@@ -2,8 +2,8 @@ Title: About
 save_as: index.html
 Template: about
 remove_footnote_section: true
-my_title: Incoming Postdoctoral Fellow
-my_affiliation: University of Washington
+my_title: Postdoctoral Scholar
+my_affiliation: University of California, Santa Barbara
 
 > [!TIP]
 > **Some exciting news**: I will be joining the [*Tech Policy Lab*](https://techpolicylab.uw.edu/) at the **University of Washington** as a postdoctoral scholar in September!
