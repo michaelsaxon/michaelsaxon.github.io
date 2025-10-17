@@ -125,7 +125,16 @@
 <h1 id="benchmarking-and-evaluation"><a class="toclink" href="#benchmarking-and-evaluation">Benchmarking and evaluation</a><a class="header-link" href="#benchmarking-and-evaluation" title="Permalink to this section">¶</a></h1>
 <p>First, a certified eval enjoyer I am obligated to point some cool benchmark and metric papers! Rapid fire:</p>
 <h2 id="code-lms-struggle-to-generate-good-test-cases"><a class="toclink" href="#code-lms-struggle-to-generate-good-test-cases">Code LMs struggle to generate good test cases</a><a class="header-link" href="#code-lms-struggle-to-generate-good-test-cases" title="Permalink to this section">¶</a></h2>
-<p>In <a href="https://arxiv.org/abs/2502.19414">Can Language Models Falsify? Evaluating Algorithmic Reasoning with Counterexample Creation</a> Shiven Sinha (IIT Hyderabad) et al introduce the REFUTE benchmark for codegen: a neat new eval for the task of writing <em>falsifying test cases</em> given a pair of (working, non-working) scripts. I submit that if a model really understands code, this should be a trivially easy task, as the model gets to see the function that contains an error! However, when comparing models at generating code for each problem vs writing counterexamples, there were extreme disparities. For example, o3-mini could pass 48% of these codeforces problems, but only write counterexamples (with demonstrations!) to 8.6%.</p>
+<p>In <a href="https://arxiv.org/abs/2502.19414">Can Language Models Falsify? Evaluating Algorithmic Reasoning with Counterexample Creation</a> Shiven Sinha (IIT Hyderabad) et al introduce the REFUTE benchmark for code generation. </p>
+<p>In this neat new eval the task is writing <em>falsifying test cases</em> given an incorrect answer to a codeforces problem.
+The target is a test case that the incorrect script will fail, but a correct one will pass.
+For a subset of codeforces problems (with access to both incorrect and correct submissions) this is a very straightforward task to evaluate, and easy to scale by grabbing new questions as they come available.</p>
+<p>I submit that this task should be trivially easy for a model that really <em>understands</em> code.
+Given understanding of a bug in the code, writing a test case is easy!</p>
+<p>However, this is not the case for SOTA codeforces models. 
+For example, o3-mini could pass 48% of these codeforces problems, but only write good counterexamples 8.6% of the time.
+This eval does a good job of capturing the weaknesses I see in code generation models, namely they suck as debugging tools.
+I could see success on this benchmark as a useful indicator for models that can more efficiently refine code and do real software engineering.</p>
 <p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_008.jpeg"/></p>
 <h2 id="base-models-are-more-creative-than-aligned"><a class="toclink" href="#base-models-are-more-creative-than-aligned">Base models are more creative than aligned</a><a class="header-link" href="#base-models-are-more-creative-than-aligned" title="Permalink to this section">¶</a></h2>
 <p>Peter West (UBC) demonstrated how <a href="https://arxiv.org/abs/2505.00047">Base Models Beat Aligned Models at Randomness and Creativity</a> using random number guessing, mixed-strategy games, and poetry writing (as judged by humans). This has implications for a variety of problems: when the need is to sample diverse examples from a model, it's probably better to go with base.
@@ -210,11 +219,11 @@ Also, I think the overall ratio of time dedicated to posters needs to be maintai
 I am a little worried that it has been so great so far because it is small and <em>not a prestige target</em>.
 Nobody who is optimizing for bean counters is focusing on COLM yet, so the reviewing process isn't overwhelmed, and really dynamic, interested people are the only ones showing up.
 Will that change as it grows?
-Also, because it isn't yet "the arena" it isn't overrun by AI bros. Will that change as it grows?</p>
-<p>Also, as much as I love Canada, I think putting top ML conferences there is getting a lil played out.
+Also, because it isn't yet "the arena" it hasn't been overrun by AI bros. Will that change as it grows?</p>
+<p>Finally, as much as I love Canada, I think putting top ML conferences there is getting a lil played out.
 I have visited the big 3 cities of Canada in a shorter period of time than I have the US, thanks solely to conferences.
 As a certified West Coast bro, I have literally spent more time in the big 3 Canadian cities than I have New York City.
-Considering the visa issues that people are having with Canada (and the US) can we go better than holding conferences there?</p>
+Considering the visa issues that people are having with Canada (and the US) can we do better with conference venue selection?</p>
 <p>I don't want to end on a negative note, so I will reiterate: <strong>COLM was amazing and I will continue to prioritize it</strong>.</p>
 <div class="footnote">
 <hr/>
