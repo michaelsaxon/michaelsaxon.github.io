@@ -30,21 +30,21 @@
 &lt;h2 id="base-models-are-more-creative-than-aligned"&gt;&lt;a class="toclink" href="#base-models-are-more-creative-than-aligned"&gt;Base models are more creative than aligned&lt;/a&gt;&lt;a class="header-link" href="#base-models-are-more-creative-than-aligned" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Peter West (UBC) demonstrated how &lt;a href="https://arxiv.org/abs/2505.00047"&gt;Base Models Beat Aligned Models at Randomness and Creativity&lt;/a&gt; using random number guessing, mixed-strategy games, and poetry writing (as judged by humans). This has implications for a variety of problems: when the need is to sample diverse examples from a model, it's probably better to go with base.
 The poetry examples were particularly evocative to me. When assessing human notions of &lt;em&gt;creativity&lt;/em&gt; vs human ratings of &lt;em&gt;pleasantness&lt;/em&gt;, the example of "write a poem about coffee" illustrates the distinction.&lt;/p&gt;
-&lt;p&gt;Llama 3 base 70B gives:&lt;/p&gt;
+&lt;p&gt;Llama 3 base 70B (a base, non-aligned model) gives:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Adenosine wrapped in caffeine,&lt;br/&gt;
 Dance through my receptors within. &lt;br/&gt;
 Stimulate; neurotransmitters go insane.&lt;br/&gt;
 Kicked inside my synapses; wake up brain!  &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Tulu-full (Llama 3 70B) gives:&lt;/p&gt;
+&lt;p&gt;Tulu-full (Llama 3 70B after RLHF and alignment) gives:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Rich aroma fills the air&lt;br/&gt;
 As morning dawns, with coffee's care&lt;br/&gt;
 Warm and dark, a soothing friend&lt;br/&gt;
 Lifting fog, till the day's end.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Personally, for the uniqueness (and the machine-ness!) of the first one, I prefer it. But the second one is definitely easier.&lt;/p&gt;
+&lt;p&gt;Personally, for the uniqueness (and the machine-ness!) of the first one, I prefer it. But the second one is definitely easier to read.&lt;/p&gt;
 &lt;h2 id="lms-struggle-with-long-range-plot-dependencies"&gt;&lt;a class="toclink" href="#lms-struggle-with-long-range-plot-dependencies"&gt;LMs struggle with long-range plot dependencies&lt;/a&gt;&lt;a class="header-link" href="#lms-struggle-with-long-range-plot-dependencies" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In &lt;a href="https://arxiv.org/abs/2504.11900"&gt;Finding Flawed Fictions&lt;/a&gt; Kabir Ahuja et al (UW) introduce plot hole detection as a task for evaluating long-context models. They introduce an algorithm to create plot holes inside of texts, and use this to build the FlawedFictions benchmark.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_009.jpeg"/&gt;&lt;/p&gt;
