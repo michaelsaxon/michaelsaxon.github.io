@@ -125,7 +125,7 @@
 <h1 id="benchmarking-and-evaluation"><a class="toclink" href="#benchmarking-and-evaluation">Benchmarking and evaluation</a><a class="header-link" href="#benchmarking-and-evaluation" title="Permalink to this section">¶</a></h1>
 <p>First, a certified eval enjoyer I am obligated to point some cool benchmark and metric papers! Rapid fire:</p>
 <h2 id="code-lms-struggle-to-generate-good-test-cases"><a class="toclink" href="#code-lms-struggle-to-generate-good-test-cases">Code LMs struggle to generate good test cases</a><a class="header-link" href="#code-lms-struggle-to-generate-good-test-cases" title="Permalink to this section">¶</a></h2>
-<p>In <a href="https://arxiv.org/abs/2502.19414">Can Language Models Falsify? Evaluating Algorithmic Reasoning with Counterexample Creation</a> Shiven Sinha (IIT Hyderabad) et al introduce the REFUTE benchmark for code generation. </p>
+<p>In <a href="https://arxiv.org/abs/2502.19414">Can Language Models Falsify? Evaluating Algorithmic Reasoning with Counterexample Creation</a> Shiven Sinha (IIIT<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a><span class="footnote-popup">Not to be confused with IIT, sorry for the mistake in the first post Shiven! </span></sup> Hyderabad) et al introduce the REFUTE benchmark for code generation. </p>
 <p>In this neat new eval the task is writing <em>falsifying test cases</em> given an incorrect answer to a codeforces problem.
 The target is a test case that the incorrect script will fail, but a correct one will pass.
 For a subset of codeforces problems (with access to both incorrect and correct submissions) this is a very straightforward task to evaluate, and easy to scale by grabbing new questions as they come available.</p>
@@ -157,7 +157,7 @@ Lifting fog, till the day's end.</p>
 <h2 id="lms-struggle-with-long-range-plot-dependencies"><a class="toclink" href="#lms-struggle-with-long-range-plot-dependencies">LMs struggle with long-range plot dependencies</a><a class="header-link" href="#lms-struggle-with-long-range-plot-dependencies" title="Permalink to this section">¶</a></h2>
 <p>In <a href="https://arxiv.org/abs/2504.11900">Finding Flawed Fictions</a> Kabir Ahuja et al (UW) introduce plot hole detection as a task for evaluating long-context models. They introduce an algorithm to create plot holes inside of texts, and use this to build the FlawedFictions benchmark.</p>
 <p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_009.jpeg"/></p>
-<p>I am really happy to see contributions like this---ecologically valid and challenging long-context understanding in LMs is understudied. Despite strong and simple "needle in a haystack" results<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a><span class="footnote-popup">See <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and me for more on this issue. </span></sup> even frontier LMs fail to generalize to basic long-context tasks such as finding easy information in long, unrelated context, or answering simple questions about long texts such as novels.
+<p>I am really happy to see contributions like this---ecologically valid and challenging long-context understanding in LMs is understudied. Despite strong and simple "needle in a haystack" results<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a><span class="footnote-popup">See <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and me for more on this issue. </span></sup> even frontier LMs fail to generalize to basic long-context tasks such as finding easy information in long, unrelated context, or answering simple questions about long texts such as novels.
 FlawedFictions is a good extension to prior long-context evals like <a href="https://novelchallenge.github.io/">NoCha</a>, which uses single claim verification from long texts rather than more detailed dependencies.</p>
 <h2 id="item-response-theory-smooths-benchmarks"><a class="toclink" href="#item-response-theory-smooths-benchmarks">Item response theory smooths benchmarks</a><a class="header-link" href="#item-response-theory-smooths-benchmarks" title="Permalink to this section">¶</a></h2>
 <p>Finally, <a href="https://arxiv.org/abs/2509.11106">Fluid Language Model Benchmarking</a> from Valentin Hoffman (Ai2) is awesome. They use item response theory (IRT) to dynamically select samples to update a latent capability estimate of a model (in a nutshell, at step <em>n</em>, if we think it's smart, pick a harder example, else pick easy). This gives lower-variance performance estimates which turn otherwise noisy evals into useful signals of training progress. (A model which gets 30% performance by randomly guessing noisy questions right vs one that gets it from answering hard ones is better)</p>
@@ -237,7 +237,10 @@ Considering the visa issues that people are having with Canada (and the US) can 
 <hr/>
 <ol>
 <li id="fn:1">
-<p>See <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and me for more on this issue. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+<p>Not to be confused with IIT, sorry for the mistake in the first post Shiven! <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>See <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and me for more on this issue. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 </ol>
 </div>
