@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <script>
+      // Check and apply theme immediately
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+      }
+  </script>
+<script src="https://saxon.me/theme/js/theme.js"></script>
+    <script src="https://saxon.me/theme/js/copy-code.js"></script>
+    <script src="https://saxon.me/theme/js/toc.js"></script>
+    <script src="https://saxon.me/theme/js/popups.js"></script>
+    <link rel="stylesheet" href="https://saxon.me/theme/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COLM 2025: 9 cool papers and some thoughts</title>
+    <link rel="stylesheet" href="https://saxon.me/theme/css/code.css">
+    <link rel="stylesheet" href="https://saxon.me/theme/css/pubs.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+          crossorigin="anonymous">
+    <link href="feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Saxon Full Atom Feed" />
+    <link href="feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Michael Saxon Full RSS Feed" />
+    <meta name="title" content="COLM 2025: 9 cool papers and some thoughts" />
+    <meta name="description" content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://saxon.me/" />
+    <meta property="og:title" content="COLM 2025: 9 cool papers and some thoughts" />
+    <meta property="og:description" content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." />
+    <meta property="og:image" content="https://saxon.me/images/colm2025-teaser.jpg" />
+   <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="https://saxon.me/" />
+    <meta property="twitter:creator" content="@m2saxon" />
+    <meta property="twitter:title" content="COLM 2025: 9 cool papers and some thoughts" />
+    <meta property="twitter:description" content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." />
+    <meta property="twitter:image" content="https://saxon.me/images/colm2025-teaser.jpg" />
+    <link rel="icon" type="image/png" href="https://saxon.me/theme/img/logomark_fill.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-nav">
+  <div style="margin-right: auto;">
+  <h1><a href="https://saxon.me/">Michael Saxon</a></h1>
+  </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+  <div class='menu-button'></div>
+</label>
+  <ul class="menu">
+    <li><a href="https://saxon.me/publications">Publications</a></li>
+    <li><a href="https://saxon.me/doc/cv_saxon.pdf">CV</a></li>
+  <li><a href="https://saxon.me/blog">Blog</a></li>
+  <li>
+    <a href="#" id="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+        <!-- Moon shape -->
+        <path class="moon" 
+              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"
+              fill="currentColor"/>
+        <!-- Sun shape (initially hidden) -->
+        <g class="sun" opacity="0">
+          <circle cx="12" cy="12" r="6" fill="currentColor"/>
+          <g class="sun-beams">
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </li>
+  </ul>
+</div>
+</header>
+
+
+<div class="page" style="word-spacing: 0.09em;">
+<article class="post">
+    <header class="post-header">
+        <div class="post-hero" style="background-image: url('https://saxon.me/images/colm2025-teaser.jpg')"></div>
+        <div class="post-content-wrapper">
+            <h1 class="post-title">
+                <a href="https://saxon.me/blog/2025/colm2025/" rel="bookmark" title="Permalink to COLM 2025: 9 cool papers and some thoughts">COLM 2025: 9 cool papers and some thoughts</a>
+            </h1>
+
+            <div class="post-meta">
+                <time>October 16, 2025</time>
+                    <span>•</span>
+                    <span>12 min read</span>
+                <span>•</span>
+                <span><a href="https://saxon.me/blog/category/research.html">Research</a></span>
+                <!-- <span>•</span>
+                <span><a href="https://saxon.me/tag/colm.html">colm</a>, <a href="https://saxon.me/tag/conference.html">conference</a></span> -->
+            </div>
+
+            <div class="post-description">
+                Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency.
+            </div>
+        </div>
+    </header>
+    <p>COLM 2025 was a blast! Here I'll summarize takeaways I had from poster discussions for 9 cool papers, and I'll give some of my own reflections on the conference overall.</p>
+<div class="toc"><span class="toc-title">Table of Contents</span><ul>
+<li><a href="#benchmarking-and-evaluation">Benchmarking and evaluation</a><ul>
+<li><a href="#code-lms-struggle-to-generate-good-test-cases">Code LMs struggle to generate good test cases</a></li>
+<li><a href="#base-models-are-more-creative-than-aligned">Base models are more creative than aligned</a></li>
+<li><a href="#lms-struggle-with-long-range-plot-dependencies">LMs struggle with long-range plot dependencies</a></li>
+<li><a href="#item-response-theory-smooths-benchmarks">Item response theory smooths benchmarks</a></li>
+</ul>
+</li>
+<li><a href="#modifying-and-improving-models">Modifying and improving models</a><ul>
+<li><a href="#data-augmentation-for-improving-long-context-models">Data augmentation for improving long-context models</a></li>
+<li><a href="#reducing-miscalibration-in-bidirectional-knowledge">Reducing miscalibration in bidirectional knowledge</a></li>
+</ul>
+</li>
+<li><a href="#personas">Personas</a><ul>
+<li><a href="#finetuned-lms-can-successfully-impersonate-you-and-trick-your-friends">Finetuned LMs can successfully impersonate you and trick your friends</a></li>
+<li><a href="#detailed-life-stories-give-more-diverse-and-distributionally-accurate-simulated-humans">Detailed life stories give more diverse and distributionally accurate simulated humans</a></li>
+<li><a href="#personas-for-evaluating-personalization">Personas for evaluating personalization</a></li>
+</ul>
+</li>
+<li><a href="#roses-and-thorns">Roses and thorns</a></li>
+</ul>
+</div>
+<h1 id="benchmarking-and-evaluation"><a class="toclink" href="#benchmarking-and-evaluation">Benchmarking and evaluation</a><a class="header-link" href="#benchmarking-and-evaluation" title="Permalink to this section">¶</a></h1>
+<p>First, a certified eval enjoyer I am obligated to point some cool benchmark and metric papers! Rapid fire:</p>
+<h2 id="code-lms-struggle-to-generate-good-test-cases"><a class="toclink" href="#code-lms-struggle-to-generate-good-test-cases">Code LMs struggle to generate good test cases</a><a class="header-link" href="#code-lms-struggle-to-generate-good-test-cases" title="Permalink to this section">¶</a></h2>
+<p>In <a href="https://arxiv.org/abs/2502.19414">Can Language Models Falsify? Evaluating Algorithmic Reasoning with Counterexample Creation</a> Shiven Sinha (IIT Hyderabad) et al introduce the REFUTE benchmark for codegen: a neat new eval for the task of writing <em>falsifying test cases</em> given a pair of (working, non-working) scripts. I submit that if a model really understands code, this should be a trivially easy task, as the model gets to see the function that contains an error! However, when comparing models at generating code for each problem vs writing counterexamples, there were extreme disparities. For example, o3-mini could pass 48% of these codeforces problems, but only write counterexamples (with demonstrations!) to 8.6%.</p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_008.jpeg"/></p>
+<h2 id="base-models-are-more-creative-than-aligned"><a class="toclink" href="#base-models-are-more-creative-than-aligned">Base models are more creative than aligned</a><a class="header-link" href="#base-models-are-more-creative-than-aligned" title="Permalink to this section">¶</a></h2>
+<p>Peter West (UBC) demonstrated how <a href="https://arxiv.org/abs/2505.00047">Base Models Beat Aligned Models at Randomness and Creativity</a> using random number guessing, mixed-strategy games, and poetry writing (as judged by humans). This has implications for a variety of problems: when the need is to sample diverse examples from a model, it's probably better to go with base.
+The poetry examples were particularly evocative to me. When assessing human notions of <em>creativity</em> vs human ratings of <em>pleasantness</em>, the example of "write a poem about coffee" illustrates the distinction.</p>
+<p>Llama 3 base 70B gives:</p>
+<blockquote>
+<p>Adenosine wrapped in caffeine,</p>
+<p>Dance through my receptors within.</p>
+<p>Stimulate; neurotransmitters go insane.</p>
+<p>Kicked inside my synapses; wake up brain!</p>
+</blockquote>
+
+<p>Tulu-full (Llama 3 70B) gives:</p>
+<blockquote>
+<p>Rich aroma fills the air</p>
+<p>As morning dawns, with coffee's care</p>
+<p>Warm and dark, a soothing friend</p>
+<p>Lifting fog, till the day's end.</p>
+</blockquote>
+
+<p>Personally, for the uniqueness (and the machine-ness!) of the first one, I prefer it. But the second one is definitely easier.</p>
+<h2 id="lms-struggle-with-long-range-plot-dependencies"><a class="toclink" href="#lms-struggle-with-long-range-plot-dependencies">LMs struggle with long-range plot dependencies</a><a class="header-link" href="#lms-struggle-with-long-range-plot-dependencies" title="Permalink to this section">¶</a></h2>
+<p>In <a href="https://arxiv.org/abs/2504.11900">Finding Flawed Fictions</a> Kabir Ahuja et al (UW) introduce plot hole detection as a task for evaluating long-context models. They introduce an algorithm to create plot holes inside of texts, and use this to build the FlawedFictions benchmark.</p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_009.jpeg"/></p>
+<p>I am really happy to see contributions like this---ecologically valid and challenging long-context understanding in LMs is understudied. Despite strong and simple "needle in a haystack" results (see <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and myself on this issue) even frontier LMs fail to generalize to basic long-context tasks such as finding easy information in long, unrelated context, or answering simple questions about long texts such as novels.
+FlawedFictions is a good extension to prior long-context evals like <a href="https://novelchallenge.github.io/">NoCha</a>, which uses single claim verification from long texts rather than more detailed dependencies.</p>
+<h2 id="item-response-theory-smooths-benchmarks"><a class="toclink" href="#item-response-theory-smooths-benchmarks">Item response theory smooths benchmarks</a><a class="header-link" href="#item-response-theory-smooths-benchmarks" title="Permalink to this section">¶</a></h2>
+<p>Finally, <a href="https://arxiv.org/abs/2509.11106">Fluid Language Model Benchmarking</a> from Valentin Hoffman (Ai2) is awesome. They use item response theory (IRT) to dynamically select samples to update a latent capability estimate of a model (in a nutshell, at step <em>n</em>, if we think it's smart, pick a harder example, else pick easy). This gives lower-variance performance estimates which turn otherwise noisy evals into useful signals of training progress. (A model which gets 30% performance by randomly guessing noisy questions right vs one that gets it from answering hard ones is better)</p>
+<p><img alt="" src="https://www.datocms-assets.com/64837/1757692010-variance_example_blog-1.png?fit=max&amp;fm=webp&amp;h=810&amp;w=1550"/></p>
+<p>I plan to talk about this paper more in the future.</p>
+<h1 id="modifying-and-improving-models"><a class="toclink" href="#modifying-and-improving-models">Modifying and improving models</a><a class="header-link" href="#modifying-and-improving-models" title="Permalink to this section">¶</a></h1>
+<h2 id="data-augmentation-for-improving-long-context-models"><a class="toclink" href="#data-augmentation-for-improving-long-context-models">Data augmentation for improving long-context models</a><a class="header-link" href="#data-augmentation-for-improving-long-context-models" title="Permalink to this section">¶</a></h2>
+<p>Given the complaints I have about long-context LMs, I was pleased to see
+<a href="https://arxiv.org/abs/2502.14854">CLIPPER</a> from Chau Minh Pham (UMD) et al, 
+a simple data augmentation technique based on compression to fine-tune open models to be better long-context readers.</p>
+<p><img alt="" src="https://github.com/chtmp223/CLIPPER/blob/main/assets/img/pipeline.jpg?raw=true"/></p>
+<p>Using an chapter-by-chapter outlines and book-level outlines they use LLMs to generate True and False claim pairs. This "compression"-based approach is then verified at small scale by human annotators, to find that 83% of generated claims are completely error-free, an absolute improvement of 66% over the prior SOTA in this form of data generation. While it would be inappropriate to use such noisy data for evaluation, for training it's much better than nothing, and 34x cheaper per sample than human annotators (used to make NoCha).</p>
+<p>Using this augmented data they construct an SFT training set to fine-tune open Qwen, Llama, and ProLong models. This process doubles the performance of the tested models on the hardest NoChat dataset, and improves performance on NarrativeQA, MuSR, and their test set considerably. Although prior results showed that short-context claim verification data does also improve long-context, it probably shouldn't be a surprise that their long-context data improved model performance more.</p>
+<p>That being said, at the poster Chau told me she was a bit surprised that their data didn't improve performance more. I wonder if more denoising and bumping up that 83% correct claim rate would help here?</p>
+<h2 id="reducing-miscalibration-in-bidirectional-knowledge"><a class="toclink" href="#reducing-miscalibration-in-bidirectional-knowledge">Reducing miscalibration in bidirectional knowledge</a><a class="header-link" href="#reducing-miscalibration-in-bidirectional-knowledge" title="Permalink to this section">¶</a></h2>
+<p><a href="https://arxiv.org/abs/2504.11381">RankAlign</a> from Juan Diego Rodriguez and Wenxuan Ding (UT Austin) was another neat paper on improving models that does something refreshingly simple to address the "generator-validator gap" (GV gap) in LMs.</p>
+<p>The GV gap refers to an LM failing to bidirectionally reflect knowledge---for example, generating <code>Olives are a type of fruit</code>, but answering <code>no</code> to <code>are olives a type of fruit?</code>.
+They formalize the GV gap using logprobs. Given the logprobs of a word's category membership and the logprobs of the category answer given the "are a type of" prompt, calibration represents a better correlation. </p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_002.jpeg"/></p>
+<p>Motivated from this framing they present a simple remedy: pairwise contrastive loss. Look at two (word, category) pairs. If the correlation relation is backwards, push them the other way!</p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_003.jpeg"/></p>
+<p>This method improves performance on a few QA tasks while considerably improving the GV gap issue.</p>
+<h1 id="personas"><a class="toclink" href="#personas">Personas</a><a class="header-link" href="#personas" title="Permalink to this section">¶</a></h1>
+<p>I used to be really incredulous about using LMs to simulate people, but I now think techniques in this space are both promising for <a href="https://openreview.net/forum?id=bttKwCZDkm">metrology</a> but also present peril. I want to highlight three papers in this space presenting the feasibility and risks of realistic, consistent personas.</p>
+<h2 id="finetuned-lms-can-successfully-impersonate-you-and-trick-your-friends"><a class="toclink" href="#finetuned-lms-can-successfully-impersonate-you-and-trick-your-friends">Finetuned LMs can successfully impersonate you and trick your friends</a><a class="header-link" href="#finetuned-lms-can-successfully-impersonate-you-and-trick-your-friends" title="Permalink to this section">¶</a></h2>
+<p><a href="https://arxiv.org/abs/2504.04332">IMPersona</a> from Ben Shi (Princeton) was an awesome and <em>scary</em> paper. They trained LMs on <em>real chat logs</em> submitted by participants in order to impersonate them, and then tested these personally finetuned models on a <em>friends and family turing test</em> where additional participants who <em>actually know</em> the submitting participants had to guess if the bot was their friend or not.</p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_004.jpeg"/></p>
+<p>Shockingly, these finetuned Llama models <em>passed</em> this test 44% of the time! <strong>A personalized LMs could trick your friends</strong>! Is all hope lost? Well, they checked for a few relationship variables which may predict whether an LM could impersonate you to someone else.</p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_005.jpeg"/></p>
+<p>The best protective attributes are texting frequency and AI experience. It does not matter how "close" you are to the person, but how often you text, and how experienced they are with AI. As the presenter put it to me, "grandparents are the most likely to get fooled." You better start texting grandma more!</p>
+<h2 id="detailed-life-stories-give-more-diverse-and-distributionally-accurate-simulated-humans"><a class="toclink" href="#detailed-life-stories-give-more-diverse-and-distributionally-accurate-simulated-humans">Detailed life stories give more diverse and distributionally accurate simulated humans</a><a class="header-link" href="#detailed-life-stories-give-more-diverse-and-distributionally-accurate-simulated-humans" title="Permalink to this section">¶</a></h2>
+<p>In <a href="https://arxiv.org/abs/2504.11673">Deep Binding of Language Model Virtual Personas</a> Minwoo Kang and Suhong Moon (UCB) the authors tackled the problem of mode collapse in simulating political poll participants (note: I really hate this application for LMs; we should be doing social science by talking to humans. But, I see other important applications for the techniques presented here.)</p>
+<p>Rather than eliciting a Republican persona by simply prompting an LM with <code>You are a Republican, now answer this question</code>, they provide instead produce lengthy, multi-turn interviews with the elicited persona to serve as context. From real-world questions for multiturn interviews (the <a href="https://americanvoicesproject.org/">American Voices Project</a>) they prompt a <em>base</em> LM (see "Base Models Beat Aligned Models at Randomness and Creativity" below for why this is important) to generate answers to each question, and then use an RLHF-tuned critic model to perform rejection sampling, removing low-quality answers.</p>
+<p>These create rich and detailed conditioning prompts to generate more diverse personas conditioned on brief group identities. Then, they test if the distribution of persona opinions matches the distribution of real Democrat and Republican opinions including cross-group hostility and in-group vs out-group meta-perception (ie., <code>As a Democrat I think...</code> vs <code>...I think Republicans think...</code>)</p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_006.jpeg"/></p>
+<p>There is a scaling relationship here. As they sample more personas, the distributional gap between real human responses and LM responses closes (decreasing Wasserstein distance)</p>
+<h2 id="personas-for-evaluating-personalization"><a class="toclink" href="#personas-for-evaluating-personalization">Personas for evaluating personalization</a><a class="header-link" href="#personas-for-evaluating-personalization" title="Permalink to this section">¶</a></h2>
+<p>In the first paper, we saw a bit about how (specific) human assessment can evaluate persona adoption in LMs, and in the second we automated the process of distributional alignment of personas. However, both of these assessed fixed persona adoption. What about cases where we want the persona to dynamically evolve over time?</p>
+<p><a href="https://arxiv.org/abs/2508.01674">CUPID</a> from Tae Soo Kim (KAIST) fits in to the broader literature on personalized alignment to introduce a dataset for the purpose of evaluating LM's abilities to infer and use <em>contextual</em> user  preferences which evolve over time using simulated user interactions.</p>
+<p>They produce personas expressed as a set of dialogue sessions: $(c_i, p_i, D_i)$ triples of some "context factor," "contextual preference," and a multi-turn dialogue which expresses the preference. The context factor is some literal string within the text, such as "Canon MP-E 65mm Macro Lens," which showing up in a session would reflect a contextual preference for exact specific details regarding equipment for a photographer persona. They generate these using detailed persona descriptions and LMs, with human verification.</p>
+<p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_007.jpeg"/></p>
+<p>They then use these dialogues for two tasks, contextual preference <em>inference</em> and preference-conditioned <em>generation</em>.
+Checking if the preference is satisfied is non-trivial... how do you verify that "sufficient technical specificity" is present in a generated passage automatically? To do this they generate atomic checklists of requirements for each preference and check them with LM-as-a-judge.</p>
+<p>They find that both inferring these preferences and generating answers with them is quite hard for frontier models. This was a cool application of LM-generated personas, and I think it has some "design patterns" around the character stories and rubrics that may be applied in my own work.</p>
+<p>I have a lot more thoughts on personas, namely <em>what even is a persona</em> which I hope to eventually get around to writing. Maybe stay tuned? Pester me with your thoughts about this question!</p>
+<h1 id="roses-and-thorns"><a class="toclink" href="#roses-and-thorns">Roses and thorns</a><a class="header-link" href="#roses-and-thorns" title="Permalink to this section">¶</a></h1>
+<p>Overall, I had a blast at COLM 2025, and I think it was just about as great as the first one. 
+There was Great mix of people and ideas: it felt like the "NLP tracks" at NeurIPS, without all the AI bros.
+In addition to having a splendid crowd (go figure, I'd love being around my friends who work in my area), I really think the structure of the venue itself makes fruitful interactions more likely.</p>
+<p><strong>Having a single track is huge.</strong> For the entire duration of the conference, all participating attendees are in roughly the same area, or the same chokepoints around and near it. Even though I mainly participate in the hallway track at conferences, I could reliably run into people to have fun conversations with in the same few places.</p>
+<p><strong>The poster sessions were long</strong>. More conferences should do this. Poster sessions are by far the most fruitful site for networking and idea exchange, and the two hour-long sessions gave me plenty of time to make my way through and take a real glance at <em>all the posters</em>. Not only is 2h a long time on an absolute level, at COLM the <em>time per poster</em> was quite high as well.</p>
+<p>Unfortunately both of these pros are artifacts of a small venue. As COLM grows it may become hard to sustain this high-participation setup.
+I think in order to preserve this character we need to <strong>not run orals and poster sessions simultaneously</strong>. That way even as the number of parallel poster tracks grows, they at least won't be competing for attention with orals, and <strong>all participants will be in the same vicinity</strong>.
+Also, I think the overall ratio of time dedicated to posters needs to be maintained, or even expanded.</p>
+<p>It was super fun to present our reasoning model work (<a href="https://arxiv.org/abs/2504.13367">ThoughtTerminator</a>) which is probably the most zeitgeisty conference presentation I have ever given. I definitely got more interactions out of it and didn't feel a need to hard sell the value of my work as much as I have in the past.</p>
+<p><img alt="A polaroid Xiao took of me after we presented our paper." src="https://saxon.me/blog/2025/colm2025/images/IMG_0145.jpeg"/></p>
+<p>As of now, unlike NeurIPS, there is not that much involvement of big lab or AI safety folks yet, which feels like a double-edged sword. Though that work isn't my cup of tea, it's very relevant, and I'd like to be around some of it!</p>
+<p>Given the amount of positive attention the conference is getting, I do have some concerns.
+I am a little worried that it has been so great so far because it is small and <em>not a prestige target</em>.
+Nobody who is optimizing for bean counters is focusing on COLM yet, so the reviewing process isn't overwhelmed, and really dynamic, interested people are the only ones showing up.
+Will that change as it grows?
+Also, because it isn't yet "the arena" it isn't overrun by AI bros. Will that change as it grows?</p>
+<p>Also, as much as I love Canada, I think putting top ML conferences there is getting a played out.
+I have visited the big 3 cities of Canada in a shorter period of time than I have the US, thanks solely to conferences.
+As a certified West Coast bro, I have literally spent more time in the big 3 Canadian cities than I have New York City.
+Considering the visa issues that people are having with Canada (and the US) can we go better than holding conferences there?</p>
+<p>I don't want to end on a negative note, so I will reiterate: <strong>COLM was amazing and I will continue to prioritize it</strong>.</p>
+</article>
+</div>
+
+
+<footer style="margin-top:25pt; padding-top:10pt;">
+  <ul class="icons">
+    <li><a href="https://www.semanticscholar.org/author/Michael-Stephen-Saxon/48227633" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/semantic-scholar.svg"></a></li>
+    <li><a href="https://scholar.google.com/citations?user=pAlwjdgAAAAJ&hl=en" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/google-scholar.svg"></a></li>
+    <li><a href="https://www.researchgate.net/profile/Michael_Saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/researchgate.svg"></a></li>
+    <li><a href="mailto:saxon@ucsb.edu"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/envelope.svg"></a></li>
+    <li><a href="https://github.com/michaelsaxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/github-alt.svg"></a></li>
+    <li><a href="https://www.youtube.com/@mssaxonAI"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/youtube.svg"></a></li>
+    <li><a href="https://www.linkedin.com/in/mssaxon/"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/linkedin-in.svg"></a></li>
+    <li><a href="https://bsky.app/profile/saxon.me" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/cloud.svg"></a></li>
+    <li><a rel="me" href="https://sigmoid.social/@saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/mastodon.svg"></a></li>
+    <li><a href="https://twitter.com/m2saxon" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/twitter.svg"></a></li>
+      
+    </ul>
+    <div class="worldmap"><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=IuxqtNT-Q6MDtRyPajTC07_66TRmeCIPbVD4z2v4M_U&co=474747&cmn=547bfc'></script></div>
+
+    <div style="max-width: 800px;   margin-right: auto; margin-left: auto;">
+	    <p style="font-size:10pt; text-align: center">Jinja template scratchbuilt in framework-free HTML/CSS by me & Cursor. 
+        Powered by <a href="https://getpelican.com/">Pelican</a>.
+        <br>
+        Feel free to steal my source from <a href="https://github.com/michaelsaxon/michaelsaxon.github.io">GitHub</a>. 
+        Theme, templates, and plugins are CC-BY-SA.</p>
+      </p>
+    </div>
+
+  
+  <div style="max-width: 800px; margin-right: auto; margin-left: auto; text-align: center;">
+     <!-- <img src="https://web.badges.world/badges/operated/getfirefox.gif"/> -->
+     <div style="width: 90pt; height: 25pt; 
+     background-color: var(--background-color); font-size: 9pt; 
+       border: 1pt solid var(--text-body); margin-right: auto; margin-left: auto; 
+     color: var(--text-body) !important; font-family: 'Arial', sans-serif;
+     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mozilla_Firefox_logo_2004.svg/133px-Mozilla_Firefox_logo_2004.svg.png);
+     background-size: 27pt; background-repeat: no-repeat; padding-left:30pt; margin-bottom: 10pt;">
+     Looks best in <b><a href="https://www.mozilla.org/en-US/firefox/new/" style="color:#e27f2e;">Mozilla Firefox</a></b> on a <b style="color: #0060df;">real PC!</b>
+   </div> 
+ 
+  </div>
+</footer>
+
+
+</body>
+</html>

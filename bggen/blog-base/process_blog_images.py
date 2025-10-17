@@ -81,7 +81,7 @@ def process_markdown_file(md_path):
         cached_path = process_external_image(url)
         
         # Convert to relative path
-        rel_path = os.path.relpath(cached_path, os.path.dirname(md_path))
+        rel_path = os.path.relpath(cached_path, os.path.dirname(md_path)).strip("content/")
         
         return f'Image: {rel_path}'
     
