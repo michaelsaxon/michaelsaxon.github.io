@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html> 
+
+<html>
 <head>
-    <script>
+<script>
       // Check and apply theme immediately
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
@@ -11,103 +12,94 @@
       }
   </script>
 <script src="https://saxon.me/theme/js/theme.js"></script>
-    <script src="https://saxon.me/theme/js/copy-code.js"></script>
-    <script src="https://saxon.me/theme/js/toc.js"></script>
-    <script src="https://saxon.me/theme/js/popups.js"></script>
-    <link rel="stylesheet" href="https://saxon.me/theme/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>COLM 2025: 9 cool papers and some thoughts</title>
-    <link rel="stylesheet" href="https://saxon.me/theme/css/code.css">
-    <link rel="stylesheet" href="https://saxon.me/theme/css/pubs.css">
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-          crossorigin="anonymous">
-    <link href="feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Saxon Full Atom Feed" />
-    <link href="feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Michael Saxon Full RSS Feed" />
-    <meta name="title" content="COLM 2025: 9 cool papers and some thoughts" />
-    <meta name="description" content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://saxon.me/" />
-    <meta property="og:title" content="COLM 2025: 9 cool papers and some thoughts" />
-    <meta property="og:description" content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." />
-    <meta property="og:image" content="https://saxon.me/images/colm2025-teaser.jpg" />
-   <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:site" content="https://saxon.me/" />
-    <meta property="twitter:creator" content="@m2saxon" />
-    <meta property="twitter:title" content="COLM 2025: 9 cool papers and some thoughts" />
-    <meta property="twitter:description" content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." />
-    <meta property="twitter:image" content="https://saxon.me/images/colm2025-teaser.jpg" />
-    <link rel="icon" type="image/png" href="https://saxon.me/theme/img/logomark_fill.png">
-</head>
+<script src="https://saxon.me/theme/js/copy-code.js"></script>
+<script src="https://saxon.me/theme/js/toc.js"></script>
+<script src="https://saxon.me/theme/js/popups.js"></script>
+<link href="https://saxon.me/theme/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>COLM 2025: 9 cool papers and some thoughts</title>
+<link href="https://saxon.me/theme/css/code.css" rel="stylesheet"/>
+<link href="https://saxon.me/theme/css/pubs.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" rel="stylesheet"/>
+<link href="feeds/all.atom.xml" rel="alternate" title="Michael Saxon Full Atom Feed" type="application/atom+xml">
+<link href="feeds/all.rss.xml" rel="alternate" title="Michael Saxon Full RSS Feed" type="application/rss+xml">
+<meta content="COLM 2025: 9 cool papers and some thoughts" name="title">
+<meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." name="description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://saxon.me/" property="og:url"/>
+<meta content="COLM 2025: 9 cool papers and some thoughts" property="og:title"/>
+<meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." property="og:description"/>
+<meta content="https://saxon.me/images/colm2025-teaser.jpg" property="og:image"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://saxon.me/" property="twitter:site"/>
+<meta content="@m2saxon" property="twitter:creator"/>
+<meta content="COLM 2025: 9 cool papers and some thoughts" property="twitter:title"/>
+<meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." property="twitter:description"/>
+<meta content="https://saxon.me/images/colm2025-teaser.jpg" property="twitter:image"/>
+<link href="https://saxon.me/theme/img/logomark_fill.png" rel="icon" type="image/png"/>
+</meta></link></link></head>
 <body>
-
 <header class="site-header">
-  <div class="top-nav">
-  <div style="margin-right: auto;">
-  <h1><a href="https://saxon.me/">Michael Saxon</a></h1>
-  </div>
-  <input id="menu-toggle" type="checkbox" />
-  <label class='menu-button-container' for="menu-toggle">
-  <div class='menu-button'></div>
+<div class="top-nav">
+<div style="margin-right: auto;">
+<h1><a href="https://saxon.me/">Michael Saxon</a></h1>
+</div>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button-container" for="menu-toggle">
+<div class="menu-button"></div>
 </label>
-  <ul class="menu">
-    <li><a href="https://saxon.me/publications">Publications</a></li>
-    <li><a href="https://saxon.me/doc/cv_saxon.pdf">CV</a></li>
-  <li><a href="https://saxon.me/blog">Blog</a></li>
-  <li>
-    <a href="#" id="theme-toggle" aria-label="Toggle dark mode">
-      <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-        <!-- Moon shape -->
-        <path class="moon" 
-              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"
-              fill="currentColor"/>
-        <!-- Sun shape (initially hidden) -->
-        <g class="sun" opacity="0">
-          <circle cx="12" cy="12" r="6" fill="currentColor"/>
-          <g class="sun-beams">
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </g>
-        </g>
-      </svg>
-    </a>
-  </li>
-  </ul>
+<ul class="menu">
+<li><a href="https://saxon.me/publications">Publications</a></li>
+<li><a href="https://saxon.me/doc/cv_saxon.pdf">CV</a></li>
+<li><a href="https://saxon.me/blog">Blog</a></li>
+<li>
+<a aria-label="Toggle dark mode" href="#" id="theme-toggle">
+<svg aria-hidden="true" class="sun-and-moon" height="24" viewbox="0 0 24 24" width="24">
+<!-- Moon shape -->
+<path class="moon" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" fill="currentColor"></path>
+<!-- Sun shape (initially hidden) -->
+<g class="sun" opacity="0">
+<circle cx="12" cy="12" fill="currentColor" r="6"></circle>
+<g class="sun-beams">
+<line x1="12" x2="12" y1="1" y2="3"></line>
+<line x1="12" x2="12" y1="21" y2="23"></line>
+<line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+<line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+<line x1="1" x2="3" y1="12" y2="12"></line>
+<line x1="21" x2="23" y1="12" y2="12"></line>
+<line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+<line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+</g>
+</g>
+</svg>
+</a>
+</li>
+</ul>
 </div>
 </header>
-
-
 <div class="page" style="word-spacing: 0.09em;">
 <article class="post">
-    <header class="post-header">
-        <div class="post-hero" style="background-image: url('https://saxon.me/images/colm2025-teaser.jpg')"></div>
-        <div class="post-content-wrapper">
-            <h1 class="post-title">
-                <a href="https://saxon.me/blog/2025/colm2025/" rel="bookmark" title="Permalink to COLM 2025: 9 cool papers and some thoughts">COLM 2025: 9 cool papers and some thoughts</a>
-            </h1>
-
-            <div class="post-meta">
-                <time>October 16, 2025</time>
-                    <span>•</span>
-                    <span>12 min read</span>
-                <span>•</span>
-                <span><a href="https://saxon.me/blog/category/research.html">Research</a></span>
-                <!-- <span>•</span>
+<header class="post-header">
+<div class="post-hero" style="background-image: url('https://saxon.me/images/colm2025-teaser.jpg')"></div>
+<div class="post-content-wrapper">
+<h1 class="post-title">
+<a href="https://saxon.me/blog/2025/colm2025/" rel="bookmark" title="Permalink to COLM 2025: 9 cool papers and some thoughts">COLM 2025: 9 cool papers and some thoughts</a>
+</h1>
+<div class="post-meta">
+<time>October 16, 2025</time>
+<span>•</span>
+<span>12 min read</span>
+<span>•</span>
+<span><a href="https://saxon.me/blog/category/research.html">Research</a></span>
+<!-- <span>•</span>
                 <span><a href="https://saxon.me/tag/colm.html">colm</a>, <a href="https://saxon.me/tag/conference.html">conference</a></span> -->
-            </div>
-
-            <div class="post-description">
+</div>
+<div class="post-description">
                 Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency.
             </div>
-        </div>
-    </header>
-    <p>COLM 2025 was a blast! Here I'll summarize takeaways I had from poster discussions for 9 cool papers, and I'll give some of my own reflections on the conference overall.</p>
+</div>
+</header>
+<p>COLM 2025 was a blast! Here I'll summarize takeaways I had from poster discussions for 9 cool papers, and I'll give some of my own reflections on the conference overall.</p>
 <div class="toc"><span class="toc-title">Table of Contents</span><ul>
 <li><a href="#benchmarking-and-evaluation">Benchmarking and evaluation</a><ul>
 <li><a href="#code-lms-struggle-to-generate-good-test-cases">Code LMs struggle to generate good test cases</a></li>
@@ -145,7 +137,6 @@ The poetry examples were particularly evocative to me. When assessing human noti
 <p>Stimulate; neurotransmitters go insane.</p>
 <p>Kicked inside my synapses; wake up brain!</p>
 </blockquote>
-
 <p>Tulu-full (Llama 3 70B) gives:</p>
 <blockquote>
 <p>Rich aroma fills the air</p>
@@ -153,12 +144,11 @@ The poetry examples were particularly evocative to me. When assessing human noti
 <p>Warm and dark, a soothing friend</p>
 <p>Lifting fog, till the day's end.</p>
 </blockquote>
-
 <p>Personally, for the uniqueness (and the machine-ness!) of the first one, I prefer it. But the second one is definitely easier.</p>
 <h2 id="lms-struggle-with-long-range-plot-dependencies"><a class="toclink" href="#lms-struggle-with-long-range-plot-dependencies">LMs struggle with long-range plot dependencies</a><a class="header-link" href="#lms-struggle-with-long-range-plot-dependencies" title="Permalink to this section">¶</a></h2>
 <p>In <a href="https://arxiv.org/abs/2504.11900">Finding Flawed Fictions</a> Kabir Ahuja et al (UW) introduce plot hole detection as a task for evaluating long-context models. They introduce an algorithm to create plot holes inside of texts, and use this to build the FlawedFictions benchmark.</p>
 <p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_009.jpeg"/></p>
-<p>I am really happy to see contributions like this---ecologically valid and challenging long-context understanding in LMs is understudied. Despite strong and simple "needle in a haystack" results (see <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and myself on this issue) even frontier LMs fail to generalize to basic long-context tasks such as finding easy information in long, unrelated context, or answering simple questions about long texts such as novels.
+<p>I am really happy to see contributions like this---ecologically valid and challenging long-context understanding in LMs is understudied. Despite strong and simple "needle in a haystack" results<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a><span class="footnote-popup">(see <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and myself on this issue) </span></sup> even frontier LMs fail to generalize to basic long-context tasks such as finding easy information in long, unrelated context, or answering simple questions about long texts such as novels.
 FlawedFictions is a good extension to prior long-context evals like <a href="https://novelchallenge.github.io/">NoCha</a>, which uses single claim verification from long texts rather than more detailed dependencies.</p>
 <h2 id="item-response-theory-smooths-benchmarks"><a class="toclink" href="#item-response-theory-smooths-benchmarks">Item response theory smooths benchmarks</a><a class="header-link" href="#item-response-theory-smooths-benchmarks" title="Permalink to this section">¶</a></h2>
 <p>Finally, <a href="https://arxiv.org/abs/2509.11106">Fluid Language Model Benchmarking</a> from Valentin Hoffman (Ai2) is awesome. They use item response theory (IRT) to dynamically select samples to update a latent capability estimate of a model (in a nutshell, at step <em>n</em>, if we think it's smart, pick a harder example, else pick easy). This gives lower-variance performance estimates which turn otherwise noisy evals into useful signals of training progress. (A model which gets 30% performance by randomly guessing noisy questions right vs one that gets it from answering hard ones is better)</p>
@@ -198,7 +188,7 @@ They formalize the GV gap using logprobs. Given the logprobs of a word's categor
 <h2 id="personas-for-evaluating-personalization"><a class="toclink" href="#personas-for-evaluating-personalization">Personas for evaluating personalization</a><a class="header-link" href="#personas-for-evaluating-personalization" title="Permalink to this section">¶</a></h2>
 <p>In the first paper, we saw a bit about how (specific) human assessment can evaluate persona adoption in LMs, and in the second we automated the process of distributional alignment of personas. However, both of these assessed fixed persona adoption. What about cases where we want the persona to dynamically evolve over time?</p>
 <p><a href="https://arxiv.org/abs/2508.01674">CUPID</a> from Tae Soo Kim (KAIST) fits in to the broader literature on personalized alignment to introduce a dataset for the purpose of evaluating LM's abilities to infer and use <em>contextual</em> user  preferences which evolve over time using simulated user interactions.</p>
-<p>They produce personas expressed as a set of dialogue sessions: $(c_i, p_i, D_i)$ triples of some "context factor," "contextual preference," and a multi-turn dialogue which expresses the preference. The context factor is some literal string within the text, such as "Canon MP-E 65mm Macro Lens," which showing up in a session would reflect a contextual preference for exact specific details regarding equipment for a photographer persona. They generate these using detailed persona descriptions and LMs, with human verification.</p>
+<p>They produce personas expressed as a set of dialogue sessions: $(c_i, p_i, D_i)$<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a><span class="footnote-popup">Yes, I know \LaTeX on my blog is broken right now... why don't you try rolling your own blog gen theme! </span></sup> triples of some "context factor," "contextual preference," and a multi-turn dialogue which expresses the preference. The context factor is some literal string within the text, such as "Canon MP-E 65mm Macro Lens," which showing up in a session would reflect a contextual preference for exact specific details regarding equipment for a photographer persona. They generate these using detailed persona descriptions and LMs, with human verification.</p>
 <p><img alt="" src="https://saxon.me/blog/2025/colm2025/images/IMG_Dispatch from COLM_007.jpeg"/></p>
 <p>They then use these dialogues for two tasks, contextual preference <em>inference</em> and preference-conditioned <em>generation</em>.
 Checking if the preference is satisfied is non-trivial... how do you verify that "sufficient technical specificity" is present in a generated passage automatically? To do this they generate atomic checklists of requirements for each preference and check them with LM-as-a-judge.</p>
@@ -226,50 +216,52 @@ I have visited the big 3 cities of Canada in a shorter period of time than I hav
 As a certified West Coast bro, I have literally spent more time in the big 3 Canadian cities than I have New York City.
 Considering the visa issues that people are having with Canada (and the US) can we go better than holding conferences there?</p>
 <p>I don't want to end on a negative note, so I will reiterate: <strong>COLM was amazing and I will continue to prioritize it</strong>.</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>(see <a href="https://techcrunch.com/2024/06/29/geminis-data-analyzing-abilities-arent-as-good-as-google-claims/">TechCrunch interview</a> with Marzena Karpinska and myself on this issue) <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>Yes, I know \LaTeX on my blog is broken right now... why don't you try rolling your own blog gen theme! <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 </article>
 </div>
-
-
 <footer style="margin-top:25pt; padding-top:10pt;">
-  <ul class="icons">
-    <li><a href="https://www.semanticscholar.org/author/Michael-Stephen-Saxon/48227633" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/semantic-scholar.svg"></a></li>
-    <li><a href="https://scholar.google.com/citations?user=pAlwjdgAAAAJ&hl=en" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/google-scholar.svg"></a></li>
-    <li><a href="https://www.researchgate.net/profile/Michael_Saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/researchgate.svg"></a></li>
-    <li><a href="mailto:saxon@ucsb.edu"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/envelope.svg"></a></li>
-    <li><a href="https://github.com/michaelsaxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/github-alt.svg"></a></li>
-    <li><a href="https://www.youtube.com/@mssaxonAI"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/youtube.svg"></a></li>
-    <li><a href="https://www.linkedin.com/in/mssaxon/"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/linkedin-in.svg"></a></li>
-    <li><a href="https://bsky.app/profile/saxon.me" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/cloud.svg"></a></li>
-    <li><a rel="me" href="https://sigmoid.social/@saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/mastodon.svg"></a></li>
-    <li><a href="https://twitter.com/m2saxon" ><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/twitter.svg"></a></li>
-      
-    </ul>
-    <div class="worldmap"><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=IuxqtNT-Q6MDtRyPajTC07_66TRmeCIPbVD4z2v4M_U&co=474747&cmn=547bfc'></script></div>
-
-    <div style="max-width: 800px;   margin-right: auto; margin-left: auto;">
-	    <p style="font-size:10pt; text-align: center">Jinja template scratchbuilt in framework-free HTML/CSS by me & Cursor. 
+<ul class="icons">
+<li><a href="https://www.semanticscholar.org/author/Michael-Stephen-Saxon/48227633"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/semantic-scholar.svg"/></a></li>
+<li><a href="https://scholar.google.com/citations?user=pAlwjdgAAAAJ&amp;hl=en"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/google-scholar.svg"/></a></li>
+<li><a href="https://www.researchgate.net/profile/Michael_Saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/researchgate.svg"/></a></li>
+<li><a href="mailto:saxon@ucsb.edu"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/envelope.svg"/></a></li>
+<li><a href="https://github.com/michaelsaxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/github-alt.svg"/></a></li>
+<li><a href="https://www.youtube.com/@mssaxonAI"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/youtube.svg"/></a></li>
+<li><a href="https://www.linkedin.com/in/mssaxon/"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/linkedin-in.svg"/></a></li>
+<li><a href="https://bsky.app/profile/saxon.me"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/cloud.svg"/></a></li>
+<li><a href="https://sigmoid.social/@saxon" rel="me"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/mastodon.svg"/></a></li>
+<li><a href="https://twitter.com/m2saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/twitter.svg"/></a></li>
+</ul>
+<div class="worldmap"><script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=a&amp;t=tt&amp;d=IuxqtNT-Q6MDtRyPajTC07_66TRmeCIPbVD4z2v4M_U&amp;co=474747&amp;cmn=547bfc" type="text/javascript"></script></div>
+<div style="max-width: 800px;   margin-right: auto; margin-left: auto;">
+<p style="font-size:10pt; text-align: center">Jinja template scratchbuilt in framework-free HTML/CSS by me &amp; Cursor. 
         Powered by <a href="https://getpelican.com/">Pelican</a>.
-        <br>
+        <br/>
         Feel free to steal my source from <a href="https://github.com/michaelsaxon/michaelsaxon.github.io">GitHub</a>. 
         Theme, templates, and plugins are CC-BY-SA.</p>
-      </p>
-    </div>
 
-  
-  <div style="max-width: 800px; margin-right: auto; margin-left: auto; text-align: center;">
-     <!-- <img src="https://web.badges.world/badges/operated/getfirefox.gif"/> -->
-     <div style="width: 90pt; height: 25pt; 
+</div>
+<div style="max-width: 800px; margin-right: auto; margin-left: auto; text-align: center;">
+<!-- <img src="https://web.badges.world/badges/operated/getfirefox.gif"/> -->
+<div style="width: 90pt; height: 25pt; 
      background-color: var(--background-color); font-size: 9pt; 
        border: 1pt solid var(--text-body); margin-right: auto; margin-left: auto; 
      color: var(--text-body) !important; font-family: 'Arial', sans-serif;
      background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mozilla_Firefox_logo_2004.svg/133px-Mozilla_Firefox_logo_2004.svg.png);
      background-size: 27pt; background-repeat: no-repeat; padding-left:30pt; margin-bottom: 10pt;">
      Looks best in <b><a href="https://www.mozilla.org/en-US/firefox/new/" style="color:#e27f2e;">Mozilla Firefox</a></b> on a <b style="color: #0060df;">real PC!</b>
-   </div> 
- 
-  </div>
+</div>
+</div>
 </footer>
-
-
-</body>
+<script src="../../../static/js/popups.js"></script></body>
 </html>
