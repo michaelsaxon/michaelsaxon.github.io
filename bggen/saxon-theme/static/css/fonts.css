@@ -23,6 +23,19 @@
   font-style: italic;
   font-stretch: condensed;
 }
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-ExtraLight-SemiCondensed.woff2');
+  font-weight: 200;
+  font-stretch: semi-condensed;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-ExtraLight-SemiCondensed-Oblique.woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: semi-condensed;
+}
 
 @font-face {
   font-family: "Berkeley Mono";
@@ -47,6 +60,19 @@
   font-weight: 350;
   font-style: italic;
   font-stretch: condensed;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-SemiLight-SemiCondensed.woff2');
+  font-weight: 350;
+  font-stretch: semi-condensed;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-SemiLight-SemiCondensed-Oblique.woff2');
+  font-weight: 350;
+  font-style: italic;
+  font-stretch: semi-condensed;
 }
 
 @font-face {
@@ -73,6 +99,19 @@
   font-style: italic;
   font-stretch: condensed;
 }
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-Medium-SemiCondensed.woff2');
+  font-weight: 500;
+  font-stretch: semi-condensed;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-Medium-SemiCondensed-Oblique.woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: semi-condensed;
+}
 
 @font-face {
   font-family: "Berkeley Mono";
@@ -98,6 +137,19 @@
   font-style: italic;
   font-stretch: condensed;
 }
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-Bold-SemiCondensed.woff2');
+  font-weight: 700;
+  font-stretch: semi-condensed;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-Bold-SemiCondensed-Oblique.woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: semi-condensed;
+}
 
 @font-face {
   font-family: "Berkeley Mono";
@@ -122,6 +174,19 @@
   font-weight: 900;
   font-style: italic;
   font-stretch: condensed;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-Black-SemiCondensed.woff2');
+  font-weight: 900;
+  font-stretch: semi-condensed;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src: url('https://saxon.me/theme/font/BerkeleyMono-Black-SemiCondensed-Oblique.woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: semi-condensed;
 }
 
 /* Univers Font Family */
