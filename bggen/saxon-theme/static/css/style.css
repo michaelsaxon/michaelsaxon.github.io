@@ -1634,6 +1634,7 @@ sup[id^="fnref"]:hover .footnote-popup {
       var(--text-body) 30%
     );
     padding-left: 1rem;
+    font-family: 'Berkeley Mono', monospace;
 }
 
 .experience-content {
@@ -1661,6 +1662,7 @@ sup[id^="fnref"]:hover .footnote-popup {
 .experience-details {
     margin-top: 0.4rem;
     line-height: 1.6;
+    font-family: 'Calluna', serif;
 }
 
 .experience-logo {
