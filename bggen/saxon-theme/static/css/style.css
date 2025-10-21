@@ -917,10 +917,12 @@ ul, ol {
 }
 
 .post-meta {
-  margin: 0 0 1rem 0;  /* Remove top margin */
+  margin: 0.5rem 0 1rem 0;  /* Remove top margin */
   color: var(--text-black);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: condensed;
+  font-weight: 350;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -1165,7 +1167,10 @@ sup[id^="fnref"]:hover .footnote-popup {
 .preview-meta {
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  color: var(--text-muted);
+  /* color: var(--text-muted); */
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: condensed;
+  font-weight: 350;
 }
 
 .preview-description {
@@ -1643,7 +1648,7 @@ sup[id^="fnref"]:hover .footnote-popup {
 
 .experience-title {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     /* Blend experience color with text color */
     /* color: color-mix(in srgb, 
         var(--experience-color, var(--brand-main)) 70%,
@@ -1654,9 +1659,10 @@ sup[id^="fnref"]:hover .footnote-popup {
 }
 
 .experience-subtitle {
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    font-weight: 350;
 }
 
 .experience-details {
@@ -1816,6 +1822,8 @@ p code {
     border: 1px solid var(--brand-main);
     border-radius: 6px;
     padding: 0.8rem;
+    font-family: 'Berkeley Mono', monospace;
+    font-stretch: condensed;
 }
 
 .toc ul {
@@ -1869,7 +1877,7 @@ p code {
 .toc a {
     color: var(--text-body);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     display: block;
     padding-bottom: 0.4rem;
 }
@@ -1949,8 +1957,6 @@ h6 .toclink:hover ~ .header-link::after,
 .toclink {
     color: var(--text-body);
     text-decoration: none;
-    padding-right: 0.4rem;
-    padding-left: 0.4rem;
 }
 
 /* Remove any inherited link styles */
