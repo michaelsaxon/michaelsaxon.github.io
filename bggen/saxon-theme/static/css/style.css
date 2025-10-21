@@ -1285,6 +1285,7 @@ sup[id^="fnref"]:hover .footnote-popup {
   margin: 0 0 0.15rem 0;  /* Tighter spacing to subtitle */
   font-size: 1.8rem;
   color: var(--text-dark);
+  font-weight: 900;
 }
 
 .about-subtitle {
