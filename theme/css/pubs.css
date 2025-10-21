@@ -5,10 +5,11 @@
     border-radius: 8px;
     background: var(--brand-light);
     line-height: 1.4;  /* tighter overall line height */
+    font-family: 'Univers', sans-serif;
 }
 
 .publication .title {
-    font-size: 1.1rem;  /* slightly larger than default */
+    font-size: 1.2rem;  /* slightly larger than default */
     font-weight: bold;
     margin-bottom: 0.3rem;  /* space after title */
     line-height: 1.3;  /* tighter line height for title */
@@ -185,6 +186,8 @@
     margin: 0 0.2rem;
     background: none;
     text-decoration: none;
+    font-family: 'Berkeley Mono', monospace;
+    font-weight: 700;
 }
 
 /* Interactive badges */
@@ -375,6 +378,9 @@ span.toggle-badge:focus {
     margin-bottom: 2rem;
     margin-top: -0.5rem;
     flex-wrap: wrap;
+    font-family: 'Berkeley Mono', monospace;
+    font-stretch: condensed;
+    font-weight: 350;
 }
 
 .filter-column {
