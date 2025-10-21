@@ -1287,6 +1287,8 @@ sup[id^="fnref"]:hover .footnote-popup {
   font-size: 1.8rem;
   color: var(--text-dark);
   font-weight: 900;
+  font-family: 'Triptych', serif;
+  font-style: italic;
 }
 
 .about-subtitle {
