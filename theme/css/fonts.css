@@ -237,3 +237,12 @@
   src: url('https://saxon.me/theme/font/Triptych-Grotesque.woff');
   font-weight: 700;
 }
+
+/* Calluna Font Family */
+
+@font-face {
+    font-family: "Calluna";
+    src: url('https://saxon.me/theme/font/Calluna-Regular-webfont.woff');
+    font-weight: 400;
+  }
+  
