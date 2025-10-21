@@ -1285,12 +1285,16 @@ sup[id^="fnref"]:hover .footnote-popup {
   margin: 0 0 0.15rem 0;  /* Tighter spacing to subtitle */
   font-size: 1.8rem;
   color: var(--text-dark);
+  font-weight: 900;
 }
 
 .about-subtitle {
   margin: 0 0 0.75rem 0;  /* Less space before icons */
   font-size: 1rem;
   color: var(--text-muted);
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: condensed;
+  font-weight: 500;
 }
 
 .about-description {
