@@ -224,9 +224,11 @@ a {
 body{
   margin: 0px;
   background-color: var(--bg-main);
-  font-family: 'Triptych', sans-serif;
+  font-family: 'Calluna', serif;
   font-size: 11pt; /* fallback for bad browser */
-  font-size: var(--base-size);
+  /* Using EB Garamond we have to make the base size bigger*/
+  font-size: calc(1.1*var(--base-size));
+  /* font-size: var(--base-size); */
   /* font-stretch: semi-condensed; */
   color: var(--text-body);
  }
@@ -252,38 +254,49 @@ h1 {
   margin: 0 0 2rem 0;
   font-size: calc(1.4 * var(--base-size));
   font-weight: 900;
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: semi-condensed;
 }
 h2 {
   margin: 0 0 1.5rem 0;
   font-size: calc(1.3 * var(--base-size));
   font-weight: 700;
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: semi-condensed;
 }
 h3 {
   margin: 0 0 1.5rem 0;
   font-size: calc(1.2 * var(--base-size));
   font-weight: 700;
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: semi-condensed;
 }
 h4 {
   margin: 0 0 1rem 0;
   font-size: calc(1.1 * var(--base-size));
   font-weight: 700;
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: semi-condensed;
 }
 h5 {
   margin: 0 0 0.75rem 0;
   font-size: calc(1 * var(--base-size));
   font-weight: 700;
+  font-family: 'Berkeley Mono', monospace;
+  font-stretch: semi-condensed;
 }
 
 header.site-header h1{
   margin: 10pt 0 0 0;
   float: left;
-  font-family: Triptych, serif;
+  font-family: 'Berkeley Mono', monospace;
   vertical-align: bottom;
   padding: 5pt 5pt;
   padding:5pt 5pt;
   /* font-style: italic; */
   margin-bottom: 0;
   padding-bottom: 0;
+  /* font-stretch: semi-condensed; */
  }
 
 header.site-header h1 a {
@@ -385,7 +398,7 @@ ul.menu li a:hover {
 
 p {
   margin: 0 0 1rem 0;
-  line-height: 1.4;
+  line-height: 1.3;
   padding: calc(0.5 * var(--base-size)) 0 calc(0.1 * var(--base-size)) 0;
   text-align: left;
 }
