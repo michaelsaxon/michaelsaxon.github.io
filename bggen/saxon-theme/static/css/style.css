@@ -1717,6 +1717,8 @@ sup[id^="fnref"]:hover .footnote-popup {
     height: 6rem;
     margin-right: 1.5rem;
     margin-left: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
     filter: var(--logo-filter);
 }
 
