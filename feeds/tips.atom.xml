@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Saxon - Tips</title><link href="https://saxon.me/" rel="alternate"></link><link href="https://saxon.me/feeds/tips.atom.xml" rel="self"></link><id>https://saxon.me/</id><updated>2025-04-10T19:00:00-07:00</updated><entry><title>Michael's TeXronomicon (LaTeX tips, tricks, and hacks)</title><link href="https://saxon.me/blog/2025/latex-tips/" rel="alternate"></link><published>2025-04-10T19:00:00-07:00</published><updated>2025-04-10T19:00:00-07:00</updated><author><name>Michael Saxon</name></author><id>tag:saxon.me,2025-04-10:/blog/2025/latex-tips/</id><summary type="html">Various snippets, tricks, and lessons I've developed and learned from messing around in LaTeX and scrutinizing source files on arXiv.</summary><content type="html">&lt;p&gt;Between my mild presentational OCD and a desire to understand how various cool figures, tables, and styles have been implemented in other groups' papers, I have accumulated quite a few LaTeX snippets that I pass around with my friends. I figured I should put them all in one place along with some explanations, so (if you're interested) you can learn to make your own.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Saxon - Tips</title><link href="https://saxon.me/" rel="alternate"></link><link href="https://saxon.me/feeds/tips.atom.xml" rel="self"></link><id>https://saxon.me/</id><updated>2025-04-10T19:00:00-07:00</updated><entry><title>Michael's TeXronomicon (LaTeX tips, tricks, and hacks)</title><link href="https://saxon.me/blog/2025/latex-tips/" rel="alternate"></link><published>2025-04-10T19:00:00-07:00</published><updated>2025-04-10T19:00:00-07:00</updated><author><name>Michael Saxon</name></author><id>tag:saxon.me,2025-04-10:/blog/2025/latex-tips/</id><summary type="html">Various snippets, tricks, and lessons I've developed and learned from messing around in LaTeX and scrutinizing source files on arXiv.</summary><content type="html">&lt;p&gt;Between my mild presentational OCD and a desire to understand how various cool figures, tables, and styles have been implemented in other groups‘ papers, I have accumulated quite a few LaTeX snippets that I pass around with my friends. I figured I should put them all in one place along with some explanations, so (if you’re interested) you can learn to make your own.&lt;/p&gt;
 &lt;p&gt;You should probably check out the TOC to decide which parts you want to read.
 There will probably be parts you already know; I am covering basics here so I can give this to a new author.
 To briefly explain the structure, I will discuss:&lt;/p&gt;
@@ -152,7 +152,7 @@ Also if you want to use fancy coloring or fonts in your method name&lt;sup id="f
 &lt;line x1="12" x2="12" y1="7" y2="17"&gt;&lt;/line&gt;
 &lt;/g&gt;
 &lt;/svg&gt;&lt;/a&gt;&lt;span class="footnote-popup"&gt;As I often do... &lt;/span&gt;&lt;/sup&gt;, putting it in a comment is a must.&lt;/p&gt;
-&lt;p&gt;Unfortunately, text in LaTeX commands have infuriating spacing behavior. If you put the command as is, it will &lt;em&gt;ignore&lt;/em&gt; trailing whitespace,  so "&lt;code&gt;\methodname is great&lt;/code&gt;" renders as "BiG-BiRdis great".&lt;/p&gt;
+&lt;p&gt;Unfortunately, text in LaTeX commands have infuriating spacing behavior. If you put the command as is, it will &lt;em&gt;ignore&lt;/em&gt; trailing whitespace,  so “&lt;code&gt;\methodname is great&lt;/code&gt;” renders as “BiG-BiRdis great”.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;\xspace&lt;/code&gt; package makes spacing work right:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
@@ -164,7 +164,7 @@ Also if you want to use fancy coloring or fonts in your method name&lt;sup id="f
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;h1 id="2-doing-text-right"&gt;&lt;a class="toclink" href="#2-doing-text-right"&gt;2. Doing text right&lt;/a&gt;&lt;a class="header-link" href="#2-doing-text-right" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;With our new understanding of commands, we can turn to discussing best practices for working with existing commands and creating new commands to make your text look beautiful.&lt;/p&gt;
-&lt;p&gt;Additionally, we will talk about how navigate the various quirky "Knuth-isms"&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref footnote-toggle" href="javascript:void(0)"&gt;&lt;svg class="footnote-icon" viewbox="0 0 24 24"&gt;
+&lt;p&gt;Additionally, we will talk about how navigate the various quirky “Knuth-isms”&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref footnote-toggle" href="javascript:void(0)"&gt;&lt;svg class="footnote-icon" viewbox="0 0 24 24"&gt;
 &lt;g class="icon-group" stroke="currentColor" stroke-linecap="round" stroke-width="3"&gt;
 &lt;line x1="7" x2="17" y1="12" y2="12"&gt;&lt;/line&gt;
 &lt;line x1="12" x2="12" y1="7" y2="17"&gt;&lt;/line&gt;
@@ -186,7 +186,7 @@ In parenthetical citation styles (such as *ACL or COLM) these mean &lt;em&gt;tex
 &lt;blockquote&gt;
 &lt;p&gt;In figure &lt;a href=""&gt;1&lt;/a&gt; we learn X.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;But what if you want the "figure" text to be part of the link? And what if you're sick of typing "figure" or "table" each time? There are two solutions, &lt;code&gt;autoref&lt;/code&gt; and &lt;code&gt;cleveref&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;But what if you want the “figure” text to be part of the link? And what if you're sick of typing “figure” or “table” each time? There are two solutions, &lt;code&gt;autoref&lt;/code&gt; and &lt;code&gt;cleveref&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;\autoref&lt;/code&gt; is the simpler command.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
@@ -201,7 +201,7 @@ In &lt;span class="k"&gt;\autoref&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&
 &lt;blockquote&gt;
 &lt;p&gt;In subsubsection 2.3.1... Section 3 shows... See table 2...&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Note that the first "figure" isn't capitalized, while the second is. "subsubsection" isn't capitalized but "Section" is. &lt;code&gt;autoref&lt;/code&gt; automates all of this based on position in a sentence.&lt;/p&gt;
+&lt;p&gt;Note that the first “figure” isn‘t capitalized, while the second is. “subsubsection” isn’t capitalized but “Section” is. &lt;code&gt;autoref&lt;/code&gt; automates all of this based on position in a sentence.&lt;/p&gt;
 &lt;p&gt;What if you want a more compact style of these automatic citations? What if you want to change this behavior? That's where &lt;code&gt;cleveref&lt;/code&gt; can come in handy.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
@@ -218,7 +218,7 @@ The turbo encabulator (&lt;span class="k"&gt;\cref&lt;/span&gt;&lt;span class="n
 &lt;blockquote&gt;
 &lt;p&gt;The turbo encabulator (§2.3.1) also leverages inverse reactive current in unilateral phase detractors&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Within those definitions you can define whatever behavior you want. You can make it say "Section 2.3.1" instead of "subsubsection 2.3.1", enforce capitalization in all places, etc.&lt;/p&gt;
+&lt;p&gt;Within those definitions you can define whatever behavior you want. You can make it say “Section 2.3.1” instead of “subsubsection 2.3.1”, enforce capitalization in all places, etc.&lt;/p&gt;
 &lt;h2 id="quotation-marks"&gt;&lt;a class="toclink" href="#quotation-marks"&gt;Quotation marks&lt;/a&gt;&lt;a class="header-link" href="#quotation-marks" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Here's a great Knuthism:
 The characters &lt;code&gt;'&lt;/code&gt; and &lt;code&gt;"&lt;/code&gt;, in most fonts, &lt;strong&gt;specifically refer to backwards marks&lt;/strong&gt;. So&lt;/p&gt;
@@ -251,16 +251,16 @@ First, to size a line of text, you use these (in ascending order of size)&lt;/p&
 &lt;li&gt;&lt;code&gt;\huge&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\Huge&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you're just mad, you should say &lt;code&gt;{\large I am mad}&lt;/code&gt; but if you're REALLY angry you can give a &lt;code&gt;{\LARGE I AM FURIOUS}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you‘re just mad, you should say &lt;code&gt;{\large I am mad}&lt;/code&gt; but if you’re REALLY angry you can give a &lt;code&gt;{\LARGE I AM FURIOUS}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;See more in &lt;a href="https://www.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles"&gt;Overleaf's docs&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="defining-colors-and-coloring-text"&gt;&lt;a class="toclink" href="#defining-colors-and-coloring-text"&gt;Defining colors and coloring text&lt;/a&gt;&lt;a class="header-link" href="#defining-colors-and-coloring-text" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;By default, LaTeX has colors like "red", "green", "blue", and "magenta" (as I used above in my comment commands).&lt;/p&gt;
+&lt;p&gt;By default, LaTeX has colors like “red”, “green”, “blue”, and “magenta” (as I used above in my comment commands).&lt;/p&gt;
 &lt;p&gt;However, the &lt;code&gt;xcolor&lt;/code&gt; package is pretty much a must-use even with those colors defined.
 I'm pretty sure it is what gives the &lt;code&gt;\color{green}&lt;/code&gt; macro its power, even if the color green already exists.&lt;/p&gt;
 &lt;p&gt;To color a bit of text, you wrap all the text you want &lt;em&gt;inside brackets, with the color macro&lt;/em&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;This text is black and &lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\color&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;green&lt;span class="nb"&gt;}&lt;/span&gt; this text is green&lt;span class="nb"&gt;}&lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;p&gt;Additionally, it gives access to more elaborate colors depending on how you import. For example, &lt;code&gt;\usepackage[dvipsnames]{xcolor}&lt;/code&gt; gives you access to more colors like "aquamarine," "skyblue", "navyblue", etc.&lt;/p&gt;
+&lt;p&gt;Additionally, it gives access to more elaborate colors depending on how you import. For example, &lt;code&gt;\usepackage[dvipsnames]{xcolor}&lt;/code&gt; gives you access to more colors like “aquamarine,” “skyblue”, “navyblue”, etc.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="The how boys see colors vs how girls see colors meme except for base latex vs dvips colors" src="https://saxon.me/blog/2025/latex-tips/images/xcolor-meme.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;Additionally, we can use xcolor to define our own colors.
 The precise way is with an RGB code.
@@ -281,14 +281,14 @@ More explanation of colors with the predefined names are given &lt;a href="https
 This is &lt;span class="k"&gt;\hl&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;cool&lt;span class="nb"&gt;}&lt;/span&gt; stuff!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt;This is &lt;span style="background-color: #0F0;"&gt;cool&lt;/span&gt; stuff!&lt;/p&gt;
+&lt;p&gt;This is &lt;span #0f0;&amp;rdquo;="" style="“background-color:"&gt;cool&lt;/span&gt; stuff!&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The purpose of this &lt;code&gt;soul&lt;/code&gt;-based solution for coloring text rather than &lt;code&gt;colorbox&lt;/code&gt; is that soul properly breaks lines, while colorbox doesn't.&lt;/p&gt;
 &lt;h2 id="size-units-for-spacing-em-ex-pt-etc"&gt;&lt;a class="toclink" href="#size-units-for-spacing-em-ex-pt-etc"&gt;Size units for spacing: em, ex, pt, etc&lt;/a&gt;&lt;a class="header-link" href="#size-units-for-spacing-em-ex-pt-etc" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;When we want to define the size or spacing of an object, we have a few choices of unit which have different uses in different settings.&lt;/p&gt;
 &lt;p&gt;You probably already know &lt;code&gt;pt&lt;/code&gt;, or typographical point. I usually use this to size inline components (see &lt;strong&gt;Inline icons&lt;/strong&gt; below). Depending on the document, 10, 11, or 12 pt will usually give you an element equal in size to the height of a tall letter in the main text.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;em&lt;/code&gt; and &lt;code&gt;ex&lt;/code&gt; come from CSS, and are &lt;strong&gt;useful size units defined relative to the font size.&lt;/strong&gt;
-&lt;code&gt;1em&lt;/code&gt; is equivalent to the current font size. &lt;code&gt;1ex&lt;/code&gt; is equivalent to the height of the letter "x" in the current font size, roughly 50% of &lt;code&gt;1em&lt;/code&gt;.&lt;/p&gt;
+&lt;code&gt;1em&lt;/code&gt; is equivalent to the current font size. &lt;code&gt;1ex&lt;/code&gt; is equivalent to the height of the letter “x” in the current font size, roughly 50% of &lt;code&gt;1em&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;These units are very useful for quickly iterating on heights and widths that are large relative to the whole document (for example, setting negative vspace in the &lt;strong&gt;Dark arts&lt;/strong&gt; section)&lt;/p&gt;
 &lt;p&gt;Finally, if you wish, you can use &lt;code&gt;cm&lt;/code&gt;, &lt;code&gt;mm&lt;/code&gt;, and &lt;code&gt;in&lt;/code&gt; for sizing. Self-explanatory, they are relative to the current document. I prefer not to use them.&lt;/p&gt;
 &lt;h2 id="annoying-extra-formatting-which-i-sometimes-use"&gt;&lt;a class="toclink" href="#annoying-extra-formatting-which-i-sometimes-use"&gt;Annoying extra formatting (which I sometimes use)&lt;/a&gt;&lt;a class="header-link" href="#annoying-extra-formatting-which-i-sometimes-use" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -331,7 +331,7 @@ This is &lt;span class="k"&gt;\hl&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&
 &lt;p&gt;Here you can see I used the fractional color models discussed above. The options &lt;code&gt;skins&lt;/code&gt; enables a subpackage which provides a LOT of different options for themeing colorboxes beyond the simple one we used (full documentation &lt;a href="https://texdoc.org/serve/tcolorbox.pdf/"&gt;here&lt;/a&gt;). This allowed us to set the frame color and background color.
 The &lt;code&gt;breakable&lt;/code&gt; option allows us to let the colorbox break across pages rather than being forced to the top of a following page and adding a bunch of whitespace like a forced inline figure would.&lt;/p&gt;
 &lt;h3 id="fancy-colored-gradients-inline"&gt;&lt;a class="toclink" href="#fancy-colored-gradients-inline"&gt;Fancy colored gradients inline&lt;/a&gt;&lt;a class="header-link" href="#fancy-colored-gradients-inline" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;If a single xcolor isn't enough to make your methodname look good (it wasn't enough in &lt;a href="https://arxiv.org/pdf/2404.04251"&gt;TS2&lt;/a&gt;) you can use the &lt;code&gt;gradient-text&lt;/code&gt; package to achieve this.&lt;/p&gt;
+&lt;p&gt;If a single xcolor isn‘t enough to make your methodname look good (it wasn’t enough in &lt;a href="https://arxiv.org/pdf/2404.04251"&gt;TS2&lt;/a&gt;) you can use the &lt;code&gt;gradient-text&lt;/code&gt; package to achieve this.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
 &lt;span class="normal"&gt;3&lt;/span&gt;
@@ -352,7 +352,7 @@ The &lt;code&gt;breakable&lt;/code&gt; option allows us to let the colorbox brea
 &lt;p&gt;For example, I put a logo for an upcoming preprint in our title like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;\vspace&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;-3pt&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\raisebox&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;-3pt&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="k"&gt;\includegraphics&lt;/span&gt;&lt;span class="na"&gt;[width=20pt]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;pics/logo.png&lt;span class="nb"&gt;}}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;p&gt;Basically, here's what's going on here. The icon image itself is very big, much bigger than a line of text. If you just put &lt;code&gt;\includegraphics&lt;/code&gt; inline without anything around it, the image will scale to its natural size.&lt;/p&gt;
+&lt;p&gt;Basically, here‘s what’s going on here. The icon image itself is very big, much bigger than a line of text. If you just put &lt;code&gt;\includegraphics&lt;/code&gt; inline without anything around it, the image will scale to its natural size.&lt;/p&gt;
 &lt;p&gt;To counteract this, I have to both manipulate its sizing and positioning.
 Through manual experimentation I found that setting the width to 20pt roughly sized it according to my desires. However, the spacing was off. The image was too far above the line and making the line itself taller. To fix this, I had to use negative &lt;code&gt;\vspace{}&lt;/code&gt; to keep the line positioning in subsequent lines from being impacted by the symbol, and negative &lt;code&gt;\raisebox{}&lt;/code&gt; to slightly push the bottom of the image under the line.&lt;/p&gt;
 &lt;h3 id="exotic-symbols-eg-as-author-affiliation-marks"&gt;&lt;a class="toclink" href="#exotic-symbols-eg-as-author-affiliation-marks"&gt;Exotic symbols (eg., as author affiliation marks)&lt;/a&gt;&lt;a class="header-link" href="#exotic-symbols-eg-as-author-affiliation-marks" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
@@ -415,7 +415,7 @@ I love Egypt! &lt;span class="k"&gt;\textpmhg&lt;/span&gt;&lt;span class="nb"&gt
 &lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Michael Saxon&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="nb"&gt;^{&lt;/span&gt;&lt;span class="nv"&gt;\psx\pscirc&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;...&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Michael Saxon&lt;sup&gt;&lt;img src="https://t2iscorescore.github.io/static/images/psx.svg" style="width:12pt;border:0;"/&gt;&lt;img src="https://t2iscorescore.github.io/static/images/psc.svg" style="width:12pt;border:0;"/&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Michael Saxon&lt;sup&gt;&lt;img src="“https://t2iscorescore.github.io/static/images/psx.svg”/" style="“width:12pt;border:0;”"/&gt;&lt;img src="“https://t2iscorescore.github.io/static/images/psc.svg”/" style="“width:12pt;border:0;”"/&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Providing a tikz tutorial is out of scope here. Look it up yourself ;)&lt;/p&gt;
 &lt;h2 id="non-latin-cjk-alphabets-on-arxiv"&gt;&lt;a class="toclink" href="#non-latin-cjk-alphabets-on-arxiv"&gt;Non-Latin (CJK) alphabets on arXiv&lt;/a&gt;&lt;a class="header-link" href="#non-latin-cjk-alphabets-on-arxiv" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -479,11 +479,11 @@ A &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; B &lt;span class="nb"&gt;&amp;am
 &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;table&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;table style="border-top: 2px solid black; border-bottom: 2px solid black; padding: 1px;"&gt;&lt;tr&gt;&lt;td style="border-bottom: 1px solid black; margin:0; width: 100pt; border-right: 1px solid black;"&gt;Thing 1&lt;/td&gt;&lt;td style="border-bottom: 1px solid black; margin:0; padding-right 5pt; width: 100pt; text-align:center;"&gt;Thing 2&lt;/td&gt;&lt;td style="border-bottom: 1px solid black; margin:0; width: 100pt;text-align:right;"&gt;Thing 3&lt;/td&gt;&lt;/tr&gt;&lt;tr style="border:0;"&gt;&lt;td style="border-right: 1px solid black;"&gt;A&lt;/td&gt;&lt;td style="text-align:center;"&gt;B&lt;/td&gt;&lt;td style="text-align:right;"&gt;C&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;
+&lt;p&gt;&lt;table 1px;&amp;rdquo;="" 2px="" black;="" border-bottom:="" padding:="" solid="" style="“border-top:"&gt;&lt;tr&gt;&lt;td 100pt;="" 1px="" black;="" black;&amp;rdquo;="" border-right:="" margin:0;="" solid="" style="“border-bottom:" width:=""&gt;Thing 1&lt;/td&gt;&lt;td 100pt;="" 1px="" 5pt;="" black;="" margin:0;="" padding-right="" solid="" style="“border-bottom:" text-align:center;&amp;rdquo;="" width:=""&gt;Thing 2&lt;/td&gt;&lt;td 100pt;text-align:right;&amp;rdquo;="" 1px="" black;="" margin:0;="" solid="" style="“border-bottom:" width:=""&gt;Thing 3&lt;/td&gt;&lt;/tr&gt;&lt;tr style="“border:0;”"&gt;&lt;td 1px="" black;&amp;rdquo;="" solid="" style="“border-right:"&gt;A&lt;/td&gt;&lt;td style="“text-align:center;”"&gt;B&lt;/td&gt;&lt;td style="“text-align:right;”"&gt;C&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Please use &lt;code&gt;|&lt;/code&gt; tastefully. (Really, a good table doesn't need any vertical lines, and one of the drawbacks of booktabs is that the cleanly separated horizontals make vertical lines look worse) Resist the impulse to do &lt;code&gt;\tabular{|c|c|c|}&lt;/code&gt;, because this is harder to scan over and read:&lt;/p&gt;
 &lt;blockquote class="infobox infobox-warning"&gt;
-&lt;p&gt;&lt;table style="border-top: 2px solid black; border-bottom: 2px solid black; padding: 1px;"&gt;&lt;tr&gt;&lt;td style="border-bottom: 1px solid black; margin:0; width: 100pt; border-right: 1px solid black; text-align:center;border-left: 1px solid black; "&gt;Thing 1&lt;/td&gt;&lt;td style="border-bottom: 1px solid black; margin:0; padding-right 5pt; width: 100pt; text-align:center; border-right: 1px solid black; "&gt;Thing 2&lt;/td&gt;&lt;td style="border-bottom: 1px solid black; margin:0; width: 100pt;text-align:center;border-right: 1px solid black; "&gt;Thing 3&lt;/td&gt;&lt;/tr&gt;&lt;tr style="border:0;"&gt;&lt;td style="border-right: 1px solid black; border-left: 1px solid black; text-align:center;"&gt;A&lt;/td&gt;&lt;td style="border-right: 1px solid black; text-align:center;"&gt;B&lt;/td&gt;&lt;td style="border-right: 1px solid black; text-align:center;"&gt;C&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;
+&lt;p&gt;&lt;table 1px;&amp;rdquo;="" 2px="" black;="" border-bottom:="" padding:="" solid="" style="“border-top:"&gt;&lt;tr&gt;&lt;td &amp;rdquo;="" 100pt;="" 1px="" black;="" border-right:="" margin:0;="" solid="" style="“border-bottom:" text-align:center;border-left:="" width:=""&gt;Thing 1&lt;/td&gt;&lt;td &amp;rdquo;="" 100pt;="" 1px="" 5pt;="" black;="" border-right:="" margin:0;="" padding-right="" solid="" style="“border-bottom:" text-align:center;="" width:=""&gt;Thing 2&lt;/td&gt;&lt;td &amp;rdquo;="" 100pt;text-align:center;border-right:="" 1px="" black;="" margin:0;="" solid="" style="“border-bottom:" width:=""&gt;Thing 3&lt;/td&gt;&lt;/tr&gt;&lt;tr style="“border:0;”"&gt;&lt;td 1px="" black;="" border-left:="" solid="" style="“border-right:" text-align:center;&amp;rdquo;=""&gt;A&lt;/td&gt;&lt;td 1px="" black;="" solid="" style="“border-right:" text-align:center;&amp;rdquo;=""&gt;B&lt;/td&gt;&lt;td 1px="" black;="" solid="" style="“border-right:" text-align:center;&amp;rdquo;=""&gt;C&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="multirow-and-multicolumn"&gt;&lt;a class="toclink" href="#multirow-and-multicolumn"&gt;&lt;code&gt;multirow&lt;/code&gt; and &lt;code&gt;multicolumn&lt;/code&gt;&lt;/a&gt;&lt;a class="header-link" href="#multirow-and-multicolumn" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;You can define multi-row and multi-column cells using these environments.&lt;/p&gt;
@@ -518,9 +518,9 @@ A &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; B &lt;span class="nb"&gt;&amp;am
 &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;table&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;table style="border-top: 2px solid black; border-bottom: 2px solid black; padding: 1px;"&gt;&lt;tr&gt;&lt;td style="margin:0; width: 100pt; border-right: 1px solid black;"&gt;Thing 1&lt;/td&gt;&lt;td style="border-bottom: 1px solid black; margin:0; padding-right 5pt; width: 100pt; text-align:center;"&gt;Thing 2&lt;/td&gt;&lt;td style="border-bottom: 1px solid black; margin:0; width: 100pt;text-align:right;"&gt;Thing 3&lt;/td&gt;&lt;/tr&gt;&lt;tr style="border:0;"&gt;&lt;td style="border-right: 1px solid black;"&gt;A&lt;/td&gt;&lt;td style="text-align:center;"&gt;B&lt;/td&gt;&lt;td style="text-align:right;"&gt;C&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;
+&lt;p&gt;&lt;table 1px;&amp;rdquo;="" 2px="" black;="" border-bottom:="" padding:="" solid="" style="“border-top:"&gt;&lt;tr&gt;&lt;td 100pt;="" 1px="" black;&amp;rdquo;="" border-right:="" solid="" style="“margin:0;" width:=""&gt;Thing 1&lt;/td&gt;&lt;td 100pt;="" 1px="" 5pt;="" black;="" margin:0;="" padding-right="" solid="" style="“border-bottom:" text-align:center;&amp;rdquo;="" width:=""&gt;Thing 2&lt;/td&gt;&lt;td 100pt;text-align:right;&amp;rdquo;="" 1px="" black;="" margin:0;="" solid="" style="“border-bottom:" width:=""&gt;Thing 3&lt;/td&gt;&lt;/tr&gt;&lt;tr style="“border:0;”"&gt;&lt;td 1px="" black;&amp;rdquo;="" solid="" style="“border-right:"&gt;A&lt;/td&gt;&lt;td style="“text-align:center;”"&gt;B&lt;/td&gt;&lt;td style="“text-align:right;”"&gt;C&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Usually, if you have multiple &lt;code&gt;cmidrule&lt;/code&gt; side-by-side, you want to "chop off" parts on the left and right sides so they don't connect, providing some visually pleasing separation. To do this, you can include &lt;code&gt;(lr)&lt;/code&gt; like:&lt;/p&gt;
+&lt;p&gt;Usually, if you have multiple &lt;code&gt;cmidrule&lt;/code&gt; side-by-side, you want to “chop off” parts on the left and right sides so they don't connect, providing some visually pleasing separation. To do this, you can include &lt;code&gt;(lr)&lt;/code&gt; like:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;\cmidrule&lt;/span&gt;(lr)&lt;span class="nb"&gt;{&lt;/span&gt;2-3&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\cmidrule&lt;/span&gt;(lr)&lt;span class="nb"&gt;{&lt;/span&gt;4-5&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;p&gt;To provide multiple partial midrules that are adjacent but not connected.&lt;/p&gt;
@@ -532,7 +532,7 @@ A &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; B &lt;span class="nb"&gt;&amp;am
 &lt;p&gt;For my CoCo-CroLa paper I wanted an efficient way to mark equivalence between cells in a column, rather than repeat the same value several times.
 I wanted something very easy to skim with minimum visual noise, and came up with:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Vertical line through duplicate cells" src="https://saxon.me/blog/2025/latex-tips/images/cccltable.png"/&gt;&lt;/p&gt;
-&lt;p&gt;I called this "same line" command &lt;code&gt;\samel&lt;/code&gt;, defined with:&lt;/p&gt;
+&lt;p&gt;I called this “same line” command &lt;code&gt;\samel&lt;/code&gt;, defined with:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;\newcommand&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\samel&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;[0]&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\multicolumn&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;1&lt;span class="nb"&gt;}{&lt;/span&gt;l&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="k"&gt;\space\hspace&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;0.5em&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\vline&lt;/span&gt;&lt;span class="nb"&gt;}}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;p&gt;Inside of a environment of a single multicolumn we can use a &lt;code&gt;\vline&lt;/code&gt; (equivalent to putting &lt;code&gt;|&lt;/code&gt; in the tabular environment definition), which would normally be to the far left side of the cell. We then push it rightward by &lt;code&gt;0.5em&lt;/code&gt;, or half the vertical height of the text.&lt;/p&gt;
@@ -776,8 +776,8 @@ For example, if you are using a graphic which has baked-in whitespace, you may w
 &lt;p&gt;The &lt;code&gt;\figure*{}&lt;/code&gt; macro does not work to insert a full-width figure above the abstract in the ACL template for some reason. Thus, we need to hack together a command that does it for us.&lt;/p&gt;
 &lt;p&gt;This command does a few things:
 - Breaks out of the document rendering defined by the ACL template with &lt;code&gt;strip&lt;/code&gt;
-- Manually implements a hacked Figure macro with manually-written "Figure 1:", manual font size setting, etc.
-- Manually sets the figure count variable to not duplicate "Figure 1"&lt;/p&gt;
+- Manually implements a hacked Figure macro with manually-written “Figure 1:”, manual font size setting, etc.
+- Manually sets the figure count variable to not duplicate “Figure 1”&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
 &lt;span class="normal"&gt; 2&lt;/span&gt;
 &lt;span class="normal"&gt; 3&lt;/span&gt;
@@ -857,7 +857,7 @@ For example, if you are using a graphic which has baked-in whitespace, you may w
 
 &lt;span class="c"&gt;%%% start abstract %%%&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;p&gt;Because we didn't produce this inside of the &lt;code&gt;figure&lt;/code&gt; macro, using &lt;code&gt;\ref{}&lt;/code&gt;, &lt;code&gt;\cref{}&lt;/code&gt;, and &lt;code&gt;\autorref&lt;/code&gt; won't work! Instead, we have to use this hack:&lt;/p&gt;
+&lt;p&gt;Because we didn‘t produce this inside of the &lt;code&gt;figure&lt;/code&gt; macro, using &lt;code&gt;\ref{}&lt;/code&gt;, &lt;code&gt;\cref{}&lt;/code&gt;, and &lt;code&gt;\autorref&lt;/code&gt; won’t work! Instead, we have to use this hack:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
 &lt;span class="normal"&gt;3&lt;/span&gt;

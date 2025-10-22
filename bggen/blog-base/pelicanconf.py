@@ -85,6 +85,12 @@ MARKDOWN = {
                 '--': '&ndash;',   # en-dash
             }
         },
+        'plugins.smart_quotes': {
+            'double_quote_open': '"',
+            'double_quote_close': '"',
+            'single_quote_open': ''',
+            'single_quote_close': ''',
+        },
     },
     'output_format': 'html5',
 }
