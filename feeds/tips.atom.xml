@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Saxon - Tips</title><link href="https://saxon.me/" rel="alternate"></link><link href="https://saxon.me/feeds/tips.atom.xml" rel="self"></link><id>https://saxon.me/</id><updated>2025-04-10T19:00:00-07:00</updated><entry><title>Michael's TeXronomicon (LaTeX tips, tricks, and hacks)</title><link href="https://saxon.me/blog/2025/latex-tips/" rel="alternate"></link><published>2025-04-10T19:00:00-07:00</published><updated>2025-04-10T19:00:00-07:00</updated><author><name>Michael Saxon</name></author><id>tag:saxon.me,2025-04-10:/blog/2025/latex-tips/</id><summary type="html">Various snippets, tricks, and lessons I've developed and learned from messing around in LaTeX and scrutinizing source files on arXiv.</summary><content type="html">&lt;p&gt;Between my mild presentational OCD and a desire to understand how various cool figures, tables, and styles have been implemented in other groups‘ papers, I have accumulated quite a few LaTeX snippets that I pass around with my friends. I figured I should put them all in one place along with some explanations, so (if you’re interested) you can learn to make your own.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Saxon - Tips</title><link href="https://saxon.me/" rel="alternate"></link><link href="https://saxon.me/feeds/tips.atom.xml" rel="self"></link><id>https://saxon.me/</id><updated>2025-04-10T19:00:00-07:00</updated><entry><title>Michael's TeXronomicon (LaTeX tips, tricks, and hacks)</title><link href="https://saxon.me/blog/2025/latex-tips/" rel="alternate"></link><published>2025-04-10T19:00:00-07:00</published><updated>2025-04-10T19:00:00-07:00</updated><author><name>Michael Saxon</name></author><id>tag:saxon.me,2025-04-10:/blog/2025/latex-tips/</id><summary type="html">Various snippets, tricks, and lessons I've developed and learned from messing around in LaTeX and scrutinizing source files on arXiv.</summary><content type="html">&lt;p&gt;Between my mild presentational OCD and a desire to understand how various cool figures, tables, and styles have been implemented in other groups' papers, I have accumulated quite a few LaTeX snippets that I pass around with my friends. I figured I should put them all in one place along with some explanations, so (if you're interested) you can learn to make your own.&lt;/p&gt;
 &lt;p&gt;You should probably check out the TOC to decide which parts you want to read.
 There will probably be parts you already know; I am covering basics here so I can give this to a new author.
 To briefly explain the structure, I will discuss:&lt;/p&gt;
@@ -201,7 +201,7 @@ In &lt;span class="k"&gt;\autoref&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&
 &lt;blockquote&gt;
 &lt;p&gt;In subsubsection 2.3.1... Section 3 shows... See table 2...&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Note that the first “figure” isn‘t capitalized, while the second is. “subsubsection” isn’t capitalized but “Section” is. &lt;code&gt;autoref&lt;/code&gt; automates all of this based on position in a sentence.&lt;/p&gt;
+&lt;p&gt;Note that the first “figure” isn't capitalized, while the second is. “subsubsection” isn't capitalized but “Section” is. &lt;code&gt;autoref&lt;/code&gt; automates all of this based on position in a sentence.&lt;/p&gt;
 &lt;p&gt;What if you want a more compact style of these automatic citations? What if you want to change this behavior? That's where &lt;code&gt;cleveref&lt;/code&gt; can come in handy.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
@@ -251,7 +251,7 @@ First, to size a line of text, you use these (in ascending order of size)&lt;/p&
 &lt;li&gt;&lt;code&gt;\huge&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\Huge&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you‘re just mad, you should say &lt;code&gt;{\large I am mad}&lt;/code&gt; but if you’re REALLY angry you can give a &lt;code&gt;{\LARGE I AM FURIOUS}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you're just mad, you should say &lt;code&gt;{\large I am mad}&lt;/code&gt; but if you're REALLY angry you can give a &lt;code&gt;{\LARGE I AM FURIOUS}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;See more in &lt;a href="https://www.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles"&gt;Overleaf's docs&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="defining-colors-and-coloring-text"&gt;&lt;a class="toclink" href="#defining-colors-and-coloring-text"&gt;Defining colors and coloring text&lt;/a&gt;&lt;a class="header-link" href="#defining-colors-and-coloring-text" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;By default, LaTeX has colors like “red”, “green”, “blue”, and “magenta” (as I used above in my comment commands).&lt;/p&gt;
@@ -331,7 +331,7 @@ This is &lt;span class="k"&gt;\hl&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&
 &lt;p&gt;Here you can see I used the fractional color models discussed above. The options &lt;code&gt;skins&lt;/code&gt; enables a subpackage which provides a LOT of different options for themeing colorboxes beyond the simple one we used (full documentation &lt;a href="https://texdoc.org/serve/tcolorbox.pdf/"&gt;here&lt;/a&gt;). This allowed us to set the frame color and background color.
 The &lt;code&gt;breakable&lt;/code&gt; option allows us to let the colorbox break across pages rather than being forced to the top of a following page and adding a bunch of whitespace like a forced inline figure would.&lt;/p&gt;
 &lt;h3 id="fancy-colored-gradients-inline"&gt;&lt;a class="toclink" href="#fancy-colored-gradients-inline"&gt;Fancy colored gradients inline&lt;/a&gt;&lt;a class="header-link" href="#fancy-colored-gradients-inline" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;If a single xcolor isn‘t enough to make your methodname look good (it wasn’t enough in &lt;a href="https://arxiv.org/pdf/2404.04251"&gt;TS2&lt;/a&gt;) you can use the &lt;code&gt;gradient-text&lt;/code&gt; package to achieve this.&lt;/p&gt;
+&lt;p&gt;If a single xcolor isn't enough to make your methodname look good (it wasn't enough in &lt;a href="https://arxiv.org/pdf/2404.04251"&gt;TS2&lt;/a&gt;) you can use the &lt;code&gt;gradient-text&lt;/code&gt; package to achieve this.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
 &lt;span class="normal"&gt;3&lt;/span&gt;
@@ -352,7 +352,7 @@ The &lt;code&gt;breakable&lt;/code&gt; option allows us to let the colorbox brea
 &lt;p&gt;For example, I put a logo for an upcoming preprint in our title like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;\vspace&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;-3pt&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\raisebox&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;-3pt&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="k"&gt;\includegraphics&lt;/span&gt;&lt;span class="na"&gt;[width=20pt]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;pics/logo.png&lt;span class="nb"&gt;}}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;p&gt;Basically, here‘s what’s going on here. The icon image itself is very big, much bigger than a line of text. If you just put &lt;code&gt;\includegraphics&lt;/code&gt; inline without anything around it, the image will scale to its natural size.&lt;/p&gt;
+&lt;p&gt;Basically, here's what's going on here. The icon image itself is very big, much bigger than a line of text. If you just put &lt;code&gt;\includegraphics&lt;/code&gt; inline without anything around it, the image will scale to its natural size.&lt;/p&gt;
 &lt;p&gt;To counteract this, I have to both manipulate its sizing and positioning.
 Through manual experimentation I found that setting the width to 20pt roughly sized it according to my desires. However, the spacing was off. The image was too far above the line and making the line itself taller. To fix this, I had to use negative &lt;code&gt;\vspace{}&lt;/code&gt; to keep the line positioning in subsequent lines from being impacted by the symbol, and negative &lt;code&gt;\raisebox{}&lt;/code&gt; to slightly push the bottom of the image under the line.&lt;/p&gt;
 &lt;h3 id="exotic-symbols-eg-as-author-affiliation-marks"&gt;&lt;a class="toclink" href="#exotic-symbols-eg-as-author-affiliation-marks"&gt;Exotic symbols (eg., as author affiliation marks)&lt;/a&gt;&lt;a class="header-link" href="#exotic-symbols-eg-as-author-affiliation-marks" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
@@ -857,7 +857,7 @@ For example, if you are using a graphic which has baked-in whitespace, you may w
 
 &lt;span class="c"&gt;%%% start abstract %%%&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;p&gt;Because we didn‘t produce this inside of the &lt;code&gt;figure&lt;/code&gt; macro, using &lt;code&gt;\ref{}&lt;/code&gt;, &lt;code&gt;\cref{}&lt;/code&gt;, and &lt;code&gt;\autorref&lt;/code&gt; won’t work! Instead, we have to use this hack:&lt;/p&gt;
+&lt;p&gt;Because we didn't produce this inside of the &lt;code&gt;figure&lt;/code&gt; macro, using &lt;code&gt;\ref{}&lt;/code&gt;, &lt;code&gt;\cref{}&lt;/code&gt;, and &lt;code&gt;\autorref&lt;/code&gt; won't work! Instead, we have to use this hack:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
 &lt;span class="normal"&gt;3&lt;/span&gt;

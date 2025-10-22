@@ -66,7 +66,7 @@ class SmartQuotesPreprocessor(Preprocessor):
     
     def process_quote_type(self, line, quote_char, open_char, close_char, inline_code_spans):
         """Process a specific type of quote (single or double)."""
-        # Count quotes that are not in inline code
+        # Count quotes that are not in inline code and meet positioning constraints
         quote_positions = []
         for i, char in enumerate(line):
             if char == quote_char:
@@ -78,7 +78,13 @@ class SmartQuotesPreprocessor(Preprocessor):
                         break
                 
                 if not in_inline_code:
-                    quote_positions.append(i)
+                    # Check if this is an apostrophe in a contraction (surrounded by alphanumerics)
+                    if self.is_apostrophe_in_contraction(line, i):
+                        continue  # Skip this quote
+                    
+                    # Check positioning constraints
+                    if self.is_valid_quote_position(line, i, quote_char, open_char, close_char):
+                        quote_positions.append(i)
         
         # Only process if we have an even number of quotes
         if len(quote_positions) % 2 != 0:
@@ -95,6 +101,31 @@ class SmartQuotesPreprocessor(Preprocessor):
                 result[pos] = close_char
         
         return ''.join(result)
+    
+    def is_apostrophe_in_contraction(self, line, pos):
+        """Check if a quote is an apostrophe in a contraction (surrounded by alphanumerics)."""
+        if pos == 0 or pos == len(line) - 1:
+            return False
+        
+        # Check if surrounded by alphanumeric characters
+        char_before = line[pos - 1]
+        char_after = line[pos + 1]
+        
+        return (char_before.isalnum() and char_after.isalnum())
+    
+    def is_valid_quote_position(self, line, pos, quote_char, open_char, close_char):
+        """Check if a quote is in a valid position for smart quote conversion."""
+        # We'll determine if this is an opening or closing quote based on context
+        # For now, just check that it's not in a contraction (already handled above)
+        # and that it's not immediately adjacent to alphanumeric characters on both sides
+        if pos > 0 and pos < len(line) - 1:
+            char_before = line[pos - 1]
+            char_after = line[pos + 1]
+            # If surrounded by alphanumeric characters, it's likely an apostrophe
+            if char_before.isalnum() and char_after.isalnum():
+                return False
+        
+        return True
     
     def run(self, lines):
         """Process lines to convert straight quotes to smart quotes."""

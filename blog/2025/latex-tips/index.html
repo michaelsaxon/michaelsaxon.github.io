@@ -100,7 +100,7 @@
             </div>
 </div>
 </header>
-<p>Between my mild presentational OCD and a desire to understand how various cool figures, tables, and styles have been implemented in other groups‘ papers, I have accumulated quite a few LaTeX snippets that I pass around with my friends. I figured I should put them all in one place along with some explanations, so (if you’re interested) you can learn to make your own.</p>
+<p>Between my mild presentational OCD and a desire to understand how various cool figures, tables, and styles have been implemented in other groups' papers, I have accumulated quite a few LaTeX snippets that I pass around with my friends. I figured I should put them all in one place along with some explanations, so (if you're interested) you can learn to make your own.</p>
 <p>You should probably check out the TOC to decide which parts you want to read.
 There will probably be parts you already know; I am covering basics here so I can give this to a new author.
 To briefly explain the structure, I will discuss:</p>
@@ -302,7 +302,7 @@ In <span class="k">\autoref</span><span class="nb">{</span>fig:figurename<span c
 <blockquote>
 <p>In subsubsection 2.3.1... Section 3 shows... See table 2...</p>
 </blockquote>
-<p>Note that the first “figure” isn‘t capitalized, while the second is. “subsubsection” isn’t capitalized but “Section” is. <code>autoref</code> automates all of this based on position in a sentence.</p>
+<p>Note that the first “figure” isn't capitalized, while the second is. “subsubsection” isn't capitalized but “Section” is. <code>autoref</code> automates all of this based on position in a sentence.</p>
 <p>What if you want a more compact style of these automatic citations? What if you want to change this behavior? That's where <code>cleveref</code> can come in handy.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
@@ -352,7 +352,7 @@ First, to size a line of text, you use these (in ascending order of size)</p>
 <li><code>\huge</code></li>
 <li><code>\Huge</code></li>
 </ul>
-<p>If you‘re just mad, you should say <code>{\large I am mad}</code> but if you’re REALLY angry you can give a <code>{\LARGE I AM FURIOUS}</code>.</p>
+<p>If you're just mad, you should say <code>{\large I am mad}</code> but if you're REALLY angry you can give a <code>{\LARGE I AM FURIOUS}</code>.</p>
 <p>See more in <a href="https://www.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles">Overleaf's docs</a></p>
 <h2 id="defining-colors-and-coloring-text"><a class="toclink" href="#defining-colors-and-coloring-text">Defining colors and coloring text</a><a class="header-link" href="#defining-colors-and-coloring-text" title="Permalink to this section">¶</a></h2>
 <p>By default, LaTeX has colors like “red”, “green”, “blue”, and “magenta” (as I used above in my comment commands).</p>
@@ -432,7 +432,7 @@ This is <span class="k">\hl</span><span class="nb">{</span>cool<span class="nb">
 <p>Here you can see I used the fractional color models discussed above. The options <code>skins</code> enables a subpackage which provides a LOT of different options for themeing colorboxes beyond the simple one we used (full documentation <a href="https://texdoc.org/serve/tcolorbox.pdf/">here</a>). This allowed us to set the frame color and background color.
 The <code>breakable</code> option allows us to let the colorbox break across pages rather than being forced to the top of a following page and adding a bunch of whitespace like a forced inline figure would.</p>
 <h3 id="fancy-colored-gradients-inline"><a class="toclink" href="#fancy-colored-gradients-inline">Fancy colored gradients inline</a><a class="header-link" href="#fancy-colored-gradients-inline" title="Permalink to this section">¶</a></h3>
-<p>If a single xcolor isn‘t enough to make your methodname look good (it wasn’t enough in <a href="https://arxiv.org/pdf/2404.04251">TS2</a>) you can use the <code>gradient-text</code> package to achieve this.</p>
+<p>If a single xcolor isn't enough to make your methodname look good (it wasn't enough in <a href="https://arxiv.org/pdf/2404.04251">TS2</a>) you can use the <code>gradient-text</code> package to achieve this.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -453,7 +453,7 @@ The <code>breakable</code> option allows us to let the colorbox break across pag
 <p>For example, I put a logo for an upcoming preprint in our title like this:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">\vspace</span><span class="nb">{</span>-3pt<span class="nb">}</span><span class="k">\raisebox</span><span class="nb">{</span>-3pt<span class="nb">}{</span><span class="k">\includegraphics</span><span class="na">[width=20pt]</span><span class="nb">{</span>pics/logo.png<span class="nb">}}</span>
 </code></pre></div></td></tr></table></div>
-<p>Basically, here‘s what’s going on here. The icon image itself is very big, much bigger than a line of text. If you just put <code>\includegraphics</code> inline without anything around it, the image will scale to its natural size.</p>
+<p>Basically, here's what's going on here. The icon image itself is very big, much bigger than a line of text. If you just put <code>\includegraphics</code> inline without anything around it, the image will scale to its natural size.</p>
 <p>To counteract this, I have to both manipulate its sizing and positioning.
 Through manual experimentation I found that setting the width to 20pt roughly sized it according to my desires. However, the spacing was off. The image was too far above the line and making the line itself taller. To fix this, I had to use negative <code>\vspace{}</code> to keep the line positioning in subsequent lines from being impacted by the symbol, and negative <code>\raisebox{}</code> to slightly push the bottom of the image under the line.</p>
 <h3 id="exotic-symbols-eg-as-author-affiliation-marks"><a class="toclink" href="#exotic-symbols-eg-as-author-affiliation-marks">Exotic symbols (eg., as author affiliation marks)</a><a class="header-link" href="#exotic-symbols-eg-as-author-affiliation-marks" title="Permalink to this section">¶</a></h3>
@@ -958,7 +958,7 @@ For example, if you are using a graphic which has baked-in whitespace, you may w
 
 <span class="c">%%% start abstract %%%</span>
 </code></pre></div></td></tr></table></div>
-<p>Because we didn‘t produce this inside of the <code>figure</code> macro, using <code>\ref{}</code>, <code>\cref{}</code>, and <code>\autorref</code> won’t work! Instead, we have to use this hack:</p>
+<p>Because we didn't produce this inside of the <code>figure</code> macro, using <code>\ref{}</code>, <code>\cref{}</code>, and <code>\autorref</code> won't work! Instead, we have to use this hack:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
