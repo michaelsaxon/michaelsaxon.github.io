@@ -225,17 +225,8 @@
 /* Triptych Font Family */
 @font-face {
   font-family: "Triptych";
-  src: url('https://saxon.me/theme/font/Triptych-Roman.woff');
-}
-@font-face {
-  font-family: "Triptych";
-  src: url('https://saxon.me/theme/font/Triptych-Italick.woff');
+  src: url('https://saxon.me/theme/font/Triptych-Italick.woff2');
   font-style: italic;
-}
-@font-face {
-  font-family: "Triptych";
-  src: url('https://saxon.me/theme/font/Triptych-Grotesque.woff');
-  font-weight: 700;
 }
 
 /* Calluna Font Family */
@@ -243,5 +234,17 @@
 @font-face {
     font-family: "Calluna";
     src: url('https://saxon.me/theme/font/Calluna-Regular-webfont.woff2');
-    font-weight: 400;
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Calluna";
+    src: url('https://saxon.me/theme/font/Calluna-It-webfont.woff2');
+    font-style: italic;
+}
+
+  @font-face {
+    font-family: "Calluna";
+    src: url('https://saxon.me/theme/font/Calluna-Bold-webfont.woff2');
+    font-weight: 700;
   }
