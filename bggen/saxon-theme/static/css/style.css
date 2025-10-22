@@ -497,7 +497,7 @@ blockquote {
   position: relative;
   overflow: hidden;
   background-color: var(--quote-bg);
-  border: 2px solid var(--quote-border);
+  border: 1px solid var(--quote-border);
 }
 
 /* Base infobox style. Include quote icon for default behavior. */
@@ -525,7 +525,7 @@ blockquote::before {
 
 .infobox-note {
   background-color: var(--note-bg);
-  border: 2px solid var(--note-border);
+  border: 1px solid var(--note-border);
   color: var(--note-text);
 }
 
@@ -537,7 +537,7 @@ blockquote::before {
 
 .infobox-warning {
   background-color: var(--warning-bg);
-  border: 2px solid var(--warning-border);
+  border: 1px solid var(--warning-border);
   color: var(--warning-text);
 }
 
@@ -548,7 +548,7 @@ blockquote::before {
 
 .infobox-tip {
   background-color: var(--tip-bg);
-  border: 2px solid var(--tip-border);
+  border: 1px solid var(--tip-border);
   color: var(--tip-text);
 }
 
