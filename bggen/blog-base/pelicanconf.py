@@ -79,6 +79,10 @@ MARKDOWN = {
             'title_class': 'toc-title',
             'anchorlink' : True,
         },
+        'plugins.html_comment_sanitizer': {
+            'warn_unclosed': True,
+            'warn_orphaned_close': True,
+        },
         'plugins.dash_shortcuts': {
             'mappings': {
                 '---': '&mdash;',  # em-dash

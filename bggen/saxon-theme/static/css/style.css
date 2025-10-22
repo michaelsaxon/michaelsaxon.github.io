@@ -910,6 +910,8 @@ ul, ol {
   font-size: 2.4rem;
   margin: 0;
   line-height: 1.2;
+  font-family: 'Triptych', serif;
+  font-style: italic;
 }
 
 .post-title a {
@@ -1941,6 +1943,15 @@ p code {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+}
+
+.toc-title:hover {
+    color: var(--brand-main);
+    text-decoration: underline dotted;
+}
+
+.toc-title:hover::before {
+    text-decoration: none;
 }
 
 /* Collapse indicator */

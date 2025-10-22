@@ -156,8 +156,6 @@ To briefly explain the structure, I will discuss:&lt;/p&gt;
 &lt;li&gt;&lt;em&gt;Table&lt;/em&gt; styling and formatting, which packages you should use, special symbols to make tables more readable, and making text compact.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;The dark arts&lt;/strong&gt;, how you can break free from the bounds of conference &lt;code&gt;.sty&lt;/code&gt; files.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&amp;lt;!– 4. &lt;em&gt;Figure&lt;/em&gt; making and styling, including composite figures, table-based figures, the various subfigure packages, and how to &lt;em&gt;generate&lt;/em&gt; good, readable figures from matplotlib easily.
-5. How to set up &lt;em&gt;Overleaf with VSCode&lt;/em&gt;, a gamechanger I was recently shown. –&amp;gt;&lt;/p&gt;
 &lt;p&gt;I might write more about within-document compound figure making and best-practices for generating readable plots in a follow-up post if there's interest.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toc-title"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#1-making-commands"&gt;1. Making commands&lt;/a&gt;&lt;ul&gt;
@@ -196,15 +194,6 @@ To briefly explain the structure, I will discuss:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#putting-it-together"&gt;Putting it together&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#todo-combining-multiple-images-into-one-image"&gt;TODO Combining multiple images into one image&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#making-subfigures-withwithout-captions"&gt;making subfigures with/without captions&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#subfig"&gt;subfig&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#subcaption"&gt;subcaption&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#minipage"&gt;minipage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="#how-to-do-pyplot-and-make-it-readable"&gt;How to do pyplot and make it readable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#colors-etc"&gt;Colors etc&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#4-the-dark-arts-advanced"&gt;4. The Dark Arts (Advanced)&lt;/a&gt;&lt;ul&gt;
@@ -764,42 +753,6 @@ I wanted to replicate this in a table I made last year and was able to pretty ea
 &lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;table*&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;p&gt;&amp;lt;!– # 4. Figures&lt;/p&gt;
-&lt;h2 id="todo-combining-multiple-images-into-one-image"&gt;&lt;a class="toclink" href="#todo-combining-multiple-images-into-one-image"&gt;TODO Combining multiple images into one image&lt;/a&gt;&lt;a class="header-link" href="#todo-combining-multiple-images-into-one-image" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I wanted to make a grid of adjacent images in a table.
-I'm gonna be honest, I do not remember how I made this. But it works&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
-&lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;
-&lt;span class="normal"&gt;4&lt;/span&gt;
-&lt;span class="normal"&gt;5&lt;/span&gt;
-&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;\newcommand&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\timg&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;[1]&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\includegraphics&lt;/span&gt;&lt;span class="na"&gt;[width=0.25\linewidth]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;img/storyprop/#1&lt;span class="nb"&gt;}}&lt;/span&gt;
-
-&lt;span class="k"&gt;\newcommand&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\specialcell&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;[1]&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="c"&gt;%&lt;/span&gt;
-  &lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;tabular&lt;span class="nb"&gt;}&lt;/span&gt;[c]&lt;span class="nb"&gt;{&lt;/span&gt;@&lt;span class="nb"&gt;{}&lt;/span&gt;c@&lt;span class="nb"&gt;{}}&lt;/span&gt;#1&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;tabular&lt;span class="nb"&gt;}}&lt;/span&gt;
-
-&lt;span class="k"&gt;\newcommand&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\imgf&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;[4]&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\specialcell&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\timg&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;#1&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\timg&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;#2&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\vspace&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;-3pt&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\\\timg&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;#3&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\timg&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;#4&lt;span class="nb"&gt;}}&lt;/span&gt;&lt;span class="k"&gt;\hspace&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;-5pt&lt;span class="nb"&gt;}}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
-&lt;h2 id="making-subfigures-withwithout-captions"&gt;&lt;a class="toclink" href="#making-subfigures-withwithout-captions"&gt;making subfigures with/without captions&lt;/a&gt;&lt;a class="header-link" href="#making-subfigures-withwithout-captions" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id="subfig"&gt;&lt;a class="toclink" href="#subfig"&gt;subfig&lt;/a&gt;&lt;a class="header-link" href="#subfig" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id="subcaption"&gt;&lt;a class="toclink" href="#subcaption"&gt;subcaption&lt;/a&gt;&lt;a class="header-link" href="#subcaption" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id="minipage"&gt;&lt;a class="toclink" href="#minipage"&gt;minipage&lt;/a&gt;&lt;a class="header-link" href="#minipage" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;h2 id="how-to-do-pyplot-and-make-it-readable"&gt;&lt;a class="toclink" href="#how-to-do-pyplot-and-make-it-readable"&gt;How to do pyplot and make it readable&lt;/a&gt;&lt;a class="header-link" href="#how-to-do-pyplot-and-make-it-readable" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Generating your figure to be readable in pyplot
-MAKE THE FIGURE SMALL IN GENERATION AS AN SVG THEN IT WILL BE BIG&lt;/p&gt;
-&lt;h2 id="colors-etc"&gt;&lt;a class="toclink" href="#colors-etc"&gt;Colors etc&lt;/a&gt;&lt;a class="header-link" href="#colors-etc" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;blue!50!black&lt;/li&gt;
-&lt;li&gt;rgb&lt;/li&gt;
-&lt;li&gt;named colors (link) –&amp;gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&amp;lt;!– # 5. TODO: Overleaf in VSCode&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;use latex workshop&lt;/li&gt;
-&lt;li&gt;use overleaf workshop&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://github.com/iamhyc/Overleaf-Workshop&lt;/p&gt;
-&lt;p&gt;Install instructions –&amp;gt;&lt;/p&gt;
 &lt;h1 id="4-the-dark-arts-advanced"&gt;&lt;a class="toclink" href="#4-the-dark-arts-advanced"&gt;4. The Dark Arts (Advanced)&lt;/a&gt;&lt;a class="header-link" href="#4-the-dark-arts-advanced" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class="infobox infobox-warning"&gt;
 &lt;p&gt;These incantations will give you dark powers and break you free from the shackles of conference style files. Use wisely.&lt;/p&gt;
