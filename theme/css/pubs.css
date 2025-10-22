@@ -50,7 +50,7 @@
     text-decoration: none;
 }
 .pub-title-link:hover {
-    text-decoration: underline;
+    text-decoration: underline dotted;
     color: var(--brand-main); /* Use brand-main for hover highlight */
 }
 
@@ -169,7 +169,7 @@
 
 .me {
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: underline dotted;
 }
 
 /* Base badge style */
@@ -406,7 +406,7 @@ span.toggle-badge:focus {
 .filter-label {
     font-size: 0.95em;
     font-weight: bold;
-    color: var(--brand-main);
+    color: var(--text-dark);
     margin-bottom: 0.3em;
     letter-spacing: 0.02em;
 }
@@ -456,7 +456,12 @@ span.toggle-badge:focus {
 .filter-text {
     font-size: 0.93em;
     color: var(--text-body);
-    transition: color 0.2s, text-decoration 0.2s;
+    /* transition: color 0.2s, text-decoration 0.2s; */
+}
+
+.filter-text:hover {
+    color: var(--brand-main);
+    text-decoration: underline dotted;
 }
 
 .custom-checkbox input[type="checkbox"]:not(:checked) ~ .filter-text {

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script>
+      // Check and apply theme immediately
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+      }
+  </script>
+<script src="https://saxon.me/theme/js/theme.js"></script>
+<script src="https://saxon.me/theme/js/copy-code.js"></script>
+<script src="https://saxon.me/theme/js/toc.js"></script>
+<script src="https://saxon.me/theme/js/popups.js"></script>
+<link href="https://saxon.me/theme/css/style.css" rel="stylesheet"/>
+<link href="https://saxon.me/theme/css/fonts.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Potential problems with using Likert scales cross-culturally</title>
+<link href="https://saxon.me/theme/css/code.css" rel="stylesheet"/>
+<link href="https://saxon.me/theme/css/pubs.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" rel="stylesheet"/>
+<link href="feeds/all.atom.xml" rel="alternate" title="Michael Saxon Full Atom Feed" type="application/atom+xml">
+<link href="feeds/all.rss.xml" rel="alternate" title="Michael Saxon Full RSS Feed" type="application/rss+xml">
+<meta content="Potential problems with using Likert scales cross-culturally" name="title">
+<meta content="Extracted and expanded section from our EMNLP 2025 paper on issues with cultural evaluation." name="description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://saxon.me/" property="og:url"/>
+<meta content="Potential problems with using Likert scales cross-culturally" property="og:title"/>
+<meta content="Extracted and expanded section from our EMNLP 2025 paper on issues with cultural evaluation." property="og:description"/>
+<meta content="https://saxon.me/images/grfp.jpg" property="og:image"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://saxon.me/" property="twitter:site"/>
+<meta content="@m2saxon" property="twitter:creator"/>
+<meta content="Potential problems with using Likert scales cross-culturally" property="twitter:title"/>
+<meta content="Extracted and expanded section from our EMNLP 2025 paper on issues with cultural evaluation." property="twitter:description"/>
+<meta content="https://saxon.me/images/grfp.jpg" property="twitter:image"/>
+<link href="https://saxon.me/theme/img/logomark_fill.png" rel="icon" type="image/png"/>
+</meta></link></link></head>
+<body>
+<header class="site-header">
+<div class="top-nav">
+<div style="margin-right: auto;">
+<h1><a href="https://saxon.me/">Michael Saxon</a></h1>
+</div>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button-container" for="menu-toggle">
+<div class="menu-button"></div>
+</label>
+<ul class="menu">
+<li><a href="https://saxon.me/publications">Publications</a></li>
+<li><a href="https://saxon.me/doc/cv_saxon.pdf">CV</a></li>
+<li><a href="https://saxon.me/blog">Blog</a></li>
+<li>
+<a aria-label="Toggle dark mode" href="#" id="theme-toggle">
+<svg aria-hidden="true" class="sun-and-moon" height="24" viewbox="0 0 24 24" width="24">
+<!-- Moon shape -->
+<path class="moon" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" fill="currentColor"></path>
+<!-- Sun shape (initially hidden) -->
+<g class="sun" opacity="0">
+<circle cx="12" cy="12" fill="currentColor" r="6"></circle>
+<g class="sun-beams">
+<line x1="12" x2="12" y1="1" y2="3"></line>
+<line x1="12" x2="12" y1="21" y2="23"></line>
+<line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+<line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+<line x1="1" x2="3" y1="12" y2="12"></line>
+<line x1="21" x2="23" y1="12" y2="12"></line>
+<line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+<line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+</g>
+</g>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</header>
+<div class="page" style="word-spacing: 0.09em;">
+<article class="post">
+<header class="post-header">
+<div class="post-hero" style="background-image: url('https://saxon.me/images/grfp.jpg')"></div>
+<div class="post-content-wrapper">
+<h1 class="post-title">
+<a href="https://saxon.me/drafts/cultural-likerts.html" rel="bookmark" title="Permalink to Potential problems with using Likert scales cross-culturally">Potential problems with using Likert scales cross-culturally</a>
+</h1>
+<div class="post-meta">
+<time>October 21, 2025</time>
+<span>-&gt;</span>
+<span>4 min read</span>
+<span>-&gt;</span>
+<span><a href="https://saxon.me/blog/category/research.html">Research</a></span>
+<!-- <span>•</span>
+                <span><a href="https://saxon.me/tag/evaluation.html">Evaluation</a>, <a href="https://saxon.me/tag/culture.html">Culture</a></span> -->
+</div>
+<div class="post-description">
+                Extracted and expanded section from our EMNLP 2025 paper on issues with cultural evaluation.
+            </div>
+</div>
+</header>
+<p>In our EMNLP 2025 paper "<a href="https://arxiv.org/pdf/2509.01301">Culture is Everywhere: A call for intentionally cultural evaluation</a>" we talk about a grab bag of issues with cultural NLP research from an HCI-flavored perspective.
+I mainly worked on section 3, "How to evaluate."
+While we were drafting this one of the questions I was interested in checking is, <em>do cultural differences change the intended meaning behind equivalent responses?</em> In other words, if a Brit and an American both give a 3/5 rating for satisfaction after interacting with an AI system (or in any study), do those mean the same thing?
+I suspected the answer is<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a><span class="footnote-popup">By <em>is</em>, what I really mean here is <em>can be</em>. </span></sup> no.</p>
+<p>So I looked in to examples of this phenomenon in academic research and in general public discussions. To my surprise, this is pretty understudied!
+There are a few academic results, mainly in education studies, with one reference I could find in education.
+I think this is a ripe area for future study as it has important implications for evaluation.</p>
+<h1 id="academic-results"><a class="toclink" href="#academic-results">Academic results</a><a class="header-link" href="#academic-results" title="Permalink to this section">¶</a></h1>
+<p><a href="https://escholarship.org/content/qt1b00n182/qt1b00n182.pdf?t=nqcr5a">RESPONSE STYLE AND CROSS-CULTURAL COMPARISONS OF RATING SCALES AMONG EAST ASIAN AND NORTH AMERICAN STUDENTS</a></p>
+<blockquote>
+<p>Responses to fifty-seven 7-point Likert-type scales were analyzed. The Japanese and Chinese students were more likely than the two North American groups to use the midpoint on the scales; the U.S. subjects were more likely than the other three groups to use the extreme values. Within each cultural group, endorsement of individualism was positively related to the use of extreme values and negatively related to the use of the midpoint.</p>
+</blockquote>
+<p>This difference that they find is statistically significant, and can be described as between the East Asian (from Japan and Taiwan) students and North American students (from US and Canada), not a strictly country-level difference (although preference for extreme points was more pronounced in the Americans)</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/12124723/">Cultural differences in responses to a Likert scale</a></p>
+<blockquote>
+<p>[<em>Chinese and Japanese respondents</em>] more frequently on items that involved admitting to a positive emotion than did the Americans, who were more likely to indicate a positive emotion.</p>
+</blockquote>
+<p><a href="https://www.tandfonline.com/doi/full/10.1080/08961530.2019.1635552">Do Country and Culture Influence Online Reviews? An Analysis of a Multinational Retailer’s Country-Specific Sites</a></p>
+<ul>
+<li>Compare FR, DE, UK, US, JA Amazon reviews. </li>
+<li>Mean reviews in western countries are all <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.26</mn><mo>±</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">4.26 \pm 0.3</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4.26</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.3</span></span></span></span>, while the mean Japanese score is 3.57. </li>
+<li>Mean "Review was helpful" vote rate in western countries was <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>65</mn><mo>±</mo><mn>4</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">65\pm4\%</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">65</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">4%</span></span></span></span> while in Japan was 75%. </li>
+<li>This highlights how cultural differences in negative response bias and extreme response bias drive single-unrelated-item incomparability between countries</li>
+</ul>
+<p><a href="https://www.semanticscholar.org/reader/4aa7af6a99000048b8bfb322ef42e4024c2a7b39">Understanding the Impact of Culture in Assessing Helpfulness of Online Reviews</a>
+- In the ACM social media studies literature
+- Similar result to above but for Arabic vs English
+- Category-specific differences in hotel reviews and book reviews
+- In hotel reviews the difference between extreme and mid response biases shows up, with Arabic reviewers also exhibiting a relative hesitance to provide 5-star reviews</p>
+<p><a href="https://www.semanticscholar.org/paper/Extreme-Response-Style-in-Cross-Cultural-Research-Chun-Campbell/ba5f88cc1f734836d0540c906def60e623d11bfc">Extreme Response Style in Cross-Cultural Research</a>
+- Early discussion of the existence of ERS and that ignoring it confounds comparisons of genuine group differences
+    - Tbh, I think this completely calls into question the value of international happiness studies for ex
+- They compare Korean and American university students on interpersonal and sociopolitical trust
+- Relative lack of extreme response bias in Korean students <em>renders their extreme responses more "reliable" wrt consistent agreement</em></p>
+<h2 id="caveats"><a class="toclink" href="#caveats">Caveats</a><a class="header-link" href="#caveats" title="Permalink to this section">¶</a></h2>
+<p>Results showing that differences are still correlated?</p>
+<p>The differences are still correlated. In some applications, all we need is a correlation and this isn't a problem. However if we are for example comparing the absolute satisfaction level between populations this becomes important.</p>
+<h1 id="non-academic-discussion"><a class="toclink" href="#non-academic-discussion">Non-academic discussion</a><a class="header-link" href="#non-academic-discussion" title="Permalink to this section">¶</a></h1>
+<p>Excerpted from a deleted <a href="https://x.com/georgejrjrjr/status/1917722125668081863">OpenAI employee tweet</a>:</p>
+<blockquote>
+<p>there's another old story i heard about how an early GPT model stopped speaking Croatian one week and nobody could figure out why. turns out Croatian users were much more prone to downvote messages so the model just gave up and decided to not speak Croatian anymore.</p>
+</blockquote>
+<p>This effect has been memed before, such as in this example about interface feedback:</p>
+<p><img alt="" src="https://saxon.me/drafts/images/culturalresponse.jpeg"/></p>
+<p>This effect also plays out in restaurant ratings, from the <a href="https://www.japantimes.co.jp/life/2025/03/09/food-drink/tabelog-ratings-cultural-influences/">Japan Times</a>:</p>
+<blockquote>
+<p>“Tabelog users tend to not give high ratings just because they find a (restaurant’s food) delicious but rather ... they tend to rate restaurants carefully, considering them in relation to other renowned establishments,” he says.</p>
+</blockquote>
+<blockquote>
+<p>“(It could) also be an ability to want to see things both ways or to not stand out too much from others,” says Farrer. “This means Japanese people are somewhat more likely to choose a three rather than a one or a five.”</p>
+</blockquote>
+<p>A <a href="https://www.japantravelpros.com/blog/star-ratings-reviews-japan-is-different">tourism guide</a> reports an (unscientific) description of the impacts of this trend:</p>
+<blockquote>
+<p><strong>As the number of English reviews increases, the reliability decreases</strong>... A popular chain of conveyor belt sushi eateries in Japan would be a great example. One of its locations, in a neighborhood in Tokyo that’s very popular among tourists, has a <strong>4.3</strong>-star rating. Another location, in a quiet, rural area of Hyogo prefecture, has a <strong>3.2</strong>-star rating. This chain goes through strict measures to ensure <strong>product and service consistency</strong> across its locations, and yet look at the <strong>discrepancy in ratings</strong>!</p>
+</blockquote>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>By <em>is</em>, what I really mean here is <em>can be</em>. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<footer style="margin-top:25pt; padding-top:10pt;">
+<ul class="icons">
+<li><a href="https://www.semanticscholar.org/author/Michael-Stephen-Saxon/48227633"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/semantic-scholar.svg"/></a></li>
+<li><a href="https://scholar.google.com/citations?user=pAlwjdgAAAAJ&amp;hl=en"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/google-scholar.svg"/></a></li>
+<li><a href="https://www.researchgate.net/profile/Michael_Saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/researchgate.svg"/></a></li>
+<li><a href="mailto:saxon@ucsb.edu"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/envelope.svg"/></a></li>
+<li><a href="https://github.com/michaelsaxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/github-alt.svg"/></a></li>
+<li><a href="https://www.youtube.com/@mssaxonAI"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/youtube.svg"/></a></li>
+<li><a href="https://www.linkedin.com/in/mssaxon/"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/linkedin-in.svg"/></a></li>
+<li><a href="https://bsky.app/profile/saxon.me"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/cloud.svg"/></a></li>
+<li><a href="https://sigmoid.social/@saxon" rel="me"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/mastodon.svg"/></a></li>
+<li><a href="https://twitter.com/m2saxon"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/twitter.svg"/></a></li>
+</ul>
+<div class="worldmap"><script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=a&amp;t=tt&amp;d=IuxqtNT-Q6MDtRyPajTC07_66TRmeCIPbVD4z2v4M_U&amp;co=474747&amp;cmn=547bfc" type="text/javascript"></script></div>
+<div style="max-width: 600px;   margin-right: auto; margin-left: auto; border: 1pt solid var(--text-body); margin-top: 10pt; margin-bottom: 10pt; padding: 2pt 2pt 2pt 2pt;">
+<p style="font-size:10pt; text-align: center; margin-bottom: 5pt;">Jinja template scratchbuilt in framework-free HTML/CSS by me &amp; Cursor. 
+        Powered by <a href="https://getpelican.com/">Pelican</a>.
+        Feel free to steal my source from <a href="https://github.com/michaelsaxon/michaelsaxon.github.io">GitHub</a>. 
+        Theme, templates, and plugins are CC-BY-SA.
+        Fonts are under personal web licenses and not for redistrubtion.</p>
+</div>
+<div style="max-width: 800px; margin-right: auto; margin-left: auto; text-align: center;">
+<!-- <img src="https://web.badges.world/badges/operated/getfirefox.gif"/> -->
+<div style="width: 90pt; height: 25pt; 
+     background-color: var(--background-color); font-size: 9pt; 
+       border: 1pt solid var(--text-body); margin-right: auto; margin-left: auto; 
+     color: var(--text-body) !important; font-family: 'Arial', sans-serif;
+     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mozilla_Firefox_logo_2004.svg/133px-Mozilla_Firefox_logo_2004.svg.png);
+     background-size: 27pt; background-repeat: no-repeat; padding-left:30pt; margin-bottom: 10pt;">
+     Looks best in <b><a href="https://www.mozilla.org/en-US/firefox/new/" style="color:#e27f2e;">Mozilla Firefox</a></b> on a <b style="color: #0060df;">real PC!</b>
+</div>
+</div>
+</footer>
+<script src="../../../static/js/popups.js"></script></body>
+</html>
