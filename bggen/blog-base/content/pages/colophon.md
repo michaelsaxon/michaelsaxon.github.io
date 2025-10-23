@@ -1,14 +1,11 @@
 Title: Colophon
 remove_footnote_section: true
 
-*Built by Michael Saxon from scratch between 2017 and today in Arizona, California, and Washington. Heavy Cursor use to build plugins and CSS.* Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io")!
+*Built from scratch by Michael Saxon on the West Coast, from 2017 till today. Heavy Cursor use to build plugins and CSS. Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io")!*
 
 <img src="https://saxon.me/theme/img/logomark_trans.png" alt="drawing" width="100" style="opacity: 0.6;
     filter: var(--logo-filter); margin-left: auto; margin-right: auto;"/>
 
-### Stack
-
-*This webpage is built using [Pelican](https://getpelican.com/), a Python-based static blog generator. It uses a custom, framework-free Jinja theme with [custom Markdown extensions and Pelican plugins](#plugins)*.
 
 #### Design
 
@@ -20,6 +17,11 @@ The following fonts are used under personal licenses:
 - **Triptych Italick** from the [Pyte Foundry](https://thepytefoundry.net/typefaces/triptych/) for decorative headers.
 
 The color scheme is based on the [Kanagawa](https://terminalcolors.com/themes/kanagawa/) Nvim/iTerm theme with slight modifications.
+
+
+### Stack
+
+*This webpage is built using [Pelican](https://getpelican.com/), a Python-based static blog generator. It uses a custom, framework-free Jinja theme with [custom Markdown extensions and Pelican plugins](#plugins)*.
 
 #### Plugins
 
