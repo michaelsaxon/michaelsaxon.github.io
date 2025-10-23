@@ -17,6 +17,8 @@
 
     background-color: var(--kanagawa-code-bg);
     color: var(--kanagawa-code-fg);
+
+    font-family: 'Berkeley Mono', monospace !important;
 }
 
 .highlight pre {
@@ -242,4 +244,8 @@ div.blogcontent p:last-child {
 
 div.blogcontent a {
     font-weight: bold;
+}
+
+code {
+    font-family: 'Berkeley Mono', monospace !important;
 }

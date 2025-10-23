@@ -405,7 +405,7 @@ p {
 }
 
 .mns {
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Berkeley Mono', monospace;
   font-weight: 800;
 }
 
@@ -1584,7 +1584,7 @@ sup[id^="fnref"]:hover .footnote-popup {
     font-size: 0.9rem;
     line-height: 1.4;
     margin: 0;
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Berkeley Mono', monospace;
 }
 
 /* Webkit scrollbar styling */
@@ -1844,10 +1844,11 @@ footer img {
 }
 
 /* Inline code styling */
-p code {
+p code,
+li code {
     color: var(--brand-main);
     font-weight: 600;
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Berkeley Mono', monospace;
     font-size: 0.95rem;
     padding: 0.1em 0.2rem;
 }
