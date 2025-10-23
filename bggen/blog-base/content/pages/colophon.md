@@ -1,7 +1,7 @@
 Title: Colophon
 remove_footnote_section: true
 
-*Built by Michael Saxon from scratch between 2017 and today in Arizona, California, and Washington. Heavy Cursor use to build plugins and CSS.*
+*Built by Michael Saxon from scratch between 2017 and today in Arizona, California, and Washington. Heavy Cursor use to build plugins and CSS.* Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io")!
 
 <img src="https://saxon.me/theme/img/logomark_trans.png" alt="drawing" width="100" style="opacity: 0.6;
     filter: var(--logo-filter); margin-left: auto; margin-right: auto;"/>
