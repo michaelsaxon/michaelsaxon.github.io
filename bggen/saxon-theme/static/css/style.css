@@ -997,9 +997,9 @@ article > p {
 /* List styling within articles */
 article > ul,
 article > ol {
-  margin: 0;      /* Match paragraph spacing */
-  margin-bottom: 1rem;
+  margin: 1rem 0;      /* Match paragraph spacing */
   padding-left: 2rem;   /* Indent lists */
+  padding-bottom: 0.6rem;
 }
 
 article > ul > li,

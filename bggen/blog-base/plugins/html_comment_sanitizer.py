@@ -15,27 +15,78 @@ class HTMLCommentSanitizerPreprocessor(Preprocessor):
     def __init__(self, config):
         self.config = config
         
+    def is_in_code_block(self, line_num, code_block_ranges):
+        """Check if a line is inside a code block."""
+        for start, end in code_block_ranges:
+            if start <= line_num <= end:
+                return True
+        return False
+    
+    def find_code_blocks(self, lines):
+        """Find all code block ranges."""
+        code_blocks = []
+        in_code_block = False
+        start_line = 0
+        
+        for i, line in enumerate(lines):
+            if line.strip().startswith('```'):
+                if not in_code_block:
+                    # Starting a code block
+                    in_code_block = True
+                    start_line = i
+                else:
+                    # Ending a code block
+                    in_code_block = False
+                    code_blocks.append((start_line, i))
+        
+        return code_blocks
+    
+    def sanitize_html_comments_in_line(self, line):
+        """Remove HTML comments from a single line, avoiding inline code."""
+        # Find all inline code spans
+        inline_code_spans = []
+        inline_code_pattern = re.compile(r'`[^`]+`')
+        for match in inline_code_pattern.finditer(line):
+            inline_code_spans.append((match.start(), match.end()))
+        
+        # Find all HTML comments in the line
+        comment_pattern = re.compile(r'<!--.*?-->')
+        matches = list(comment_pattern.finditer(line))
+        
+        # Process matches in reverse order to avoid index shifting
+        processed_line = line
+        for match in reversed(matches):
+            # Check if this comment is inside inline code
+            in_inline_code = False
+            for start, end in inline_code_spans:
+                if start <= match.start() < end:
+                    in_inline_code = True
+                    break
+            
+            if not in_inline_code:
+                # Remove the comment
+                processed_line = processed_line[:match.start()] + processed_line[match.end():]
+        
+        return processed_line
+    
     def sanitize_html_comments(self, lines):
         """Remove HTML comments from the lines, handling both inline and multi-line comments."""
-        # Join all lines into a single string for easier processing
-        content = '\n'.join(lines)
+        # Find code block ranges
+        code_blocks = self.find_code_blocks(lines)
         
-        # Use regex to find and replace HTML comments
-        # This pattern matches <!-- ... --> including multi-line comments
-        comment_pattern = r'<!--.*?-->'
-        content = re.sub(comment_pattern, '', content, flags=re.DOTALL)
+        processed_lines = []
         
-        # Check for unclosed comments (comments without -->)
-        unclosed_pattern = r'<!--(?!.*?-->).*$'
-        unclosed_matches = re.findall(unclosed_pattern, content, flags=re.DOTALL)
-        if unclosed_matches:
-            for match in unclosed_matches:
-                warnings.warn(f"Unclosed HTML comment found: {match[:50]}...")
-            # Remove unclosed comments
-            content = re.sub(unclosed_pattern, '', content, flags=re.DOTALL)
+        for i, line in enumerate(lines):
+            # Skip if we're in a code block
+            if self.is_in_code_block(i, code_blocks):
+                processed_lines.append(line)
+                continue
+            
+            # Process HTML comments in the line
+            processed_line = self.sanitize_html_comments_in_line(line)
+            processed_lines.append(processed_line)
         
-        # Split back into lines
-        return content.split('\n')
+        return processed_lines
     
     def run(self, lines):
         """Process lines to remove HTML comments."""
