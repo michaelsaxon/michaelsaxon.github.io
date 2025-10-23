@@ -1,8 +1,7 @@
 Title: Colophon
 remove_footnote_section: true
 
-<img src="https://saxon.me/theme/img/logomark_trans.png" alt="drawing" style="opacity: 0.6;
-    filter: var(--logo-filter); margin-left: auto; margin-right: auto;" class="colophon-img"/>
+<img src="https://saxon.me/theme/img/logomark_trans.png" alt="Logomark" class="colophon-img"/>
 
 
 *Built from scratch on the west coast by Michael Saxon, from 2017 to today. Heavy Cursor use to build plugins and CSS. Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io)!*
