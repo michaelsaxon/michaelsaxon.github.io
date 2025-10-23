@@ -5,7 +5,7 @@ remove_footnote_section: true
     filter: var(--logo-filter); margin-left: auto; margin-right: auto;" class="colophon-img"/>
 
 
-*Built from scratch on the west coast by Michael Saxon, from 2017 to today. Heavy Cursor use to build plugins and CSS. Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io")!*
+*Built from scratch on the west coast by Michael Saxon, from 2017 to today. Heavy Cursor use to build plugins and CSS. Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io)!*
 
 #### Design
 
