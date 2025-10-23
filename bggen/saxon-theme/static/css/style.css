@@ -2188,3 +2188,14 @@ h6 .toclink:hover ~ .header-link::after,
     pointer-events: none;
     z-index: 1;
 }
+
+.colophon-img {
+  filter: var(--logo-filter);
+  width: 100px;
+  height: 100px;
+  background-image: url('../img/logomark_trans.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+}

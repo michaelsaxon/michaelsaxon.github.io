@@ -3,8 +3,7 @@ remove_footnote_section: true
 
 *Built from scratch on the west coast by Michael Saxon, from 2017 till today. Heavy Cursor use to build plugins and CSS. Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io")!*
 
-<img src="https://saxon.me/theme/img/logomark_trans.png" alt="drawing" width="100" style="opacity: 0.6;
-    filter: var(--logo-filter); margin-left: auto; margin-right: auto;"/>
+<div style="colophon-img"></div>
 
 
 #### Design
