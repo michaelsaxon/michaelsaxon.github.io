@@ -382,7 +382,7 @@ More explanation of colors with the predefined names are given <a href="https://
 This is <span class="k">\hl</span><span class="nb">{</span>cool<span class="nb">}</span> stuff!
 </code></pre></div></td></tr></table></div>
 <blockquote>
-<p>This is <span #0f0;&rdquo;="" style="“background-color:">cool</span> stuff!</p>
+<p>This is <span style="background-color: #0F0;">cool</span> stuff!</p>
 </blockquote>
 <p>The purpose of this <code>soul</code>-based solution for coloring text rather than <code>colorbox</code> is that soul properly breaks lines, while colorbox doesn't.</p>
 <h2 id="size-units-for-spacing-em-ex-pt-etc"><a class="toclink" href="#size-units-for-spacing-em-ex-pt-etc">Size units for spacing: em, ex, pt, etc</a><a class="header-link" href="#size-units-for-spacing-em-ex-pt-etc" title="Permalink to this section">¶</a></h2>
@@ -516,7 +516,7 @@ I love Egypt! <span class="k">\textpmhg</span><span class="nb">{</span>eFR<span 
 <span class="k">\author</span><span class="nb">{</span>Michael Saxon<span class="s">$</span><span class="nb">^{</span><span class="nv">\psx\pscirc</span><span class="nb">}</span><span class="s">$</span>...<span class="nb">}</span>
 </code></pre></div></td></tr></table></div>
 <blockquote>
-<p>Michael Saxon<sup><img src="“https://t2iscorescore.github.io/static/images/psx.svg”/" style="“width:12pt;border:0;”"/><img src="“https://t2iscorescore.github.io/static/images/psc.svg”/" style="“width:12pt;border:0;”"/></sup></p>
+<p>Michael Saxon<sup><img src="https://t2iscorescore.github.io/static/images/psx.svg" style="width:12pt;border:0;"/><img src="https://t2iscorescore.github.io/static/images/psc.svg" style="width:12pt;border:0;"/></sup></p>
 </blockquote>
 <p>Providing a tikz tutorial is out of scope here. Look it up yourself ;)</p>
 <h2 id="non-latin-cjk-alphabets-on-arxiv"><a class="toclink" href="#non-latin-cjk-alphabets-on-arxiv">Non-Latin (CJK) alphabets on arXiv</a><a class="header-link" href="#non-latin-cjk-alphabets-on-arxiv" title="Permalink to this section">¶</a></h2>
@@ -580,11 +580,11 @@ A <span class="nb">&amp;</span> B <span class="nb">&amp;</span> C <span class="k
 <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
 </code></pre></div></td></tr></table></div>
 <blockquote>
-<p><table 1px;&rdquo;="" 2px="" black;="" border-bottom:="" padding:="" solid="" style="“border-top:"><tr><td 100pt;="" 1px="" black;="" black;&rdquo;="" border-right:="" margin:0;="" solid="" style="“border-bottom:" width:="">Thing 1</td><td 100pt;="" 1px="" 5pt;="" black;="" margin:0;="" padding-right="" solid="" style="“border-bottom:" text-align:center;&rdquo;="" width:="">Thing 2</td><td 100pt;text-align:right;&rdquo;="" 1px="" black;="" margin:0;="" solid="" style="“border-bottom:" width:="">Thing 3</td></tr><tr style="“border:0;”"><td 1px="" black;&rdquo;="" solid="" style="“border-right:">A</td><td style="“text-align:center;”">B</td><td style="“text-align:right;”">C</td></tr></table></p>
+<p><table style="border-top: 2px solid black; border-bottom: 2px solid black; padding: 1px;"><tr><td style="border-bottom: 1px solid black; margin:0; width: 100pt; border-right: 1px solid black;">Thing 1</td><td style="border-bottom: 1px solid black; margin:0; padding-right 5pt; width: 100pt; text-align:center;">Thing 2</td><td style="border-bottom: 1px solid black; margin:0; width: 100pt;text-align:right;">Thing 3</td></tr><tr style="border:0;"><td style="border-right: 1px solid black;">A</td><td style="text-align:center;">B</td><td style="text-align:right;">C</td></tr></table></p>
 </blockquote>
 <p>Please use <code>|</code> tastefully. (Really, a good table doesn't need any vertical lines, and one of the drawbacks of booktabs is that the cleanly separated horizontals make vertical lines look worse) Resist the impulse to do <code>\tabular{|c|c|c|}</code>, because this is harder to scan over and read:</p>
 <blockquote class="infobox infobox-warning">
-<p><table 1px;&rdquo;="" 2px="" black;="" border-bottom:="" padding:="" solid="" style="“border-top:"><tr><td &rdquo;="" 100pt;="" 1px="" black;="" border-right:="" margin:0;="" solid="" style="“border-bottom:" text-align:center;border-left:="" width:="">Thing 1</td><td &rdquo;="" 100pt;="" 1px="" 5pt;="" black;="" border-right:="" margin:0;="" padding-right="" solid="" style="“border-bottom:" text-align:center;="" width:="">Thing 2</td><td &rdquo;="" 100pt;text-align:center;border-right:="" 1px="" black;="" margin:0;="" solid="" style="“border-bottom:" width:="">Thing 3</td></tr><tr style="“border:0;”"><td 1px="" black;="" border-left:="" solid="" style="“border-right:" text-align:center;&rdquo;="">A</td><td 1px="" black;="" solid="" style="“border-right:" text-align:center;&rdquo;="">B</td><td 1px="" black;="" solid="" style="“border-right:" text-align:center;&rdquo;="">C</td></tr></table></p>
+<p><table style="border-top: 2px solid black; border-bottom: 2px solid black; padding: 1px;"><tr><td style="border-bottom: 1px solid black; margin:0; width: 100pt; border-right: 1px solid black; text-align:center;border-left: 1px solid black; ">Thing 1</td><td style="border-bottom: 1px solid black; margin:0; padding-right 5pt; width: 100pt; text-align:center; border-right: 1px solid black; ">Thing 2</td><td style="border-bottom: 1px solid black; margin:0; width: 100pt;text-align:center;border-right: 1px solid black; ">Thing 3</td></tr><tr style="border:0;"><td style="border-right: 1px solid black; border-left: 1px solid black; text-align:center;">A</td><td style="border-right: 1px solid black; text-align:center;">B</td><td style="border-right: 1px solid black; text-align:center;">C</td></tr></table></p>
 </blockquote>
 <h2 id="multirow-and-multicolumn"><a class="toclink" href="#multirow-and-multicolumn"><code>multirow</code> and <code>multicolumn</code></a><a class="header-link" href="#multirow-and-multicolumn" title="Permalink to this section">¶</a></h2>
 <p>You can define multi-row and multi-column cells using these environments.</p>
@@ -619,7 +619,7 @@ A <span class="nb">&amp;</span> B <span class="nb">&amp;</span> C <span class="k
 <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
 </code></pre></div></td></tr></table></div>
 <blockquote>
-<p><table 1px;&rdquo;="" 2px="" black;="" border-bottom:="" padding:="" solid="" style="“border-top:"><tr><td 100pt;="" 1px="" black;&rdquo;="" border-right:="" solid="" style="“margin:0;" width:="">Thing 1</td><td 100pt;="" 1px="" 5pt;="" black;="" margin:0;="" padding-right="" solid="" style="“border-bottom:" text-align:center;&rdquo;="" width:="">Thing 2</td><td 100pt;text-align:right;&rdquo;="" 1px="" black;="" margin:0;="" solid="" style="“border-bottom:" width:="">Thing 3</td></tr><tr style="“border:0;”"><td 1px="" black;&rdquo;="" solid="" style="“border-right:">A</td><td style="“text-align:center;”">B</td><td style="“text-align:right;”">C</td></tr></table></p>
+<p><table style="border-top: 2px solid black; border-bottom: 2px solid black; padding: 1px;"><tr><td style="margin:0; width: 100pt; border-right: 1px solid black;">Thing 1</td><td style="border-bottom: 1px solid black; margin:0; padding-right 5pt; width: 100pt; text-align:center;">Thing 2</td><td style="border-bottom: 1px solid black; margin:0; width: 100pt;text-align:right;">Thing 3</td></tr><tr style="border:0;"><td style="border-right: 1px solid black;">A</td><td style="text-align:center;">B</td><td style="text-align:right;">C</td></tr></table></p>
 </blockquote>
 <p>Usually, if you have multiple <code>cmidrule</code> side-by-side, you want to “chop off” parts on the left and right sides so they don't connect, providing some visually pleasing separation. To do this, you can include <code>(lr)</code> like:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">\cmidrule</span>(lr)<span class="nb">{</span>2-3<span class="nb">}</span><span class="k">\cmidrule</span>(lr)<span class="nb">{</span>4-5<span class="nb">}</span>

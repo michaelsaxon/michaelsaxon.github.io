@@ -50,34 +50,44 @@ class SmartQuotesPreprocessor(Preprocessor):
         return code_blocks
     
     def process_quotes_in_line(self, line):
-        """Process quotes in a single line, avoiding inline code."""
+        """Process quotes in a single line, avoiding inline code and HTML tags."""
         # Find all inline code spans
         inline_code_spans = []
         for match in self.inline_code_pattern.finditer(line):
             inline_code_spans.append((match.start(), match.end()))
         
+        # Find all HTML tag spans
+        html_tag_spans = []
+        html_tag_pattern = re.compile(r'<[^>]*>')
+        for match in html_tag_pattern.finditer(line):
+            html_tag_spans.append((match.start(), match.end()))
+        
+        
+        # Combine all exclusion spans
+        exclusion_spans = inline_code_spans + html_tag_spans
+        
         # Process double quotes
-        line = self.process_quote_type(line, '"', self.double_quote_open, self.double_quote_close, inline_code_spans)
+        line = self.process_quote_type(line, '"', self.double_quote_open, self.double_quote_close, exclusion_spans)
         
         # Process single quotes
-        line = self.process_quote_type(line, "'", self.single_quote_open, self.single_quote_close, inline_code_spans)
+        line = self.process_quote_type(line, "'", self.single_quote_open, self.single_quote_close, exclusion_spans)
         
         return line
     
-    def process_quote_type(self, line, quote_char, open_char, close_char, inline_code_spans):
+    def process_quote_type(self, line, quote_char, open_char, close_char, exclusion_spans):
         """Process a specific type of quote (single or double)."""
-        # Count quotes that are not in inline code and meet positioning constraints
+        # Count quotes that are not in exclusion spans and meet positioning constraints
         quote_positions = []
         for i, char in enumerate(line):
             if char == quote_char:
-                # Check if this quote is inside inline code
-                in_inline_code = False
-                for start, end in inline_code_spans:
+                # Check if this quote is inside any exclusion span (inline code or HTML tags)
+                in_exclusion_span = False
+                for start, end in exclusion_spans:
                     if start <= i < end:
-                        in_inline_code = True
+                        in_exclusion_span = True
                         break
                 
-                if not in_inline_code:
+                if not in_exclusion_span:
                     # Check if this is an apostrophe in a contraction (surrounded by alphanumerics)
                     if self.is_apostrophe_in_contraction(line, i):
                         continue  # Skip this quote
