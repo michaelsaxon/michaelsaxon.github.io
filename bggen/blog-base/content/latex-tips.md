@@ -21,6 +21,8 @@ To briefly explain the structure, I will discuss:
 <!-- 4. *Figure* making and styling, including composite figures, table-based figures, the various subfigure packages, and how to *generate* good, readable figures from matplotlib easily.
 5. How to set up *Overleaf with VSCode*, a gamechanger I was recently shown. -->
 
+<!--single line comment-->
+
 I might write more about within-document compound figure making and best-practices for generating readable plots in a follow-up post if there's interest.
 
 [TOC]

@@ -9,8 +9,6 @@ To briefly explain the structure, I will discuss:&lt;/p&gt;
 &lt;li&gt;&lt;em&gt;Table&lt;/em&gt; styling and formatting, which packages you should use, special symbols to make tables more readable, and making text compact.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;The dark arts&lt;/strong&gt;, how you can break free from the bounds of conference &lt;code&gt;.sty&lt;/code&gt; files.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&amp;lt;!– 4. &lt;em&gt;Figure&lt;/em&gt; making and styling, including composite figures, table-based figures, the various subfigure packages, and how to &lt;em&gt;generate&lt;/em&gt; good, readable figures from matplotlib easily.
-5. How to set up &lt;em&gt;Overleaf with VSCode&lt;/em&gt;, a gamechanger I was recently shown. –&amp;gt;&lt;/p&gt;
 &lt;p&gt;I might write more about within-document compound figure making and best-practices for generating readable plots in a follow-up post if there's interest.&lt;/p&gt;
 &lt;div class="toc"&gt;&lt;span class="toc-title"&gt;Table of Contents&lt;/span&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="#1-making-commands"&gt;1. Making commands&lt;/a&gt;&lt;ul&gt;
