@@ -2188,3 +2188,10 @@ h6 .toclink:hover ~ .header-link::after,
     pointer-events: none;
     z-index: 1;
 }
+
+
+.colophon-img {
+  filter: var(--logo-filter);
+  width: 100px;
+  opacity: 0.6;
+}
