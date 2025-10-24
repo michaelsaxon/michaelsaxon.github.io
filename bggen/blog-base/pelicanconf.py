@@ -97,6 +97,9 @@ MARKDOWN = {
             'single_quote_open': ''',
             'single_quote_close': ''',
         },
+        # 'plugins.underscore_underline': {
+        #     'enabled': True,
+        # },
     },
     'output_format': 'html5',
 }

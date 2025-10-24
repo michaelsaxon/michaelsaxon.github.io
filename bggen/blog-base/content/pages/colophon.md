@@ -17,7 +17,7 @@ The following fonts are used under personal licenses:
 
 The color scheme is based on the [Kanagawa](https://terminalcolors.com/themes/kanagawa/) Nvim/iTerm theme with slight modifications.
 
-Design inspirations for this site include [Justine Zhang's site](http://tisjune.github.io), [Gwern](https://gwern.net/)[^3], 
+Design inspirations for this site include [Justine Zhang's site](http://tisjune.github.io), [Gwern](https://gwern.net/)[^3], and [US Graphics Co.](https://usgraphics.com/) (if you would believe it).
 
 [^3]: I know, cringe... but the pop up footnotes are awesome man!
 
@@ -36,6 +36,8 @@ Design inspirations for this site include [Justine Zhang's site](http://tisjune.
 `dash_shortcuts`: converts strings into nice unicode characters, in particular mapping the en-dash `--` to -- and em-dash `---` to ---.
 
 `smart_quotes`: beautify `"` and `'` by converting them to left and right versions in a contextually-appropriate manner. Examples: "double quotes" and 'single quotes' get correctly mapped, but contractions aren't changed.
+
+<!-- `underscore_underline`: Parses underscores `_` in markdown as _underlines_ and not as *emphasis*. -->
 
 `html_comment_sanitizer`: completely removes inline HTML comments `<!-- -->` from rendered HTML[^2] so that comments I put in the files while writing posts aren't leaked.
 
