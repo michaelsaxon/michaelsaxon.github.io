@@ -17,6 +17,9 @@ The following fonts are used under personal licenses:
 
 The color scheme is based on the [Kanagawa](https://terminalcolors.com/themes/kanagawa/) Nvim/iTerm theme with slight modifications.
 
+Design inspirations for this site include [Justine Zhang's site](http://tisjune.github.io), [Gwern](https://gwern.net/)[^3], 
+
+[^3]: I know, cringe... but the pop up footnotes are awesome man!
 
 ### Stack
 

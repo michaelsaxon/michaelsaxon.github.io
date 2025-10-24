@@ -11,6 +11,9 @@ TIMEZONE = 'US/Pacific'
 DEFAULT_DATE_FORMAT= '%B %-d, %Y'
 DEFAULT_LANG = 'en'
 
+from datetime import datetime
+NOW = datetime.now()
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
@@ -43,10 +46,9 @@ PUBLICATIONS_SAVE_AS = 'publications/index.html'
 
 #BLOG_INDEX_SAVE_AS = 'blog.html'
 
-ENABLE_WORLD_MAP = True 
+ENABLE_WORLD_MAP = False 
 # Uncomment following lines for local development
 # RELATIVE_URLS = True
-# ENABLE_WORLD_MAP = False 
 
 # Add these settings
 USE_FOLDER_AS_CATEGORY = False
