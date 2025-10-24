@@ -54,8 +54,18 @@ So as much as my Electrical Engineer's heart would love to be an academic great 
 
 ## My Bacon number is 4
 
-Michael Saxon -(Camp Operetta)-> JaidenAnimations -(100 Youtubers)-> Mr. Beast -(Kung Fu Panda 4)-> Dustin Hoffman -(Sleepers)-> Kevin Bacon
-Alternatively, JaidenAnimations -(Youtube Rewind)-> Will Smith -(Independence Day)-> Jeff Goldblum -(Tour de Pharmacy)-> Kevin Bacon
+I don't know my Erdős number, but I do know my [Kevin Bacon number](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon#Bacon_numbers), which is 4.
+Amusingly, I am on the Bacon graph because, when I was like 7 years old, I appeared in such a bizarre school play that a future YouTuber who also happened to be in the play would later make a video about it.
+
+![Me in the play, singing "ha ha ha ha you are ugly"]({attach}/images/operetta.jpeg)
+
+At YouTube video https://youtu.be/SRWatgS077k?si=FnNWfOa1v9vFejMK&t=312
+
+And this YouTuber ended up being big enough to appear in a big Mr. Beast video, and the Will Smith YouTube rewind from like 2018.
+
+So I can either trace a Bacon line of me `-->` JaidenAnimations `-->` Mr. Beast `-->` Dustin Hoffman (both were in Kung Fu Panda 4) `-->` Kevin Bacon, or `-->` Will Smith `-->` Jeff Goldbum (Independence Day) `-->` Kevin Bacon.
+
+Not sure if it's funnier to go through Mr. Beast or Will Smith.
 
 ## Originating a mildly successful meme in college
 
@@ -71,5 +81,3 @@ I am a USAF brat.
 I chose to play the saxophone in school because of nominative determinism. Then I chose to switch to bassoon because I thought it was a funny looking and sounding instrument and playing saxophone at my band's level was a bit too easy.
 I enjoy hobbyist language learning.
 I am an Eagle Scout, so if I accomplish anything substantial the BSA will claim me.
-I have perfect pitch.
-My middle school-era YouTube channel dedicated to YouTube poops and Transformers had ~50k views but it got banned because I didn't understand how copyright strikes worked and kept reuploading the same video when it got deleted.
