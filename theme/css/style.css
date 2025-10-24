@@ -1049,7 +1049,7 @@ sup[id^="fnref"] {
 
 /* Style the footnote number/plus */
 .footnote-ref {
-  color: var(--link-color);
+  color: var(--text-dark);
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
@@ -1058,7 +1058,7 @@ sup[id^="fnref"] {
   font-family: monospace;
   width: 1em;
   height: 1em;
-  border: 1px solid var(--link-color);
+  border: 1px solid var(--text-dark);
   border-radius: 50%;
   position: relative;
   transition: background-color 0.2s;
@@ -1091,8 +1091,8 @@ sup[id^="fnref"] {
   background: var(--bg-main);
   padding: 1.5em;
   border-radius: 4px;
-  font-size: var(--base-size);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: calc(1.1 * var(--base-size));
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   z-index: 9999;
   bottom: 100%;
   margin-bottom: 1em;
@@ -1107,7 +1107,7 @@ sup[id^="fnref"] {
   /* Center by default */
   left: 50%;
   transform: translateX(calc(-50% + var(--popup-shift, 0px)));
-  border: 1px solid var(--link-color);
+  border: 1px solid var(--text-dark);
 }
 
 /* Show popup */
@@ -1123,7 +1123,7 @@ sup[id^="fnref"]:hover .footnote-popup {
   bottom: -10px;
   border-width: 0 10px 10px 10px;
   border-style: solid;
-  border-color: transparent transparent var(--link-color) transparent;
+  border-color: transparent transparent var(--text-dark) transparent;
   left: calc(50% - var(--popup-shift, 0px));
   transform: translateX(-50%) rotate(180deg);
 }
@@ -1704,14 +1704,14 @@ sup[id^="fnref"]:hover .footnote-popup {
     font-size: var(--base-size);
     margin-bottom: 0.5rem;
     font-weight: 350;
-    padding-left: calc(0.5 * var(--base-size));
 }
 
 .experience-details {
     margin-top: 0.4rem;
     line-height: 1.6;
     font-family: 'Calluna', serif;
-    padding-left: var(--base-size);
+    border-left: 1px solid var(--brand-main);
+    padding-left: calc(0.4 * var(--base-size));
 }
 
 .experience-logo {
@@ -1845,11 +1845,12 @@ footer img {
 
 /* Inline code styling */
 p code,
-li code {
+li code,
+span.footnote-popup code {
     color: var(--brand-main);
     font-weight: 600;
     font-family: 'Berkeley Mono', monospace;
-    font-size: 0.95rem;
+    font-size: calc(0.9 * var(--base-size));
     padding: 0.1em 0.2rem;
 }
 

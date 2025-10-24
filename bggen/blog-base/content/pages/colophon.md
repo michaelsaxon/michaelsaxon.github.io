@@ -40,7 +40,7 @@ The color scheme is based on the [Kanagawa](https://terminalcolors.com/themes/ka
 
 
 [^1]: Like this! It uses some JS to keep the popup centered over the footnote tag, unless it will fall outside of the bounding box of the main text.
-[^2]: It's stupid that I even need to implement this...but there are no Markdown-specific ways to write comments, the official way is to just put HTML comments which interacts with `dash_shortcuts` badly and 
+[^2]: It's stupid that I even need to implement this...but there are no Markdown-specific ways to write comments, the official way is to just put HTML comments which interacts with `dash_shortcuts` badly and creates `<!&ndash &ndash>`, which renders normally instead of being removed.
 
 All plugins are CC-BY-SA and accessible from my source github repo.
 
