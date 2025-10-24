@@ -36,7 +36,7 @@ The color scheme is based on the [Kanagawa](https://terminalcolors.com/themes/ka
 
 `html_comment_sanitizer`: completely removes inline HTML comments `<!-- -->` from rendered HTML[^2] so that comments I put in the files while writing posts aren't leaked.
 
-`pelican_bibtex`: uses the Python `pybtex` package to scan a Bibtex file containing all my papers to generate my [Publications](../Publications) page.
+`pelican_bibtex`: uses the Python `pybtex` package to scan a Bibtex file containing all my papers to generate my [Publications](../Publications) page. This plugin was inspired by, but is effectively completely different from [Vlad Niculae's own `pelican-bibtex` plugin.](https://github.com/vene/pelican-bibtex).
 
 
 [^1]: Like this! It uses some JS to keep the popup centered over the footnote tag, unless it will fall outside of the bounding box of the main text.
