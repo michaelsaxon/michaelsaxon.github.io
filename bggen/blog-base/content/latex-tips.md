@@ -597,53 +597,7 @@ Using all of the above components we've discussed, including the `booktabs` line
 ```
 
 
-<!-- # 4. Figures
 
-## TODO Combining multiple images into one image
-
-I wanted to make a grid of adjacent images in a table.
-I'm gonna be honest, I do not remember how I made this. But it works
-
-```latex
-\newcommand{\timg}[1]{\includegraphics[width=0.25\linewidth]{img/storyprop/#1}}
-
-\newcommand{\specialcell}[1]{%
-  \begin{tabular}[c]{@{}c@{}}#1\end{tabular}}
-
-\newcommand{\imgf}[4]{\specialcell{\timg{#1}\timg{#2}\vspace{-3pt}\\\timg{#3}\timg{#4}}\hspace{-5pt}}
-
-```
-
-
-
-## making subfigures with/without captions
-
-### subfig
-
-### subcaption
-
-### minipage
-
-## How to do pyplot and make it readable
-
-Generating your figure to be readable in pyplot
-MAKE THE FIGURE SMALL IN GENERATION AS AN SVG THEN IT WILL BE BIG
-
-
-## Colors etc
-
-- blue!50!black
-- rgb
-- named colors (link) -->
-
-<!-- # 5. TODO: Overleaf in VSCode
-
-- use latex workshop
-- use overleaf workshop
-
-https://github.com/iamhyc/Overleaf-Workshop
-
-Install instructions -->
 
 # 4. The Dark Arts (Advanced)
 

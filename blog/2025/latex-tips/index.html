@@ -89,7 +89,7 @@
 <div class="post-meta">
 <time>April 10, 2025</time>
 <span>-&gt;</span>
-<span>25 min read</span>
+<span>24 min read</span>
 <span>-&gt;</span>
 <span><a href="https://saxon.me/blog/category/tips.html">Tips</a></span>
 <!-- <span>•</span>
@@ -148,15 +148,6 @@ To briefly explain the structure, I will discuss:</p>
 </ul>
 </li>
 <li><a href="#putting-it-together">Putting it together</a></li>
-<li><a href="#todo-combining-multiple-images-into-one-image">TODO Combining multiple images into one image</a></li>
-<li><a href="#making-subfigures-withwithout-captions">making subfigures with/without captions</a><ul>
-<li><a href="#subfig">subfig</a></li>
-<li><a href="#subcaption">subcaption</a></li>
-<li><a href="#minipage">minipage</a></li>
-</ul>
-</li>
-<li><a href="#how-to-do-pyplot-and-make-it-readable">How to do pyplot and make it readable</a></li>
-<li><a href="#colors-etc">Colors etc</a></li>
 </ul>
 </li>
 <li><a href="#4-the-dark-arts-advanced">4. The Dark Arts (Advanced)</a><ul>
@@ -716,42 +707,6 @@ I wanted to replicate this in a table I made last year and was able to pretty ea
 <span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>table*<span class="nb">}</span>
 </code></pre></div></td></tr></table></div>
-<p>&lt;!– # 4. Figures</p>
-<h2 id="todo-combining-multiple-images-into-one-image"><a class="toclink" href="#todo-combining-multiple-images-into-one-image">TODO Combining multiple images into one image</a><a class="header-link" href="#todo-combining-multiple-images-into-one-image" title="Permalink to this section">¶</a></h2>
-<p>I wanted to make a grid of adjacent images in a table.
-I'm gonna be honest, I do not remember how I made this. But it works</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\timg</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\includegraphics</span><span class="na">[width=0.25\linewidth]</span><span class="nb">{</span>img/storyprop/#1<span class="nb">}}</span>
-
-<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\specialcell</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="c">%</span>
-  <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}</span>[c]<span class="nb">{</span>@<span class="nb">{}</span>c@<span class="nb">{}}</span>#1<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}}</span>
-
-<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\imgf</span><span class="nb">}</span>[4]<span class="nb">{</span><span class="k">\specialcell</span><span class="nb">{</span><span class="k">\timg</span><span class="nb">{</span>#1<span class="nb">}</span><span class="k">\timg</span><span class="nb">{</span>#2<span class="nb">}</span><span class="k">\vspace</span><span class="nb">{</span>-3pt<span class="nb">}</span><span class="k">\\\timg</span><span class="nb">{</span>#3<span class="nb">}</span><span class="k">\timg</span><span class="nb">{</span>#4<span class="nb">}}</span><span class="k">\hspace</span><span class="nb">{</span>-5pt<span class="nb">}}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="making-subfigures-withwithout-captions"><a class="toclink" href="#making-subfigures-withwithout-captions">making subfigures with/without captions</a><a class="header-link" href="#making-subfigures-withwithout-captions" title="Permalink to this section">¶</a></h2>
-<h3 id="subfig"><a class="toclink" href="#subfig">subfig</a><a class="header-link" href="#subfig" title="Permalink to this section">¶</a></h3>
-<h3 id="subcaption"><a class="toclink" href="#subcaption">subcaption</a><a class="header-link" href="#subcaption" title="Permalink to this section">¶</a></h3>
-<h3 id="minipage"><a class="toclink" href="#minipage">minipage</a><a class="header-link" href="#minipage" title="Permalink to this section">¶</a></h3>
-<h2 id="how-to-do-pyplot-and-make-it-readable"><a class="toclink" href="#how-to-do-pyplot-and-make-it-readable">How to do pyplot and make it readable</a><a class="header-link" href="#how-to-do-pyplot-and-make-it-readable" title="Permalink to this section">¶</a></h2>
-<p>Generating your figure to be readable in pyplot
-MAKE THE FIGURE SMALL IN GENERATION AS AN SVG THEN IT WILL BE BIG</p>
-<h2 id="colors-etc"><a class="toclink" href="#colors-etc">Colors etc</a><a class="header-link" href="#colors-etc" title="Permalink to this section">¶</a></h2>
-<ul>
-<li>blue!50!black</li>
-<li>rgb</li>
-<li>named colors (link) –&gt;</li>
-</ul>
-<p>&lt;!– # 5. TODO: Overleaf in VSCode</p>
-<ul>
-<li>use latex workshop</li>
-<li>use overleaf workshop</li>
-</ul>
-<p>https://github.com/iamhyc/Overleaf-Workshop</p>
-<p>Install instructions –&gt;</p>
 <h1 id="4-the-dark-arts-advanced"><a class="toclink" href="#4-the-dark-arts-advanced">4. The Dark Arts (Advanced)</a><a class="header-link" href="#4-the-dark-arts-advanced" title="Permalink to this section">¶</a></h1>
 <blockquote class="infobox infobox-warning">
 <p>These incantations will give you dark powers and break you free from the shackles of conference style files. Use wisely.</p>
