@@ -3,6 +3,7 @@ save_as:
 
 **5/8/2025** Interviewed in IEEE Spectrum about reasoning models; our ThoughtTerminator work was mentioned! [[article link]](https://spectrum.ieee.org/chain-of-thought-prompting)
 
+
 **4/17/2025** New paper! ThoughtTerminator: Benchmarking, Calibrating, and Mitigating Overthinking in Reasoning Models [[arXiv]](https://arxiv.org/abs/2504.13367)
 
 **3/29/2025** I will be joining the University of Washington for a postdoc position in September!

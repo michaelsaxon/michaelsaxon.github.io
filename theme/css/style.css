@@ -1294,6 +1294,11 @@ sup[id^="fnref"]:hover .footnote-popup {
   /* z-index: 2; */
 }
 
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
 .about-title {
   margin: 0 0 0.15rem 0;  /* Tighter spacing to subtitle */
   font-size: 1.8rem;
