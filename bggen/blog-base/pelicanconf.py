@@ -32,6 +32,7 @@ PLUGINS = [
     "image_processor",
     "ert",
     'pelican_bibtex',
+    'image_line_classifier',
 ]
 
 SLUGIFY_SOURCE = 'basename'

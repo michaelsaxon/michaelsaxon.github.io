@@ -351,7 +351,7 @@ I'm pretty sure it is what gives the <code>\color{green}</code> macro its power,
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>This text is black and <span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>green<span class="nb">}</span> this text is green<span class="nb">}</span>.
 </code></pre></div></td></tr></table></div>
 <p>Additionally, it gives access to more elaborate colors depending on how you import. For example, <code>\usepackage[dvipsnames]{xcolor}</code> gives you access to more colors like “aquamarine,” “skyblue”, “navyblue”, etc.</p>
-<p><img alt="The how boys see colors vs how girls see colors meme except for base latex vs dvips colors" src="https://saxon.me/blog/2025/latex-tips/images/xcolor-meme.jpg"/></p>
+<p class="image-line"><img alt="The how boys see colors vs how girls see colors meme except for base latex vs dvips colors" src="https://saxon.me/blog/2025/latex-tips/images/xcolor-meme.jpg"/></p>
 <p>Additionally, we can use xcolor to define our own colors.
 The precise way is with an RGB code.
 For example, <code>\definecolor{tifablue}{RGB}{226, 232, 248}</code> defines the exact color we used in Table 2 of our <a href="https://arxiv.org/pdf/2404.04251">TS2 paper</a> to define the highlight color of TIFA-related runs. Once defined, one of these colors can be invoked with <code>\color{tifablue}</code>.</p>
@@ -621,7 +621,7 @@ A <span class="nb">&amp;</span> B <span class="nb">&amp;</span> C <span class="k
 <h3 id="special-table-symbols"><a class="toclink" href="#special-table-symbols">Special table symbols</a><a class="header-link" href="#special-table-symbols" title="Permalink to this section">¶</a></h3>
 <p>For my CoCo-CroLa paper I wanted an efficient way to mark equivalence between cells in a column, rather than repeat the same value several times.
 I wanted something very easy to skim with minimum visual noise, and came up with:</p>
-<p><img alt="Vertical line through duplicate cells" src="https://saxon.me/blog/2025/latex-tips/images/cccltable.png"/></p>
+<p class="image-line"><img alt="Vertical line through duplicate cells" src="https://saxon.me/blog/2025/latex-tips/images/cccltable.png"/></p>
 <p>I called this “same line” command <code>\samel</code>, defined with:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\samel</span><span class="nb">}</span>[0]<span class="nb">{</span><span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span><span class="k">\space\hspace</span><span class="nb">{</span>0.5em<span class="nb">}</span><span class="k">\vline</span><span class="nb">}}</span>
 </code></pre></div></td></tr></table></div>
@@ -638,7 +638,7 @@ I wanted to replicate this in a table I made last year and was able to pretty ea
 <p><code>\myrotcel</code> basically behaves exactly as I wanted inside of a table, turning the rotated text into an element with the proper width and height for positioning elements around it without overlapping or other weird clipping behavior.</p>
 <h2 id="putting-it-together"><a class="toclink" href="#putting-it-together">Putting it together</a><a class="header-link" href="#putting-it-together" title="Permalink to this section">¶</a></h2>
 <p>Using all of the above components we've discussed, including the <code>booktabs</code> line rules and <code>cmidrule</code>, the text cell rotation command <code>\myrotcel</code> we made, cell coloring and rotated <code>multicolumn</code>, we can generate this table from the TS2 paper:</p>
-<p><img alt="Table from the TS2 paper using all of these tricks." src="https://saxon.me/blog/2025/latex-tips/images/ts2table.png"/></p>
+<p class="image-line"><img alt="Table from the TS2 paper using all of these tricks." src="https://saxon.me/blog/2025/latex-tips/images/ts2table.png"/></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -826,7 +826,7 @@ For example, if you are using a graphic which has baked-in whitespace, you may w
 <p>Just wrap the <code>\includegraphics</code> command inside of <code>\bigln</code>, and pass the desired image size (as a multiple of page width) as the first argument.</p>
 <h2 id="teaser-figures-in-the-acl-format"><a class="toclink" href="#teaser-figures-in-the-acl-format">Teaser figures in the *ACL format</a><a class="header-link" href="#teaser-figures-in-the-acl-format" title="Permalink to this section">¶</a></h2>
 <p>Suppose you want to put a full-width figure at the top of your ACL paper, as seen in this example.</p>
-<p><img alt="Top of Michael's ACL 2023 paper with a big teaser figure" src="https://gist.github.com/michaelsaxon/21ab96429ffb86fb7691945dfe3f657a/raw/6ec0322422b20f70264faf1211e53138d5409021/0_z_cccl_example.png"/></p>
+<p class="image-line"><img alt="Top of Michael's ACL 2023 paper with a big teaser figure" src="https://gist.github.com/michaelsaxon/21ab96429ffb86fb7691945dfe3f657a/raw/6ec0322422b20f70264faf1211e53138d5409021/0_z_cccl_example.png"/></p>
 <p>The <code>\figure*{}</code> macro does not work to insert a full-width figure above the abstract in the ACL template for some reason. Thus, we need to hack together a command that does it for us.</p>
 <p>This command does a few things:
 - Breaks out of the document rendering defined by the ACL template with <code>strip</code>

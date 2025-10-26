@@ -250,7 +250,7 @@ I'm pretty sure it is what gives the &lt;code&gt;\color{green}&lt;/code&gt; macr
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;This text is black and &lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\color&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;green&lt;span class="nb"&gt;}&lt;/span&gt; this text is green&lt;span class="nb"&gt;}&lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;p&gt;Additionally, it gives access to more elaborate colors depending on how you import. For example, &lt;code&gt;\usepackage[dvipsnames]{xcolor}&lt;/code&gt; gives you access to more colors like “aquamarine,” “skyblue”, “navyblue”, etc.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="The how boys see colors vs how girls see colors meme except for base latex vs dvips colors" src="https://saxon.me/blog/2025/latex-tips/images/xcolor-meme.jpg"/&gt;&lt;/p&gt;
+&lt;p class="image-line"&gt;&lt;img alt="The how boys see colors vs how girls see colors meme except for base latex vs dvips colors" src="https://saxon.me/blog/2025/latex-tips/images/xcolor-meme.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;Additionally, we can use xcolor to define our own colors.
 The precise way is with an RGB code.
 For example, &lt;code&gt;\definecolor{tifablue}{RGB}{226, 232, 248}&lt;/code&gt; defines the exact color we used in Table 2 of our &lt;a href="https://arxiv.org/pdf/2404.04251"&gt;TS2 paper&lt;/a&gt; to define the highlight color of TIFA-related runs. Once defined, one of these colors can be invoked with &lt;code&gt;\color{tifablue}&lt;/code&gt;.&lt;/p&gt;
@@ -520,7 +520,7 @@ A &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; B &lt;span class="nb"&gt;&amp;am
 &lt;h3 id="special-table-symbols"&gt;&lt;a class="toclink" href="#special-table-symbols"&gt;Special table symbols&lt;/a&gt;&lt;a class="header-link" href="#special-table-symbols" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;For my CoCo-CroLa paper I wanted an efficient way to mark equivalence between cells in a column, rather than repeat the same value several times.
 I wanted something very easy to skim with minimum visual noise, and came up with:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vertical line through duplicate cells" src="https://saxon.me/blog/2025/latex-tips/images/cccltable.png"/&gt;&lt;/p&gt;
+&lt;p class="image-line"&gt;&lt;img alt="Vertical line through duplicate cells" src="https://saxon.me/blog/2025/latex-tips/images/cccltable.png"/&gt;&lt;/p&gt;
 &lt;p&gt;I called this “same line” command &lt;code&gt;\samel&lt;/code&gt;, defined with:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;\newcommand&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\samel&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;[0]&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\multicolumn&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;1&lt;span class="nb"&gt;}{&lt;/span&gt;l&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="k"&gt;\space\hspace&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;0.5em&lt;span class="nb"&gt;}&lt;/span&gt;&lt;span class="k"&gt;\vline&lt;/span&gt;&lt;span class="nb"&gt;}}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
@@ -537,7 +537,7 @@ I wanted to replicate this in a table I made last year and was able to pretty ea
 &lt;p&gt;&lt;code&gt;\myrotcel&lt;/code&gt; basically behaves exactly as I wanted inside of a table, turning the rotated text into an element with the proper width and height for positioning elements around it without overlapping or other weird clipping behavior.&lt;/p&gt;
 &lt;h2 id="putting-it-together"&gt;&lt;a class="toclink" href="#putting-it-together"&gt;Putting it together&lt;/a&gt;&lt;a class="header-link" href="#putting-it-together" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Using all of the above components we've discussed, including the &lt;code&gt;booktabs&lt;/code&gt; line rules and &lt;code&gt;cmidrule&lt;/code&gt;, the text cell rotation command &lt;code&gt;\myrotcel&lt;/code&gt; we made, cell coloring and rotated &lt;code&gt;multicolumn&lt;/code&gt;, we can generate this table from the TS2 paper:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Table from the TS2 paper using all of these tricks." src="https://saxon.me/blog/2025/latex-tips/images/ts2table.png"/&gt;&lt;/p&gt;
+&lt;p class="image-line"&gt;&lt;img alt="Table from the TS2 paper using all of these tricks." src="https://saxon.me/blog/2025/latex-tips/images/ts2table.png"/&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
 &lt;span class="normal"&gt; 2&lt;/span&gt;
 &lt;span class="normal"&gt; 3&lt;/span&gt;
@@ -725,7 +725,7 @@ For example, if you are using a graphic which has baked-in whitespace, you may w
 &lt;p&gt;Just wrap the &lt;code&gt;\includegraphics&lt;/code&gt; command inside of &lt;code&gt;\bigln&lt;/code&gt;, and pass the desired image size (as a multiple of page width) as the first argument.&lt;/p&gt;
 &lt;h2 id="teaser-figures-in-the-acl-format"&gt;&lt;a class="toclink" href="#teaser-figures-in-the-acl-format"&gt;Teaser figures in the *ACL format&lt;/a&gt;&lt;a class="header-link" href="#teaser-figures-in-the-acl-format" title="Permalink to this section"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Suppose you want to put a full-width figure at the top of your ACL paper, as seen in this example.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Top of Michael's ACL 2023 paper with a big teaser figure" src="https://gist.github.com/michaelsaxon/21ab96429ffb86fb7691945dfe3f657a/raw/6ec0322422b20f70264faf1211e53138d5409021/0_z_cccl_example.png"/&gt;&lt;/p&gt;
+&lt;p class="image-line"&gt;&lt;img alt="Top of Michael's ACL 2023 paper with a big teaser figure" src="https://gist.github.com/michaelsaxon/21ab96429ffb86fb7691945dfe3f657a/raw/6ec0322422b20f70264faf1211e53138d5409021/0_z_cccl_example.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;\figure*{}&lt;/code&gt; macro does not work to insert a full-width figure above the abstract in the ACL template for some reason. Thus, we need to hack together a command that does it for us.&lt;/p&gt;
 &lt;p&gt;This command does a few things:
 - Breaks out of the document rendering defined by the ACL template with &lt;code&gt;strip&lt;/code&gt;

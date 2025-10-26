@@ -2033,6 +2033,7 @@ h6 .toclink:hover ~ .header-link::after,
 }
 
 
+
 /* Heading anchor link styling */
 .toclink {
     color: var(--text-body);
@@ -2220,4 +2221,8 @@ h6 .toclink:hover ~ .header-link::after,
   filter: var(--logo-filter);
   width: 100px;
   opacity: 0.6;
+}
+
+p.image-line {
+  text-align: center;
 }
