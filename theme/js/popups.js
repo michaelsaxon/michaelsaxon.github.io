@@ -69,12 +69,12 @@ function initializePopups() {
                 
                 // Toggle styles on the reference and icon
                 if (popup.classList.contains('visible')) {
-                    ref.style.backgroundColor = 'var(--link-color)';
+                    ref.style.backgroundColor = 'var(--text-dark)';
                     ref.style.color = 'var(--bg-main)';
                     icon.style.transform = 'rotate(45deg)';
                 } else {
                     ref.style.backgroundColor = 'var(--bg-main)';
-                    ref.style.color = 'var(--link-color)';
+                    ref.style.color = 'var(--text-dark)';
                     icon.style.transform = '';
                 }
                 
@@ -86,7 +86,7 @@ function initializePopups() {
                         const otherRef = p.parentElement.querySelector('.footnote-ref');
                         const otherIcon = p.parentElement.querySelector('.footnote-icon');
                         otherRef.style.backgroundColor = 'var(--bg-main)';
-                        otherRef.style.color = 'var(--link-color)';
+                        otherRef.style.color = 'var(--text-dark)';
                         otherIcon.style.transform = '';
                     }
                 });
@@ -103,7 +103,7 @@ function initializePopups() {
                 const otherRef = popup.parentElement.querySelector('.footnote-ref');
                 const otherIcon = popup.parentElement.querySelector('.footnote-icon');
                 otherRef.style.backgroundColor = 'var(--bg-main)';
-                otherRef.style.color = 'var(--link-color)';
+                otherRef.style.color = 'var(--text-dark)';
                 otherIcon.style.transform = '';
             });
         }

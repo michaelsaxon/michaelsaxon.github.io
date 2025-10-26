@@ -1004,7 +1004,6 @@ article > ul,
 article > ol {
   margin: 1rem 0;      /* Match paragraph spacing */
   padding-left: 2rem;   /* Indent lists */
-  padding-bottom: 0.6rem;
 }
 
 article > ul > li,
@@ -1084,7 +1083,7 @@ sup[id^="fnref"] {
 
 /* Hover effect */
 .footnote-ref:hover {
-  background-color: var(--link-color) !important;
+  background-color: var(--text-dark) !important;
   color: var(--bg-main) !important;
 }
 
@@ -1106,7 +1105,6 @@ sup[id^="fnref"] {
   text-align: left;
   line-height: 1.4em;
   white-space: normal;
-  pointer-events: none;
   color: var(--text-black);
   /* font-family: 'Berkeley Mono', sans-serif;     */
   /* Center by default */
@@ -1838,7 +1836,8 @@ sup[id^="fnref"]:hover .footnote-popup {
 
 /* Inline image styling */
 article.post img,
-.post-content img {
+.post-content img,
+.footnote-popup img {
     border-radius: 6px;  /* Match other elements' radius */
     height: auto;
     border: 1px solid var(--brand-main);
@@ -1997,7 +1996,8 @@ span.footnote-popup code {
 
 
 /* Link icon using SVG with filter */
-.header-link::after {
+.header-link::after,
+.post-title a::after {
   content: '';
   display: inline-block;
   width: 1.2rem;
@@ -2012,6 +2012,12 @@ span.footnote-popup code {
   visibility: hidden;
 }
 
+.post-title a::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.7rem;
+}
+
 
 /* Show on hover of heading */
 h1 .toclink:hover ~ .header-link::after,
@@ -2020,6 +2026,7 @@ h3 .toclink:hover ~ .header-link::after,
 h4 .toclink:hover ~ .header-link::after,
 h5 .toclink:hover ~ .header-link::after,
 h6 .toclink:hover ~ .header-link::after, 
+.post-title a:hover::after,
 .header-link:hover::after {
   filter: var(--icon-filter-hover);  /* Use hover filter on hover */
   visibility: visible;
