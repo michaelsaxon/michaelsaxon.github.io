@@ -47,7 +47,7 @@
  --kanagawa-light-selection: #2d4f67;
  --kanagawa-light-bg: #efede3;
  --kanagawa-light-text: #1f1f28;
- --kanagawa-dark-selection: #d5dfe6;
+ --kanagawa-dark-selection: #6a91ac;
 
   /* Icon filters */
   --kanagawa-dark-icon-filter: brightness(0) saturate(100%) invert(90%) sepia(83%) saturate(132%) hue-rotate(334deg) brightness(91%) contrast(89%);
@@ -128,7 +128,8 @@
   /* UI colors */
   --bg-main: var(--kanagawa-light-bg);     /* Main background */
   --link-color: var(--kanagawa-dark-blue);    /* Link blue */
-  --selection-color: var(--kanagawa-selection-blue);
+  /* --selection-color: var(--kanagawa-selection-blue); */
+  --selection-color: var(--kanagawa-dark-bg);
   --selection-text-color: var(--kanagawa-dark-text);
   
   /* Social icon colors */
@@ -180,7 +181,7 @@
   /* UI colors */
   --bg-main: var(--kanagawa-dark-bg);     /* Main background */
   --link-color: var(--kanagawa-light-blue);    /* Link blue */
-  --selection-color: var(--kanagawa-dark-selection);
+  --selection-color: var(--kanagawa-dark-text);
   --selection-text-color: var(--kanagawa-light-text);
   
   /* Social icon colors */
