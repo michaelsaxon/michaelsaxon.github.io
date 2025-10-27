@@ -5,6 +5,7 @@ Tags: About
 Authors: Michael Saxon
 Summary: To test that my blog implementation works, I'll share my pytorchlightning-based replication of dataset cartography!
 Image: images/softlaunch.jpg
+bsky_uri: at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3k6w5dwpddr2n
 
 ### About my blog
 

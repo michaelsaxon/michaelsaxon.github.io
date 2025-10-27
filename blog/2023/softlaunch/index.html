@@ -108,6 +108,11 @@
             <div class="post-description">
                 To test that my blog implementation works, I'll share my pytorchlightning-based replication of dataset cartography!
             </div>
+            <div class="bsky-stats-preview-container">
+                <div id="article-title-bsky-stats-preview" class="bsky-stats-preview">
+                    <p><em>Loading post stats...</em></p>
+                </div>
+            </div>
         </div>
     </header>
     <h3 id="about-my-blog"><a class="toclink" href="#about-my-blog">About my blog</a><a class="header-link" href="#about-my-blog" title="Permalink to this section">¶</a></h3>
@@ -215,6 +220,27 @@
 </code></pre></div></td></tr></table></div>
 <p>I wrote this code so that I could replicate the <a href="https://arxiv.org/abs/2009.10795">Dataset Cartography</a> features of confidence and correctness to analyze the effectiveness of my <a href="https://arxiv.org/abs/2112.09237">PECO</a> tool for analyzing datasets. You can see the code used in-context <a href="https://github.com/michaelsaxon/DatasetAnalysis">here!</a></p>
 </article>
+<div id="bluesky-comments-container" class="widget-wrapper">
+    <script src="https://saxon.me/theme/js/bluesky-comments.js"></script>
+    <div id="my-bluesky-comments">
+      <p><i>Loading Bluesky comments...</i></p>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const targetContainerId = 'my-bluesky-comments';
+        const blueskyPostUri = 'at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3k6w5dwpddr2n'; // <<<--- CHANGE THIS URI
+        if (typeof loadAndRenderComments === 'function') {
+            loadAndRenderComments(targetContainerId, blueskyPostUri);
+        } else {
+            console.error("Error: loadAndRenderComments function not found.");
+            const container = document.getElementById(targetContainerId);
+            if (container) {
+                container.innerHTML = '<p class="bsky-comments-error">Error: Could not load comments component.</p>';
+            }
+        }
+    });
+</script>
 </div>
 
 

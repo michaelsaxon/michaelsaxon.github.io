@@ -5,6 +5,7 @@ Tags: Policy, ACL, AI, Metascience, Fairness
 Authors: Michael Saxon
 Summary: Preprinting and promoting one's work online is one of the most impactful and accessible career advancement methods for early-career researchers. Policies that hinder this process are thus disproportionately harmful to early career scientists, relative to their senior peers. As online promotion is more accessible than traditional routes of namebuilding, we contend that depriving "low-prestige institution"-affiliated early-career researchers of this avenue for self-advancement futher disproportionately harms them relative to their "high-prestige" peers. Finally, a broad culture of posting quality preprints has community-level and scientific benefits. We contend that the ACL anonymity policy is harmful for the ways in which it forces early-career researchers (ECRs) to choose between participating in ACL or doing what's best for their careers.
 Image: images/anti-acl-anon.jpg
+bsky_uri: at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3k7hs3ihhu22g
 
 > [!WARNING]
 > This post is outdated. The ACL Anonymity Embargo Period has been repealed.
