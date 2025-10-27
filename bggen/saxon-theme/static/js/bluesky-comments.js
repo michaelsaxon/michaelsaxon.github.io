@@ -620,10 +620,10 @@ function renderParentPostStats(statsContainer, parentPostData, statsPreview) {
     statsHtmlParts.push(createStatHtml(quoteCount, 'Quote', 'Quotes', 'ph-quotes', '/quotes', 'View Quotes on Bluesky'));
 
 
-    previewStatsHtmlParts.push(createStatHtml(likeCount, 'Like', 'Likes', 'ph-heart', '', 'View Likes on Bluesky', "#my-bluesky-comments"));
-    previewStatsHtmlParts.push(createStatHtml(repostCount, 'Repost', 'Reposts', 'ph-repeat', '', 'View Reposts on Bluesky', "#my-bluesky-comments"));
-    previewStatsHtmlParts.push(createStatHtml(replyCount, 'Reply', 'Replies', 'ph-chat-centered', '', 'View Post on Bluesky', "#my-bluesky-comments"));
-    previewStatsHtmlParts.push(createStatHtml(quoteCount, 'Quote', 'Quotes', 'ph-quotes', '', 'View Quotes on Bluesky', "#my-bluesky-comments"));
+    previewStatsHtmlParts.push(createStatHtml(likeCount, 'Like', 'Likes', 'ph-heart', '', 'Bluesky Likes: go to comments', "#my-bluesky-comments"));
+    previewStatsHtmlParts.push(createStatHtml(repostCount, 'Repost', 'Reposts', 'ph-repeat', '', 'Bluesky Reposts: go to comments', "#my-bluesky-comments"));
+    previewStatsHtmlParts.push(createStatHtml(replyCount, 'Reply', 'Replies', 'ph-chat-centered', '', 'Bluesky Replies: go to comments', "#my-bluesky-comments"));
+    previewStatsHtmlParts.push(createStatHtml(quoteCount, 'Quote', 'Quotes', 'ph-quotes', '', 'Bluesky Quotes: go to comments', "#my-bluesky-comments"));
     const finalHtml = statsHtmlParts.filter(part => part).join('');
 
     if (finalHtml) {
