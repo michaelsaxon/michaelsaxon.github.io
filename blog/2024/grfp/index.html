@@ -108,6 +108,11 @@
             <div class="post-description">
                 Reflections and advice from my successful NSF GRFP proposal in NLP. Why I think my applications worked well, what I wish I did differently, and links to my actual statements and feedback from the GRFP reviewing panel.
             </div>
+            <div class="bsky-stats-preview-container">
+                <div id="article-title-bsky-stats-preview" class="bsky-stats-preview">
+                    <p><em>Loading post stats...</em></p>
+                </div>
+            </div>
         </div>
     </header>
     <div class="toc"><span class="toc-title">Table of Contents</span><ul>
@@ -215,6 +220,27 @@ In a less crowded field your chances are better!</p>
 <p>If you have any further questions about applying to the GRFP, or <strong>if you have your own previous successful application materials that you would like to share with me so I can distribute them as examples for other prospective applicants</strong> please email me.</p>
 <p>I also have a modest collection of other people's successful applications. While I am not comfortable just posting them all, I will share them with you privately, <strong>provided you then share <em>your statements back to me</em> after so I can <a href="https://www.youtube.com/watch?v=abBabSWyNOI">add them to my collection</a>.</strong></p>
 </article>
+<div id="bluesky-comments-container" class="widget-wrapper">
+    <script src="https://saxon.me/theme/js/bluesky-comments.js"></script>
+    <div id="my-bluesky-comments">
+      <p><i>Loading Bluesky comments...</i></p>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const targetContainerId = 'my-bluesky-comments';
+        const blueskyPostUri = 'at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3kb7omx2cqh2n'; // <<<--- CHANGE THIS URI
+        if (typeof loadAndRenderComments === 'function') {
+            loadAndRenderComments(targetContainerId, blueskyPostUri);
+        } else {
+            console.error("Error: loadAndRenderComments function not found.");
+            const container = document.getElementById(targetContainerId);
+            if (container) {
+                container.innerHTML = '<p class="bsky-comments-error">Error: Could not load comments component.</p>';
+            }
+        }
+    });
+</script>
 </div>
 
 
