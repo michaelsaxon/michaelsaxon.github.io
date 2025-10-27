@@ -110,7 +110,7 @@
 
 
 .widget-wrapper #bsky-parent-post-stats-container {
-    padding: 16px;
+    padding: 0 1rem;
     border-bottom: 1px solid var(--monochrome-2);
     display: flex;
     flex-wrap: wrap;
@@ -129,7 +129,8 @@
     gap: 12px 20px;
     text-align: center;
     max-width: 800px;
-    margin-top: 1rem;
+    margin-top: 0.1rem;
+    margin-bottom: -0.9rem;
     font-family: "Berkeley Mono", monospace;
     font-stretch: semi-condensed;
     font-size: var(--font-size-tagline) !important;
@@ -138,6 +139,7 @@
 #my-bluesky-comments {
     width: 95%;
 }
+
 
 @media (max-width: 600px) {
     .bsky-stat-full {
@@ -169,7 +171,7 @@
 }
 
 .widget-wrapper #bsky-parent-post-stats-container .ph-heart,.bsky-stats-preview .ph-heart {
-    color: var(--kanagawa-dark-red) !important;
+    color: var(--text-main) !important;
 }
 
 .widget-wrapper #bsky-parent-post-stats-container .ph-chat-centered,.bsky-stats-preview .ph-chat-centered {
@@ -177,11 +179,11 @@
 }
 
 .widget-wrapper #bsky-parent-post-stats-container .ph-repeat,.bsky-stats-preview .ph-repeat {
-    color: var(--kanagawa-dark-green) !important;
+    color: var(--text-main) !important;
 }
 
 .widget-wrapper #bsky-parent-post-stats-container .ph-quotes,.bsky-stats-preview .ph-quotes {
-    color: var(--kanagawa-dark-blue) !important;
+    color: var(--text-main) !important;
 }
 
 .widget-wrapper #bsky-parent-post-stats-container p,.bsky-stats-preview p {
@@ -316,9 +318,11 @@
 .widget-wrapper .comment-embed-image-link {
     pointer-events: auto;
     cursor: pointer;
-    color: var(--primary-base);
+    color: var(--link-color);
     font-weight: 500;
     text-decoration: none;
+    font-family: "Berkeley Mono", monospace;
+    font-stretch: semi-condensed;
 }
 
 .widget-wrapper .comment-blocked-notice,
@@ -526,7 +530,7 @@
 }
 
 .widget-wrapper .comment-embed-external-desc {
-    font-size: var(--font-size-label);
+    font-size: var(--font-size-tagline);
     color: var(--monochrome-7);
     line-height: 1.4;
     display: -webkit-box;
@@ -536,6 +540,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
+    font-stretch: condensed;
 }
 
 .widget-wrapper .comment-embed-notice {
@@ -641,4 +646,24 @@
     background-color: var(--monochrome-4) !important;
     cursor: not-allowed !important;
     opacity: 0.7 !important;
+}
+
+a.bsky-stat-link {
+    padding: 1rem 0;
+}
+
+a.bsky-stat-link:hover span.stat-ph-heart, a.bsky-stat-link:hover span.stat-ph-heart span {
+    color: var(--kanagawa-dark-red) !important;
+}
+
+a.bsky-stat-link:hover span.stat-ph-chat-centered, a.bsky-stat-link:hover span.stat-ph-chat-centered span {
+    color: var(--kanagawa-dark-cyan) !important;
+}
+
+a.bsky-stat-link:hover span.stat-ph-repeat, a.bsky-stat-link:hover span.stat-ph-repeat span {
+    color: var(--kanagawa-dark-green) !important;
+}
+
+a.bsky-stat-link:hover span.stat-ph-quotes, a.bsky-stat-link:hover span.stat-ph-quotes span {
+    color: var(--kanagawa-dark-blue) !important;
 }
