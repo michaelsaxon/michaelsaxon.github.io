@@ -6,6 +6,7 @@ Authors: Michael Saxon
 Summary: Various snippets, tricks, and lessons I've developed and learned from messing around in LaTeX and scrutinizing source files on arXiv.
 Image: images/latex-tips.jpg
 remove_footnote_section: true
+bsky_uri: at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3lmix2edrz22p
 
 Between my mild presentational OCD and a desire to understand how various cool figures, tables, and styles have been implemented in other groups' papers, I have accumulated quite a few LaTeX snippets that I pass around with my friends. I figured I should put them all in one place along with some explanations, so (if you're interested) you can learn to make your own.
 

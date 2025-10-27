@@ -19,11 +19,13 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/fonts.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/code.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pubs.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bluesky-comments.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/code.css"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pubs.css"/>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-          crossorigin="anonymous">
+          crossorigin="anonymous"/>
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
     {% endif %}
@@ -50,7 +52,7 @@
     <meta property="twitter:title" content="{{ self.title() }}" />
     <meta property="twitter:description" content="{{ self.description() }}" />
     <meta property="twitter:image" content="{{ SITEURL }}/{{ self.imgurl() }}" />
-    <link rel="icon" type="image/png" href="{{ SITEURL }}/theme/img/logomark_fill.png">
+    <link rel="icon" type="image/png" href="{{ SITEURL }}/theme/img/logomark_fill.png"/>
 </head>
 <body>
 

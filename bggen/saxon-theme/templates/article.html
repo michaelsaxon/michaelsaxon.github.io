@@ -26,8 +26,38 @@
             <div class="post-description">
                 {{ article.summary }}
             </div>
+            {% if article.bsky_uri %}
+            <div class="bsky-stats-preview-container">
+                <div id="article-title-bsky-stats-preview" class="bsky-stats-preview">
+                    <p><em>Loading post stats...</em></p>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </header>
     {{ article.content }}
 </article>
+{% if article.bsky_uri %}
+<div id="bluesky-comments-container" class="widget-wrapper">
+    <script src="{{ SITEURL }}/theme/js/bluesky-comments.js"></script>
+    <div id="my-bluesky-comments">
+      <p><i>Loading Bluesky comments...</i></p>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const targetContainerId = 'my-bluesky-comments';
+        const blueskyPostUri = '{{ article.bsky_uri }}'; // <<<--- CHANGE THIS URI
+        if (typeof loadAndRenderComments === 'function') {
+            loadAndRenderComments(targetContainerId, blueskyPostUri);
+        } else {
+            console.error("Error: loadAndRenderComments function not found.");
+            const container = document.getElementById(targetContainerId);
+            if (container) {
+                container.innerHTML = '<p class="bsky-comments-error">Error: Could not load comments component.</p>';
+            }
+        }
+    });
+</script>
+{% endif %}
 {% endblock %}

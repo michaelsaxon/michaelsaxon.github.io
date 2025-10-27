@@ -19,13 +19,11 @@
 <link href="https://saxon.me/theme/css/fonts.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>COLM 2025: 9 cool papers and some thoughts</title>
-<link href="https://saxon.me/theme/css/bluesky-comments.css" rel="stylesheet">
-<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" rel="stylesheet" type="text/css">
 <link href="https://saxon.me/theme/css/code.css" rel="stylesheet"/>
 <link href="https://saxon.me/theme/css/pubs.css" rel="stylesheet"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" rel="stylesheet"/>
-<link href="feeds/all.atom.xml" rel="alternate" title="Michael Saxon Full Atom Feed" type="application/atom+xml"/>
-<link href="feeds/all.rss.xml" rel="alternate" title="Michael Saxon Full RSS Feed" type="application/rss+xml"/>
+<link href="feeds/all.atom.xml" rel="alternate" title="Michael Saxon Full Atom Feed" type="application/atom+xml">
+<link href="feeds/all.rss.xml" rel="alternate" title="Michael Saxon Full RSS Feed" type="application/rss+xml">
 <meta content="COLM 2025: 9 cool papers and some thoughts" name="title">
 <meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." name="description"/>
 <meta content="article" property="og:type"/>
@@ -40,7 +38,10 @@
 <meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." property="twitter:description"/>
 <meta content="https://saxon.me/images/colm2025-teaser.jpg" property="twitter:image"/>
 <link href="https://saxon.me/theme/img/logomark_fill.png" rel="icon" type="image/png"/>
-</meta></link></link></head>
+</meta></link></link>
+<link rel="stylesheet" href="../../../theme/css/bluesky-comments.css"> Widget styles
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+</head>
 <body>
 <header class="site-header">
 <div class="top-nav">
@@ -100,11 +101,6 @@
 <div class="post-description">
                 Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency.
             </div>
-<div class="bsky-stats-preview-container">
-<div class="bsky-stats-preview" id="article-title-bsky-stats-preview">
-<p><em>Loading post stats...</em></p>
-</div>
-</div>
 </div>
 </header>
 <p>COLM 2025 was a blast! Here I'll summarize takeaways I had from poster discussions for 9 cool papers, and I'll give some of my own reflections on the conference overall.</p>
@@ -255,29 +251,20 @@ Considering the visa issues that people are having with Canada (and the US) can 
 </li>
 </ol>
 </div>
+
+
 </article>
-<div class="widget-wrapper" id="bluesky-comments-container">
-<script src="https://saxon.me/theme/js/bluesky-comments.js"></script>
-<div id="my-bluesky-comments">
-<p><i>Loading Bluesky comments...</i></p>
-</div>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const targetContainerId = 'my-bluesky-comments';
-        const blueskyPostUri = 'at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3m3ejsl544c2f'; // <<<--- CHANGE THIS URI
-        if (typeof loadAndRenderComments === 'function') {
-            loadAndRenderComments(targetContainerId, blueskyPostUri);
-        } else {
-            console.error("Error: loadAndRenderComments function not found.");
-            const container = document.getElementById(targetContainerId);
-            if (container) {
-                container.innerHTML = '<p class="bsky-comments-error">Error: Could not load comments component.</p>';
-            }
-        }
-    });
-</script>
-</div>
+
+<!-- Bluesky comments -->
+<div id="bluesky-comments-container" class="widget-wrapper">
+  <script src="../../../theme/js/bluesky-comments.js"></script>
+  <div id="my-bluesky-comments">
+    <p><i>Loading Bluesky comments...</i></p>
+  </div>
+  </div>
+
+
+
 <footer style="margin-top:25pt; padding-top:10pt;">
 <ul class="icons">
 <li><a href="https://www.semanticscholar.org/author/Michael-Stephen-Saxon/48227633"><img class="filtercolor" src="https://saxon.me/theme/img/ico/svg/semantic-scholar.svg"/></a></li>
@@ -298,7 +285,7 @@ Considering the visa issues that people are having with Canada (and the US) can 
 <div class="worldmap" style="border: 1pt solid var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); font-family: 'Berkeley Mono', monospace; font-stretch: semi-condensed;">The Clustrmaps visitor tracker that used to live here has been removed to protect your privacy.</div>
 <div style="max-width: 800px; margin-right: auto; margin-left: auto; text-align: center;">
 <!-- <img src="https://web.badges.world/badges/operated/getfirefox.gif"/> -->
-<div style="width: 90pt; height: 25pt; 
+<div style="width: 95pt; height: 25pt; 
      background-color: var(--background-color); font-size: 9pt; 
        border: 1pt solid var(--text-body); margin-right: auto; margin-left: auto; 
      color: var(--text-body) !important; font-family: 'Arial', sans-serif;
@@ -308,5 +295,24 @@ Considering the visa issues that people are having with Canada (and the US) can 
 </div>
 </div>
 </footer>
-<script src="../../../static/js/popups.js"></script></body>
+  
+<script src="../../../static/js/popups.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const targetContainerId = 'my-bluesky-comments';
+      const blueskyPostUri = 'at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3m3ejsl544c2f'; // <<<--- CHANGE THIS URI
+      if (typeof loadAndRenderComments === 'function') {
+          loadAndRenderComments(targetContainerId, blueskyPostUri);
+      } else {
+          console.error("Error: loadAndRenderComments function not found.");
+          const container = document.getElementById(targetContainerId);
+          if (container) {
+              container.innerHTML = '<p class="bsky-comments-error">Error: Could not load comments component.</p>';
+          }
+      }
+  });
+</script>
+
+</body>
 </html>

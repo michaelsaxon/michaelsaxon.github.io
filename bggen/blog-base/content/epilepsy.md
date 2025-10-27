@@ -6,6 +6,7 @@ Authors: Michael Saxon
 Summary: Meditations and reflections of a (former?) epileptic in recovery
 Image: images/epilepsy.jpg
 remove_footnote_section: true
+bsky_uri: at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3lf7eeqyp4k2c
 
 > [!NOTE]
 > *My New Year's resolution is to blog regularly, even if it means writing random nonsense that has little to do with research. To start, I wanted to tell the story of my health for my research career. This is not a pity party but a documentary effort. Now that I think I have (fingers crossed) closed this chapter of my life, I feel ready to write a bit about it. A lot of this story is about me being stupid. Don't be stupid like me.* 

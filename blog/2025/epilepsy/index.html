@@ -19,11 +19,13 @@
 <link href="https://saxon.me/theme/css/fonts.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>A seizure-free year for Michael!</title>
+<link href="https://saxon.me/theme/css/bluesky-comments.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" rel="stylesheet" type="text/css">
 <link href="https://saxon.me/theme/css/code.css" rel="stylesheet"/>
 <link href="https://saxon.me/theme/css/pubs.css" rel="stylesheet"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" rel="stylesheet"/>
-<link href="feeds/all.atom.xml" rel="alternate" title="Michael Saxon Full Atom Feed" type="application/atom+xml">
-<link href="feeds/all.rss.xml" rel="alternate" title="Michael Saxon Full RSS Feed" type="application/rss+xml">
+<link href="feeds/all.atom.xml" rel="alternate" title="Michael Saxon Full Atom Feed" type="application/atom+xml"/>
+<link href="feeds/all.rss.xml" rel="alternate" title="Michael Saxon Full RSS Feed" type="application/rss+xml"/>
 <meta content="A seizure-free year for Michael!" name="title">
 <meta content="Meditations and reflections of a (former?) epileptic in recovery" name="description"/>
 <meta content="article" property="og:type"/>
@@ -98,6 +100,11 @@
 <div class="post-description">
                 Meditations and reflections of a (former?) epileptic in recovery
             </div>
+<div class="bsky-stats-preview-container">
+<div class="bsky-stats-preview" id="article-title-bsky-stats-preview">
+<p><em>Loading post stats...</em></p>
+</div>
+</div>
 </div>
 </header>
 <blockquote class="infobox infobox-note">
@@ -187,6 +194,27 @@ right??</p>
 <p>I don't know. I am still struggling with these questions. Writing this was a bit of an act of self-therapy to get over it. I hope to help others like me in my career going forward. I wonder what the best way to do that is. I wonder if I count as disabled. How should I identify myself? Will my epilepsy ever really be “cured?”</p>
 <p>All I know for now, is that I am extremely grateful looking back on 2024. I was more productive than ever. I made some great friends. And I didn't have any seizures. Here's to continuing this trend in 2025.</p>
 </article>
+<div class="widget-wrapper" id="bluesky-comments-container">
+<script src="https://saxon.me/theme/js/bluesky-comments.js"></script>
+<div id="my-bluesky-comments">
+<p><i>Loading Bluesky comments...</i></p>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const targetContainerId = 'my-bluesky-comments';
+        const blueskyPostUri = 'at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3lf7eeqyp4k2c'; // <<<--- CHANGE THIS URI
+        if (typeof loadAndRenderComments === 'function') {
+            loadAndRenderComments(targetContainerId, blueskyPostUri);
+        } else {
+            console.error("Error: loadAndRenderComments function not found.");
+            const container = document.getElementById(targetContainerId);
+            if (container) {
+                container.innerHTML = '<p class="bsky-comments-error">Error: Could not load comments component.</p>';
+            }
+        }
+    });
+</script>
 </div>
 <footer style="margin-top:25pt; padding-top:10pt;">
 <ul class="icons">

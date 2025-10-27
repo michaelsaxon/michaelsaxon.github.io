@@ -33,6 +33,7 @@ PLUGINS = [
     "ert",
     'pelican_bibtex',
     'image_line_classifier',
+    'bsky_metadata',
 ]
 
 SLUGIFY_SOURCE = 'basename'
