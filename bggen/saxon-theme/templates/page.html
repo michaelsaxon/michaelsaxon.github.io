@@ -5,6 +5,7 @@
 
 
 {% block content %}
+<article class="post">
     <h1 style="font-family: 'Triptych', serif; font-style: italic; font-weight: 900; margin-top: 0.2rem;">{{ page.title }}</h1>
     {% import 'translations.html' as translations with context %}
     {{ translations.translations_for(page) }}
@@ -16,4 +17,5 @@
         Last updated: {{ page.locale_modified }}
         </p>
     {% endif %}
+</article>
 {% endblock %}

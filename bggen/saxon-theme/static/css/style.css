@@ -1837,7 +1837,8 @@ sup[id^="fnref"]:hover .footnote-popup {
 /* Inline image styling */
 article.post img,
 .post-content img,
-.footnote-popup img {
+.footnote-popup img,
+blockquote img {
     border-radius: 6px;  /* Match other elements' radius */
     height: auto;
     border: 1px solid var(--brand-main);
@@ -2221,6 +2222,8 @@ h6 .toclink:hover ~ .header-link::after,
   filter: var(--logo-filter);
   width: 100px;
   opacity: 0.6;
+  border: 0px !important;
+  border-radius: 0px !important;
 }
 
 p.image-line {

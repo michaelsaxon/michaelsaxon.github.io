@@ -1,7 +1,14 @@
 Title: Colophon
 remove_footnote_section: true
 
-*Built from scratch on the west coast by Michael Saxon, from 2017 to today. Heavy Cursor use to build plugins and CSS. Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io)!*
+> [!note]
+> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Inkunabel.ValMax.finis.detail.jpg" alt="Sample colophon from Wikipedia."> 
+> A *colophon*[^4] is a page that describes how the site is made, with what tools, supporting what technologies.  Having the key principles that govern your site in one place means that any user who visits does not need to read through the archives of your site or speak with you to understand what mattered most to you when you constructed your site. 
+> ---[IndieWebCamp](https://indieweb.org/colophon)
+
+[^4]: The term [colophon](https://en.wikipedia.org/wiki/Colophon_(publishing)) comes from publishing, to describe the pages in the forward of a volume which name where and by whom it was printed, what font it is set in, and other details.
+
+Built from scratch on the west coast by Michael Saxon, from 2017 to today. Heavy Cursor use to build plugins and CSS. Feel free to steal my source on [GitHub](https://github.com/michaelsaxon/michaelsaxon.github.io)!
 
 <img src="https://saxon.me/theme/img/logomark_trans.png" alt="Logomark" class="colophon-img"/>
 
@@ -62,3 +69,18 @@ I have implemented default, `warning`, `info`, and `tip` boxes.
 
 > [!TIP]
 > This is a TIP.
+
+### Hosting & Domain
+
+The site is hosted for free using [GitHub pages](https://docs.github.com/en/pages). The domain is provided by Namecheap. I am thinking about moving to better providers and aspire to eventually self host, but GH pages is pretty good for static sites.
+
+### Privacy
+
+For a long time I used [Clustrmaps](https://clustrmaps.com/site/1bs8p) for visitor tracking.
+While obviously, any free service for this sort of thing will be using it for data gathering, I didn't realize quite how nasty Clustrmaps is.
+Beyond just a run-of-the-mill databroker, it actually uses its data to power a by-name people search service which correlates IPs to addresses.
+
+I got rid of it in October 2025. I want to eventually roll my own visitor tracker (shouldn't be *too* hard) but that's a project for another time.
+For posterity, here's the state of the visitor map when I took it down:
+
+![The visitor map for my site.]({attach}images/clustr.png)
