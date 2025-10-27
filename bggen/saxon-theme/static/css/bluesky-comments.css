@@ -386,12 +386,14 @@
 
 .widget-wrapper .comment-author-handle {
     color: var(--monochrome-6);
-    font-size: var(--font-size-label);
+    font-size: var(--font-size-caption);
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: "Berkeley Mono", monospace;
+    font-stretch: semi-condensed;
 }
 
 .widget-wrapper .comment-author-handle:hover {
