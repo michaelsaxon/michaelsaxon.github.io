@@ -605,7 +605,7 @@ function renderParentPostStats(statsContainer, parentPostData, statsPreview) {
     const createStatHtml = (count, labelSingular, labelPlural, iconClass, linkSuffix, linkTitle, linkOverride = null) => {
         if (count === 0) return ''; // Hide if count is 0
         const label = count === 1 ? labelSingular : labelPlural;
-        const statContent = `<span><i class="ph-duotone ${iconClass}"></i> ${formatNumber(count)} ${label}</span>`;
+        const statContent = `<span><i class="ph-duotone ${iconClass}"></i><span class="bsky-stat-abbrev">&nbsp;</span>${formatNumber(count)}<span class="bsky-stat-full">&nbsp;${label}</span></span>`;
         if (canLink) {
             const targetUrl = linkOverride ? linkOverride : (linkSuffix ? basePostUrl + linkSuffix : basePostUrl);
             return `<a href="${targetUrl}" target="_blank" rel="noopener noreferrer" title="${linkTitle}" class="bsky-stat-link">${statContent}</a>`;
