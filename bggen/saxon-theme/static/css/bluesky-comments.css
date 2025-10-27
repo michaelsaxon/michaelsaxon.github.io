@@ -142,7 +142,7 @@
 .widget-wrapper #bsky-parent-post-stats-container>*,.bsky-stats-preview>* {
     flex: 1 1 calc(25% - 16px);
     /* min-width: 148px; */
-    width: 25%
+    width: calc(25% - 16px);
 }
 
 .widget-wrapper #bsky-parent-post-stats-container span,.bsky-stats-preview span {
