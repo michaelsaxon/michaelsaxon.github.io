@@ -139,7 +139,7 @@
 #my-bluesky-comments {
     width: 95%;
 }
-
+/* 
 
 @media (max-width: 600px) {
     .bsky-stat-full {
@@ -148,7 +148,7 @@
     .bsky-stat-abbrev {
         width: 0.8rem;
     }
-}
+} */
 
 .widget-wrapper #bsky-parent-post-stats-container>*,.bsky-stats-preview>* {
     flex: 1 1 calc(25% - 16px);

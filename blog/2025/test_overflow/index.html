@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script>
+      // Check and apply theme immediately
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+      }
+  </script>
+<script src="../../../theme/js/theme.js"></script>
+<script src="../../../theme/js/copy-code.js"></script>
+<script src="../../../theme/js/toc.js"></script>
+<script src="../../../theme/js/popups.js"></script>
+<link href="../../../theme/css/style.css" rel="stylesheet"/>
+<link href="../../../theme/css/fonts.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>COLM 2025: 9 cool papers and some thoughts</title>
+<link href="../../../theme/css/bluesky-comments.css" rel="stylesheet">
+<link href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" rel="stylesheet" type="text/css">
+<link href="../../../theme/css/code.css" rel="stylesheet"/>
+<link href="../../../theme/css/pubs.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" rel="stylesheet"/>
+<link href="feeds/all.atom.xml" rel="alternate" title="Michael Saxon Full Atom Feed" type="application/atom+xml"/>
+<link href="feeds/all.rss.xml" rel="alternate" title="Michael Saxon Full RSS Feed" type="application/rss+xml"/>
+<meta content="COLM 2025: 9 cool papers and some thoughts" name="title">
+<meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." name="description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://saxon.me/" property="og:url"/>
+<meta content="COLM 2025: 9 cool papers and some thoughts" property="og:title"/>
+<meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." property="og:description"/>
+<meta content="../../../images/colm2025-teaser.jpg" property="og:image"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://saxon.me/" property="twitter:site"/>
+<meta content="@m2saxon" property="twitter:creator"/>
+<meta content="COLM 2025: 9 cool papers and some thoughts" property="twitter:title"/>
+<meta content="Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency." property="twitter:description"/>
+<meta content="../../../images/colm2025-teaser.jpg" property="twitter:image"/>
+<link href="../../../theme/img/logomark_fill.png" rel="icon" type="image/png"/>
+</meta></link></link></head>
+<body style="width: 100vw; overflow-x: hidden;">
+<header class="site-header">
+<div class="top-nav">
+<div style="margin-right: auto;">
+<h1><a href="../../../">Michael Saxon</a></h1>
+</div>
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-button-container" for="menu-toggle">
+<div class="menu-button"></div>
+</label>
+<ul class="menu">
+<li><a href="../../../publications">Publications</a></li>
+<li><a href="../../../doc/cv_saxon.pdf">CV</a></li>
+<li><a href="../../../blog">Blog</a></li>
+<li>
+<a aria-label="Toggle dark mode" href="#" id="theme-toggle">
+<svg aria-hidden="true" class="sun-and-moon" height="24" viewbox="0 0 24 24" width="24">
+<!-- Moon shape -->
+<path class="moon" d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" fill="currentColor"></path>
+<!-- Sun shape (initially hidden) -->
+<g class="sun" opacity="0">
+<circle cx="12" cy="12" fill="currentColor" r="6"></circle>
+<g class="sun-beams">
+<line x1="12" x2="12" y1="1" y2="3"></line>
+<line x1="12" x2="12" y1="21" y2="23"></line>
+<line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+<line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+<line x1="1" x2="3" y1="12" y2="12"></line>
+<line x1="21" x2="23" y1="12" y2="12"></line>
+<line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+<line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+</g>
+</g>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</header>
+<div class="page" style="word-spacing: 0.09em;">
+<article class="post">
+<header class="post-header">
+<div class="post-hero" style="background-image: url('../../../images/colm2025-teaser.jpg')"></div>
+<div class="post-content-wrapper">
+<h1 class="post-title">
+<a href="../../../blog/2025/test_overflow/" rel="bookmark" title="Permalink to COLM 2025: 9 cool papers and some thoughts">COLM 2025: 9 cool papers and some thoughts</a>
+</h1>
+<div class="post-meta">
+<time>October 16, 2025</time>
+<span>-&gt;</span>
+<span>&lt; 1 min read</span>
+<span>-&gt;</span>
+<span><a href="../../../blog/category/research.html">Research</a></span>
+<!-- <span>•</span>
+                <span><a href="../../../tag/colm.html">colm</a>, <a href="../../../tag/conference.html">conference</a></span> -->
+</div>
+<div class="post-description">
+                Reflections on the 2025 COLM conference, and a discussion of 9 cool COLM papers on benchmarking and eval, personas, and improving models for better long-context performance and consistency.
+            </div>
+</div>
+</header>
+<p>Status: draft
+remove_footnote_section: true</p>
+<p>COLM 2025 was a blast! Here I'll summarize takeaways I had from poster discussions for 9 cool papers, and I'll give some of my own reflections on the conference overall.</p>
+<h1 id="benchmarking-and-evaluation"><a class="toclink" href="#benchmarking-and-evaluation">Benchmarking and evaluation</a><a class="header-link" href="#benchmarking-and-evaluation" title="Permalink to this section">¶</a></h1>
+<p>First, a certified eval enjoyer I am obligated to point some cool benchmark and metric papers! Rapid fire:</p>
+<h2 id="code-lms-struggle-to-generate-good-test-cases"><a class="toclink" href="#code-lms-struggle-to-generate-good-test-cases">Code LMs struggle to generate good test cases</a><a class="header-link" href="#code-lms-struggle-to-generate-good-test-cases" title="Permalink to this section">¶</a></h2>
+<p>In <a href="https://arxiv.org/abs/2502.19414">Can Language Models Falsify? Evaluating Algorithmic Reasoning with Counterexample Creation</a> Shiven Sinha (IIIT<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a><span class="footnote-popup">Not to be confused with IIT, sorry for the mistake in the first post Shiven! </span></sup> Hyderabad) et al introduce the REFUTE benchmark for code generation. </p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Not to be confused with IIT, sorry for the mistake in the first post Shiven! <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<footer style="margin-top:25pt; padding-top:10pt;">
+<ul class="icons">
+<li><a href="https://www.semanticscholar.org/author/Michael-Stephen-Saxon/48227633"><img class="filtercolor" src="../../../theme/img/ico/svg/semantic-scholar.svg"/></a></li>
+<li><a href="https://scholar.google.com/citations?user=pAlwjdgAAAAJ&amp;hl=en"><img class="filtercolor" src="../../../theme/img/ico/svg/google-scholar.svg"/></a></li>
+<li><a href="https://www.researchgate.net/profile/Michael_Saxon"><img class="filtercolor" src="../../../theme/img/ico/svg/researchgate.svg"/></a></li>
+<li><a href="mailto:saxon@ucsb.edu"><img class="filtercolor" src="../../../theme/img/ico/svg/envelope.svg"/></a></li>
+<li><a href="https://github.com/michaelsaxon"><img class="filtercolor" src="../../../theme/img/ico/svg/github-alt.svg"/></a></li>
+<li><a href="https://www.youtube.com/@mssaxonAI"><img class="filtercolor" src="../../../theme/img/ico/svg/youtube.svg"/></a></li>
+<li><a href="https://www.linkedin.com/in/mssaxon/"><img class="filtercolor" src="../../../theme/img/ico/svg/linkedin-in.svg"/></a></li>
+<li><a href="https://bsky.app/profile/saxon.me"><img class="filtercolor" src="../../../theme/img/ico/svg/cloud.svg"/></a></li>
+<li><a href="https://sigmoid.social/@saxon" rel="me"><img class="filtercolor" src="../../../theme/img/ico/svg/mastodon.svg"/></a></li>
+<li><a href="https://twitter.com/m2saxon"><img class="filtercolor" src="../../../theme/img/ico/svg/twitter.svg"/></a></li>
+</ul>
+<div style="max-width: 600px;   margin-right: auto; margin-left: auto; border: 1pt solid var(--text-body); margin-top: 10pt; margin-bottom: 10pt; padding: 2pt 5pt 2pt 5pt;">
+<p style="font-size:10pt; text-align: center; margin-bottom: 5pt;">© Michael Saxon, 2017-2025. CC-BY-SA. Scratchbuilt in framework-free HTML/CSS with a heavily customized <a href="https://getpelican.com/">Pelican</a> stack.
+        For more info on the design and all its cool features, check out the <a href="../../../colophon" style="font-family: 'Triptych', serif; font-style: italic; font-weight: 500;">Colophon</a>!</p>
+</div>
+<div class="worldmap" style="border: 1pt solid var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); font-family: 'Berkeley Mono', monospace; font-stretch: semi-condensed;">The Clustrmaps visitor tracker that used to live here has been removed to protect your privacy.</div>
+<div style="max-width: 800px; margin-right: auto; margin-left: auto; text-align: center;">
+<!-- <img src="https://web.badges.world/badges/operated/getfirefox.gif"/> -->
+<div style="width: 90pt; height: 25pt; 
+     background-color: var(--background-color); font-size: 9pt; 
+       border: 1pt solid var(--text-body); margin-right: auto; margin-left: auto; 
+     color: var(--text-body) !important; font-family: 'Arial', sans-serif;
+     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mozilla_Firefox_logo_2004.svg/133px-Mozilla_Firefox_logo_2004.svg.png);
+     background-size: 27pt; background-repeat: no-repeat; padding-left:30pt; margin-bottom: 10pt;">
+     Looks best in <b><a href="https://www.mozilla.org/en-US/firefox/new/" style="color:#e27f2e;">Mozilla Firefox</a></b> on a <b style="color: #0060df;">real PC!</b>
+</div>
+</div>
+</footer>
+<script src="../../../static/js/popups.js"></script></body>
+</html>

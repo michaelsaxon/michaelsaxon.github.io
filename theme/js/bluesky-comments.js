@@ -579,6 +579,8 @@ function handleCommentBodyClick(event) {
 
 // Renders parent stats, hiding zero counts and linking non-zero counts
 function renderParentPostStats(statsContainer, parentPostData, statsPreview) {
+    const pageWidth = document.querySelector('.page').offsetWidth;
+
     if (!parentPostData || !parentPostData.uri || !parentPostData.author?.did) {
         statsContainer.innerHTML = '<p><em>Loading post details...</em></p>';
         return;
@@ -603,14 +605,25 @@ function renderParentPostStats(statsContainer, parentPostData, statsPreview) {
     const canLink = basePostUrl !== '#';
 
     const createStatHtml = (count, labelSingular, labelPlural, iconClass, linkSuffix, linkTitle, linkOverride = null) => {
-        if (count === 0) return ''; // Hide if count is 0
-        const label = count === 1 ? labelSingular : labelPlural;
-        const statContent = `<span class="stat-${iconClass}"><i class="ph-duotone ${iconClass}"></i><span class="bsky-stat-abbrev">&nbsp;</span>${formatNumber(count)}<span class="bsky-stat-full">&nbsp;${label}</span></span>`;
-        if (canLink) {
-            const targetUrl = linkOverride ? linkOverride : (linkSuffix ? basePostUrl + linkSuffix : basePostUrl);
-            return `<a href="${targetUrl}" target="_blank" rel="noopener noreferrer" title="${linkTitle}" class="bsky-stat-link">${statContent}</a>`;
+        if ( pageWidth < 600 ) {
+            if (count === 0) return ''; // Hide if count is 0
+            const statContent = `<span class="stat-${iconClass}"><i class="ph-duotone ${iconClass}"></i>${formatNumber(count)}</span>`;
+            if (canLink) {
+                const targetUrl = linkOverride ? linkOverride : (linkSuffix ? basePostUrl + linkSuffix : basePostUrl);
+                return `<a href="${targetUrl}" target="_blank" rel="noopener noreferrer" title="${linkTitle}" class="bsky-stat-link">${statContent}</a>`;
+            } else {
+                return statContent;
+            }
         } else {
-            return statContent;
+            if (count === 0) return ''; // Hide if count is 0
+            const label = count === 1 ? labelSingular : labelPlural;
+            const statContent = `<span class="stat-${iconClass}"><i class="ph-duotone ${iconClass}"></i>&nbsp;${formatNumber(count)}&nbsp;${label}</span>`;
+            if (canLink) {
+                const targetUrl = linkOverride ? linkOverride : (linkSuffix ? basePostUrl + linkSuffix : basePostUrl);
+                return `<a href="${targetUrl}" target="_blank" rel="noopener noreferrer" title="${linkTitle}" class="bsky-stat-link">${statContent}</a>`;
+            } else {
+                return statContent;
+            }
         }
     };
 

@@ -21,7 +21,7 @@ function initializePopups() {
                 const estimatedWidth = Math.min(text.length * charWidth, 300); // Cap at 300px
                 popup.style.width = `${estimatedWidth}pt`;
             } else {
-                popup.style.width = `min(500px, calc(${pageWidth}px - 40px))`;
+                popup.style.width = `min(500px, calc(${pageWidth}px - 60px))`;
             }
             
             const popupWidth = popup.offsetWidth;
@@ -47,6 +47,10 @@ function initializePopups() {
 
     // Initial update
     updatePopups();
+
+    // Debug statement
+    console.log('Initializing popups...');
+
     
     // Update on window resize
     window.addEventListener('resize', updatePopups);
