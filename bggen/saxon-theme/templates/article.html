@@ -14,10 +14,10 @@
             <div class="post-meta">
                 <time>{{ article.locale_date }}</time>
                 {% if article.ert %}
-                    <span>-></span>
+                    <span>&gt;&gt;</span>
                     <span>{{ article.ert }}</span>
                 {% endif %}
-                <span>-></span>
+                <span>&gt;&gt;</span>
                 <span><a href="{{ SITEURL }}/blog/{{ article.category.url }}">{{ article.category }}</a></span>
                 <!-- <span>•</span>
                 <span>{% if article.tags %}{% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</span> -->
