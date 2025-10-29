@@ -496,7 +496,6 @@ blockquote {
   padding: 1rem 1rem 0 4rem; /* Extra left padding for icon */
   border-radius: 6px;
   position: relative;
-  overflow: hidden;
   background-color: var(--quote-bg);
   border: 1px solid var(--quote-border);
   border-left: 3px solid;
