@@ -27,7 +27,7 @@
 }
 
 .collapsible:hover {
-    text-decoration: underline dotted;
+    text-decoration: underline ;
     color: var(--brand-main);
 }
 

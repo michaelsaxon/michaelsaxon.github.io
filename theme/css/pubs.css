@@ -199,51 +199,51 @@ a.pub-badge, button.pub-badge {
 /* Badge colors - using border and text color */
 /* Unclickable venue badges - solid fill with light white text */
 .acl-badge, .naacl-badge, .eacl-badge, .aacl-badge, .preprint-badge {
-    background-color: var(--kanagawa-dark-red);
-    color: var(--kanagawa-light-white);
-    border-color: var(--kanagawa-light-white);
+    background-color: var(--usgraphics-red-dark);
+    color: var(--usgraphics-white);
+    border-color: var(--usgraphics-white);
 }
 
 .iclr-badge {
-    color: var(--kanagawa-light-white);
-    background-color: var(--kanagawa-dark-cyan);
-    border-color: var(--kanagawa-light-white);
+    color: var(--usgraphics-white);
+    background-color: var(--usgraphics-cyan-dark);
+    border-color: var(--usgraphics-white);
 }
 
 .colm-badge {
-    color: var(--kanagawa-light-white);
-    background-color: var(--kanagawa-light-black);
-    border-color: var(--kanagawa-light-white);
+    color: var(--usgraphics-white);
+    background-color: var(--usgraphics-black);
+    border-color: var(--usgraphics-white);
 }
 
 .neurips-badge {
-    color: var(--kanagawa-light-white);
-    background-color: var(--kanagawa-dark-magenta);
-    border-color: var(--kanagawa-light-white);
+    color: var(--usgraphics-white);
+    background-color: var(--usgraphics-magenta-dark);
+    border-color: var(--usgraphics-white);
 }
 
 .emnlp-badge {
-    color: var(--kanagawa-light-white);
-    background-color: var(--kanagawa-dark-green);
-    border-color: var(--kanagawa-light-white);
+    color: var(--usgraphics-white);
+    background-color: var(--usgraphics-green-dark);
+    border-color: var(--usgraphics-white);
 }
 
 /* Clickable link badges - transparent fill with colored text */
 .acl-anthology-badge, .arxiv-badge {
-    color: var(--kanagawa-dark-red);
-    border-color: var(--kanagawa-dark-red);
+    color: var(--usgraphics-red-dark);
+    border-color: var(--usgraphics-red-dark);
 }
 
 .oral-badge {
-    color: var(--kanagawa-dark-yellow);
-    border-color: var(--kanagawa-dark-yellow);
+    color: var(--usgraphics-yellow-dark);
+    border-color: var(--usgraphics-yellow-dark);
     position: relative;
     padding-left: 2rem; /* Increased padding for larger icon */
 }
 
 .video-badge {
-    color: var(--kanagawa-dark-red);
-    border-color: var(--kanagawa-dark-red);
+    color: var(--usgraphics-red-dark);
+    border-color: var(--usgraphics-red-dark);
     position: relative;
     padding-left: 2rem; /* Increased padding for larger icon */
 }
@@ -263,8 +263,8 @@ a.pub-badge, button.pub-badge {
 }
 
 .press-badge {
-    color: var(--kanagawa-dark-yellow);
-    border-color: var(--kanagawa-dark-yellow);
+    color: var(--usgraphics-yellow-dark);
+    border-color: var(--usgraphics-yellow-dark);
     position: relative;
     padding-left: 2rem; /* Increased padding for larger icon */
 }
@@ -298,8 +298,8 @@ a.pub-badge, button.pub-badge {
 }
 
 .spotlight-badge {
-    color: var(--kanagawa-dark-yellow);
-    border-color: var(--kanagawa-dark-yellow);
+    color: var(--usgraphics-yellow-dark);
+    border-color: var(--usgraphics-yellow-dark);
     position: relative;
     padding-left: 2rem; /* Increased padding for larger icon */
 }
@@ -331,28 +331,28 @@ a.pub-badge, button.pub-badge {
 /* Hover states for interactive elements */
 a.acl-anthology-badge:hover, button.acl-anthology-badge:hover,
 a.arxiv-badge:hover, button.arxiv-badge:hover {
-    color: var(--kanagawa-medium-red);
-    border-color: var(--kanagawa-medium-red);
+    color: var(--usgraphics-red);
+    border-color: var(--usgraphics-red);
 }
 
 a.oral-badge:hover, button.oral-badge:hover {
-    color: var(--kanagawa-medium-yellow);
-    border-color: var(--kanagawa-medium-yellow);
+    color: var(--usgraphics-yellow);
+    border-color: var(--usgraphics-yellow);
 }
 
 a.video-badge:hover, button.video-badge:hover {
-    color: var(--kanagawa-medium-red);
-    border-color: var(--kanagawa-medium-red);
+    color: var(--usgraphics-red);
+    border-color: var(--usgraphics-red);
 }
 
 a.press-badge:hover, button.press-badge:hover {
-    color: var(--kanagawa-medium-yellow);
-    border-color: var(--kanagawa-medium-yellow);
+    color: var(--usgraphics-yellow);
+    border-color: var(--usgraphics-yellow);
 }
 
 a.spotlight-badge:hover, button.spotlight-badge:hover {
-    color: var(--kanagawa-light-blue);
-    border-color: var(--kanagawa-light-blue);
+    color: var(--usgraphics-blue-light);
+    border-color: var(--usgraphics-blue-light);
 }
 
 a.link-badge:hover, button.link-badge:hover,

@@ -1,58 +1,79 @@
-/* Kanagawa color variables */
+/* US Graphics color variables */
 :root {
  /* Reds */
- --kanagawa-dark-red: #b31d1d;
- --kanagawa-medium-red: #c34043;
- --kanagawa-light-red: #db5555;
+ --usgraphics-red: #FF0000;
+ --usgraphics-red-light: #FF8080;
+ --usgraphics-red-dark: #800000;
 
  /* Greens */
- --kanagawa-dark-green: #4b6b4b;
- --kanagawa-medium-green: #76946a;
- --kanagawa-light-green: #98bb6c;
- --kanagawa-extra-green: #668c44;
+ --usgraphics-green: #00A645;
+ --usgraphics-green-light: #80D3A2;
+ --usgraphics-green-dark: #005323;
 
  /* Blues */
- --kanagawa-dark-blue: #4a5cc5;
- --kanagawa-light-blue: #7e9cd8;
- --kanagawa-selection-blue: #4a7890;
-
- /* Yellows */
- --kanagawa-dark-yellow: #8f6c3f;
- --kanagawa-medium-yellow: #c0a36e;
- --kanagawa-light-yellow: #e6c384;
-
- /* Magentas */
-  --kanagawa-dark-magenta: #625987;
-  --kanagawa-medium-magenta: #957fb8;
-  --kanagawa-light-magenta: #938aa9;
+ --usgraphics-blue: #000066;
+ --usgraphics-blue-light: #8080B3;
+ --usgraphics-blue-dark: #000033;
 
  /* Cyans */
- --kanagawa-dark-cyan: #3d6b62;
- --kanagawa-medium-cyan: #6a9589;
- --kanagawa-light-cyan: #7aa89f;
+ --usgraphics-cyan: #006666;
+ --usgraphics-cyan-light: #80B3B3;
+ --usgraphics-cyan-dark: #003333;
+
+ /* Magentas */
+ --usgraphics-magenta: #660066;
+ --usgraphics-magenta-light: #B380B3;
+ --usgraphics-magenta-dark: #330033;
+
+ /* Yellows */
+ --usgraphics-yellow: #FFBF00;
+ --usgraphics-yellow-light: #FFDF80;
+ --usgraphics-yellow-dark: #806000;
+
+ /* Oranges */
+ --usgraphics-orange: #FF6600;
+ --usgraphics-orange-light: #FFB380;
+ --usgraphics-orange-dark: #803300;
+
+ /* Grays */
+ --usgraphics-gray: #999999;
+ --usgraphics-gray-light: #CCCCCC;
+ --usgraphics-gray-dark: #666666;
+
+ /* Maroons */
+ --usgraphics-maroon: #660000;
+ --usgraphics-maroon-light: #B38080;
+ --usgraphics-maroon-dark: #330000;
+
+ /* Olives */
+ --usgraphics-olive: #666600;
+ --usgraphics-olive-light: #B3B380;
+ --usgraphics-olive-dark: #333300;
+
+ /* Pure colors */
+ --usgraphics-fl-red: #FF0000;
+ --usgraphics-fl-green: #00FF00;
+ --usgraphics-fl-blue: #0000FF;
+ --usgraphics-fl-cyan: #00FFFF;
+ --usgraphics-fl-magenta: #FF00FF;
+ --usgraphics-fl-yellow: #FFFF00;
 
  /* Blacks and Whites */
- --kanagawa-dark-black: #090618;
- --kanagawa-dark-bright-black: #727169;
- --kanagawa-dark-white: #c8c093;
- --kanagawa-dark-bright-white: #dcd7ba;
- --kanagawa-light-black: #1f1f28;
- --kanagawa-light-bright-black: #54534d;
- --kanagawa-light-white: #dcd7ba;
- --kanagawa-light-bright-white: #1f1f28;
+ --usgraphics-black: #000000;
+ --usgraphics-white: #FFFFFF;
 
  /* Background, Foreground and Selection */
- --kanagawa-dark-bg: #1f1f28;
- --kanagawa-dark-text: #dcd7ba;
- --kanagawa-light-selection: #2d4f67;
- --kanagawa-light-bg: #efede3;
- --kanagawa-light-text: #1f1f28;
- --kanagawa-dark-selection: #6a91ac;
+ --usgraphics-dark-bg: #000000;
+ --usgraphics-dark-text: #FFFFFF;
+ --usgraphics-light-bg: #FFFFFF;
+ --usgraphics-light-text: #000000;
+ --usgraphics-dark-selection: #666666;
+ --usgraphics-light-selection: #CCCCCC;
 
   /* Icon filters */
-  --kanagawa-dark-icon-filter: brightness(0) saturate(100%) invert(90%) sepia(83%) saturate(132%) hue-rotate(334deg) brightness(91%) contrast(89%);
-  --kanagawa-light-icon-filter: brightness(0) saturate(100%) invert(9%) sepia(15%) saturate(845%) hue-rotate(201deg) brightness(92%) contrast(91%);
-  --kanagawa-icon-mouseover-filter: brightness(0) saturate(100%) invert(45%) sepia(34%) saturate(510%) hue-rotate(156deg) brightness(89%) contrast(89%);
+  --usgraphics-dark-icon-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  --usgraphics-light-icon-filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+  --usgraphics-icon-mouseover-filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(60%) contrast(100%);
   /* Icon filters */
   --text-filter: 40%;  /* Adjust this value to match text-body color */
 
@@ -67,10 +88,12 @@
   --base-size: 13pt;
   
   /* Core brand colors */
-  --brand-dark: rgb(147, 54, 37);      /* Dark red for hover states */
-  --brand-main: rgb(205, 76, 53);      /* Main brand red */
-  --brand-light: rgb(255, 245, 245);   /* Light red background */
+  --brand-dark: var(--usgraphics-green);      /* Dark cyan for hover states */
+  --brand-main: var(--usgraphics-green);      /* Main brand cyan */
+  --brand-light: var(--usgraphics-green);/* Light cyan background */
   
+
+ 
   /* Text colors */
   --text-dark: #333;         /* Dark text for headings */
   --text-body: #444;         /* Main body text */
@@ -96,122 +119,110 @@
   --quote-border: rgb(208, 215, 222);
   --quote-text: rgb(36, 41, 47);
 
-  --note-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-magenta) 5%);
-  --note-border: var(--kanagawa-dark-magenta);
-  --note-text: var(--kanagawa-dark-magenta);
+  --note-bg: color-mix(in srgb, var(--usgraphics-light-bg) 95%, var(--usgraphics-magenta-light) 5%);
+  --note-border: var(--usgraphics-magenta-dark);
+  --note-text: var(--usgraphics-magenta-dark);
 
-  --warning-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-red) 5%);
-  --warning-border: var(--kanagawa-dark-red);
-  --warning-text: var(--kanagawa-dark-red);
+  --warning-bg: color-mix(in srgb, var(--usgraphics-light-bg) 95%, var(--usgraphics-red-light) 5%);
+  --warning-border: var(--usgraphics-red-dark);
+  --warning-text: var(--usgraphics-red-dark);
 
-  --tip-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-yellow) 5%);
-  --tip-border: var(--kanagawa-dark-yellow);
-  --tip-text: var(--kanagawa-dark-yellow);
+  --tip-bg: color-mix(in srgb, var(--usgraphics-light-bg) 95%, var(--usgraphics-yellow-light) 5%);
+  --tip-border: var(--usgraphics-yellow-dark);
+  --tip-text: var(--usgraphics-yellow-dark);
 }
 
-/* Kanagawa light theme colors  (uses the kanagawa theme colors above) */
+/* US Graphics light theme colors  (uses the usgraphics theme colors above) */
 :root {
   /* Base sizes */
   --base-size: 13pt;
 
-  /* Core brand colors */
-  --brand-dark: var(--kanagawa-dark-cyan);      /* Dark red for hover states */
-  --brand-main: var(--kanagawa-medium-cyan);      /* Main brand red */
-  --brand-light: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-medium-cyan) 5%);   /* Light red background */
-  
-  /* Text colors */
-  --text-dark: var(--kanagawa-light-text);         /* Dark text for headings */
-  --text-body: color-mix(in srgb, var(--kanagawa-light-text) 90%, var(--kanagawa-light-bg) 10%);         /* Main body text */
-  --text-muted: color-mix(in srgb, var(--kanagawa-light-text) 70%, var(--kanagawa-light-bg) 30%);        /* Subdued text */
-  --text-black: var(--kanagawa-light-text);        /* Pure black text */
+   /* Text colors */
+  --text-dark: var(--usgraphics-light-text);         /* Dark text for headings */
+  --text-body: color-mix(in srgb, var(--usgraphics-light-text) 90%, var(--usgraphics-light-bg) 10%);         /* Main body text */
+  --text-muted: color-mix(in srgb, var(--usgraphics-light-text) 70%, var(--usgraphics-light-bg) 30%);        /* Subdued text */
+  --text-black: var(--usgraphics-light-text);        /* Pure black text */
   
   /* UI colors */
-  --bg-main: var(--kanagawa-light-bg);     /* Main background */
-  --link-color: var(--kanagawa-dark-blue);    /* Link blue */
-  /* --selection-color: var(--kanagawa-selection-blue); */
-  --selection-color: var(--kanagawa-dark-bg);
-  --selection-text-color: var(--kanagawa-dark-text);
+  --bg-main: var(--usgraphics-light-bg);     /* Main background */
+  /* --selection-color: var(--usgraphics-selection-blue); */
+  --selection-color: var(--usgraphics-dark-bg);
+  --selection-text-color: var(--usgraphics-dark-text);
   
   /* Social icon colors */
-  --icon-hover: var(--kanagawa-red);
-  --icon-default: var(--kanagawa-bright-black);
+  --icon-hover: var(--usgraphics-red);
+  --icon-default: var(--usgraphics-gray-dark);
   
   /* Scrollbar colors */
-  --scrollbar-bg: var(--kanagawa-light-bg);
-  --scrollbar-thumb: var(--kanagawa-light-red);
-  --scrollbar-thumb-hover: var(--kanagawa-light-red);
+  --scrollbar-bg: var(--usgraphics-light-bg);
+  --scrollbar-thumb: var(--usgraphics-red-light);
+  --scrollbar-thumb-hover: var(--usgraphics-red-light);
 
   /* Infobox colors */
-  --quote-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-dark-black) 5%);
-  --quote-border: var(--kanagawa-light-bright-black);
-  --quote-text: var(--kanagawa-dark-black);
+  --quote-bg: color-mix(in srgb, var(--usgraphics-light-bg) 95%, var(--usgraphics-black) 5%);
+  --quote-border: var(--usgraphics-gray-dark);
+  --quote-text: var(--usgraphics-black);
 
-  --note-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-dark-magenta) 5%);
-  --note-border: var(--kanagawa-dark-magenta);
-  --note-text: var(--kanagawa-dark-magenta);
+  --note-bg: color-mix(in srgb, var(--usgraphics-light-bg) 95%, var(--usgraphics-magenta-dark) 5%);
+  --note-border: var(--usgraphics-magenta-dark);
+  --note-text: var(--usgraphics-magenta-dark);
 
-  --warning-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-dark-red) 5%);
-  --warning-border: var(--kanagawa-dark-red);
-  --warning-text: var(--kanagawa-dark-red);
+  --warning-bg: color-mix(in srgb, var(--usgraphics-light-bg) 95%, var(--usgraphics-red-dark) 5%);
+  --warning-border: var(--usgraphics-red-dark);
+  --warning-text: var(--usgraphics-red-dark);
 
-  --tip-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-yellow) 5%);
-  --tip-border: var(--kanagawa-dark-yellow);
-  --tip-text: var(--kanagawa-dark-yellow);
+  --tip-bg: color-mix(in srgb, var(--usgraphics-light-bg) 95%, var(--usgraphics-yellow-light) 5%);
+  --tip-border: var(--usgraphics-yellow-dark);
+  --tip-text: var(--usgraphics-yellow-dark);
 
-  --icon-filter: var(--kanagawa-light-icon-filter);
-  --icon-filter-hover: var(--kanagawa-icon-mouseover-filter);
+  --icon-filter: var(--usgraphics-light-icon-filter);
+  --icon-filter-hover: var(--usgraphics-icon-mouseover-filter);
 }
 
-/* Kanagawa dark theme colors  (uses the kanagawa theme colors above) */
+/* US Graphics dark theme colors  (uses the usgraphics theme colors above) */
 :root[data-theme="dark"] {
   /* Base sizes */
   --base-size: 13pt;
 
-  /* Core brand colors */
-  --brand-dark: var(--kanagawa-light-cyan);      /* Dark red for hover states */
-  --brand-main: var(--kanagawa-medium-cyan);      /* Main brand red */
-  --brand-light: color-mix(in srgb, var(--kanagawa-dark-bg) 95%, var(--kanagawa-dark-cyan) 5%);   /* Light red background */
-  
   /* Text colors */
-  --text-dark: var(--kanagawa-dark-text);         /* Dark text for headings */
-  --text-body: color-mix(in srgb, var(--kanagawa-dark-text) 90%, var(--kanagawa-dark-bg) 10%);         /* Main body text */
-  --text-muted: color-mix(in srgb, var(--kanagawa-dark-text) 70%, var(--kanagawa-dark-bg) 30%);        /* Subdued text */
-  --text-black: var(--kanagawa-dark-text);        /* Pure black text */
+  --text-dark: var(--usgraphics-dark-text);         /* Light text for headings */
+  --text-body: color-mix(in srgb, var(--usgraphics-dark-text) 90%, var(--usgraphics-dark-bg) 10%);         /* Main body text */
+  --text-muted: color-mix(in srgb, var(--usgraphics-dark-text) 70%, var(--usgraphics-dark-bg) 30%);        /* Subdued text */
+  --text-black: var(--usgraphics-dark-text);        /* Pure white text */
   
   /* UI colors */
-  --bg-main: var(--kanagawa-dark-bg);     /* Main background */
-  --link-color: var(--kanagawa-light-blue);    /* Link blue */
-  --selection-color: var(--kanagawa-dark-text);
-  --selection-text-color: var(--kanagawa-light-text);
+  --bg-main: var(--usgraphics-dark-bg);     /* Main background */
+  --selection-color: var(--usgraphics-dark-text);
+  --selection-text-color: var(--usgraphics-light-text);
   
   /* Social icon colors */
-  --icon-hover: var(--kanagawa-red);
-  --icon-default: var(--kanagawa-bright-black);
+  --icon-hover: var(--usgraphics-red);
+  --icon-default: var(--usgraphics-gray-light);
   
   /* Scrollbar colors */
-  --scrollbar-bg: var(--kanagawa-dark-bg);
-  --scrollbar-thumb: var(--kanagawa-light-red);
-  --scrollbar-thumb-hover: var(--kanagawa-light-red);
+  --scrollbar-bg: var(--usgraphics-dark-bg);
+  --scrollbar-thumb: var(--usgraphics-red-light);
+  --scrollbar-thumb-hover: var(--usgraphics-red-light);
 
   /* Infobox colors */
-  --quote-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 75%, var(--kanagawa-light-bright-black) 25%);
-  --quote-border: var(--kanagawa-dark-text);
-  --quote-text: var(--kanagawa-dark-text);
+  --quote-bg: color-mix(in srgb, var(--usgraphics-dark-bg) 75%, var(--usgraphics-gray-light) 25%);
+  --quote-border: var(--usgraphics-dark-text);
+  --quote-text: var(--usgraphics-dark-text);
 
-  --note-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 80%, var(--kanagawa-dark-magenta) 20%);
-  --note-border: var(--kanagawa-light-magenta);
-  --note-text: var(--kanagawa-light-magenta);
+  --note-bg: color-mix(in srgb, var(--usgraphics-dark-bg) 80%, var(--usgraphics-magenta-dark) 20%);
+  --note-border: var(--usgraphics-magenta-light);
+  --note-text: var(--usgraphics-magenta-light);
 
-  --warning-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 80%, var(--kanagawa-dark-red) 20%);
-  --warning-border: var(--kanagawa-light-red);
-  --warning-text: var(--kanagawa-light-red);
+  --warning-bg: color-mix(in srgb, var(--usgraphics-dark-bg) 80%, var(--usgraphics-red-dark) 20%);
+  --warning-border: var(--usgraphics-red-light);
+  --warning-text: var(--usgraphics-red-light);
 
-  --tip-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 80%, var(--kanagawa-dark-yellow) 20%);
-  --tip-border: var(--kanagawa-light-yellow);
-  --tip-text: var(--kanagawa-light-yellow);
+  --tip-bg: color-mix(in srgb, var(--usgraphics-dark-bg) 80%, var(--usgraphics-yellow-dark) 20%);
+  --tip-border: var(--usgraphics-yellow-light);
+  --tip-text: var(--usgraphics-yellow-light);
 
-  --icon-filter: var(--kanagawa-dark-icon-filter);
-  --icon-filter-hover: var(--kanagawa-icon-mouseover-filter);
+  --icon-filter: var(--usgraphics-dark-icon-filter);
+  --icon-filter-hover: var(--usgraphics-icon-mouseover-filter);
 
 }
 
@@ -225,7 +236,7 @@ a {
 body{
   margin: 0px;
   background-color: var(--bg-main);
-  font-family: 'Calluna', serif;
+  font-family: 'Univers', sans-serif;
   font-size: 11pt; /* fallback for bad browser */
   /* Using EB Garamond we have to make the base size bigger*/
   font-size: calc(1.1*var(--base-size));
@@ -354,7 +365,7 @@ ul.menu li {float: left; margin-bottom: 0; padding-bottom: 0;}
 
 hr {
   border: 0px;
-  border-top: 1px dotted gray;
+  border-top: 1px  gray;
   margin-top: 10pt;
   padding-bottom: 5pt;
 }
@@ -371,7 +382,7 @@ ul.menu li a {
 }
 
 a:hover {
-  text-decoration: underline dotted;
+  text-decoration: underline ;
 }
 
 /* ul.menu li a:hover:not(.active) {
@@ -379,7 +390,7 @@ a:hover {
 } */
 
 ul.menu li a:hover {
-  text-decoration: underline dotted;
+  text-decoration: underline ;
   color: var(--brand-main);
 }
 
@@ -494,7 +505,7 @@ blockquote {
   margin: 0 0 1rem 0;
   max-width: var(--page-width);
   padding: 1rem 1rem 0 4rem; /* Extra left padding for icon */
-  border-radius: 6px;
+  border-radius: 0px;
   position: relative;
   background-color: var(--quote-bg);
   border: 1px solid var(--quote-border);
@@ -642,7 +653,7 @@ ul, ol {
 .news-section {
     position: relative;
     background: var(--bg-main);
-    border-radius: 12px;
+    border-radius: 02px;
     margin: 2rem 0 1rem 0;
     padding: 1rem 0 0 1rem;
 }
@@ -666,12 +677,12 @@ ul, ol {
 
 .news-box::-webkit-scrollbar-track {
     background: var(--bg-main);
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 .news-box::-webkit-scrollbar-thumb {
     background: var(--brand-main);
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 .news-box::-webkit-scrollbar-thumb:hover {
@@ -772,7 +783,7 @@ ul, ol {
   position: absolute;
   height: 4px;
   width: 30px;
-  border-radius: 2px;
+  border-radius: 0px;
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   left: 50%;
   transform: translateX(-50%);
@@ -872,7 +883,7 @@ ul, ol {
   max-width: var(--page-width);
   margin: 0 auto 1.5rem auto;
   background: var(--bg-main);
-  border-radius: 6px;
+  border-radius: 0px;
   overflow: hidden;
   position: relative;
   border: 1px solid var(--brand-main);
@@ -925,7 +936,7 @@ ul, ol {
 
 .post-title a:hover {
   color: var(--brand-main);
-  text-decoration: underline dotted;
+  text-decoration: underline ;
 }
 
 .post-meta {
@@ -1062,7 +1073,7 @@ sup[id^="fnref"] {
   width: 1em;
   height: 1em;
   border: 1px solid var(--text-dark);
-  border-radius: 50%;
+  border-radius: 00%;
   position: relative;
   transition: background-color 0.2s;
   line-height: 1;     /* Ensure vertical centering */
@@ -1093,7 +1104,7 @@ sup[id^="fnref"] {
   width: min(600px, calc(var(--page-width) - 40px));
   background: var(--bg-main);
   padding: 1.5em;
-  border-radius: 4px;
+  border-radius: 0px;
   font-size: calc(1.1 * var(--base-size));
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   z-index: 9999;
@@ -1266,7 +1277,7 @@ sup[id^="fnref"]:hover .footnote-popup {
   margin: 0 auto;
   margin-bottom: 2rem;
   background: var(--bg-main);
-  border-radius: 6px;
+  border-radius: 0px;
   overflow: hidden;
   position: relative;
   min-height: 200px;
@@ -1384,7 +1395,7 @@ sup[id^="fnref"]:hover .footnote-popup {
     margin-left: auto;
     margin-right: auto;
     background: var(--bg-main);
-    border-radius: 6px;
+    border-radius: 0px;
     overflow: hidden;
     min-height: 160px;  /* Reduced from 200px */
     position: relative;
@@ -1397,7 +1408,7 @@ sup[id^="fnref"]:hover .footnote-popup {
 
 .article-preview:hover .preview-title {
     color: var(--brand-main);
-    text-decoration: underline dotted;
+    text-decoration: underline ;
 }
 
 .preview-image {
@@ -1515,7 +1526,7 @@ sup[id^="fnref"]:hover .footnote-popup {
 }
 
 #theme-toggle:hover {
-    /* opacity: 0.8; */
+    opacity: 0.8;
 }
 
 /* Update the button li to match other menu items */
@@ -1593,10 +1604,10 @@ sup[id^="fnref"]:hover .footnote-popup {
     max-width: 100%;
     padding: 1.2rem;
     margin: 1em 0;
-    border-radius: 6px;
+    border-radius: 0px;
     border: 1px solid var(--brand-main);
-    background-color: var(--kanagawa-code-bg);
-    color: var(--kanagawa-code-fg);
+    background-color: var(--usgraphics-dark-bg);
+    color: var(--usgraphics-dark-text);
     position: relative;  /* For absolute positioning of copy button */
 }
 
@@ -1616,13 +1627,13 @@ sup[id^="fnref"]:hover .footnote-popup {
 
 .highlight::-webkit-scrollbar-track {
     background: var(--bg-main);
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 .highlight::-webkit-scrollbar-thumb {
     background: var(--brand-main);
     opacity: 0.5;
-    border-radius: 4px;
+    border-radius: 0px;
     transition: all 0.2s ease;
 }
 
@@ -1731,7 +1742,7 @@ sup[id^="fnref"]:hover .footnote-popup {
 .experience-details {
     margin-top: 0.4rem;
     line-height: 1.6;
-    font-family: 'Calluna', serif;
+    font-family: 'Univers', sans-serif;
     border-left: 1px solid var(--brand-main);
     padding-left: calc(0.4 * var(--base-size));
 }
@@ -1785,7 +1796,7 @@ sup[id^="fnref"]:hover .footnote-popup {
 }
 
 .experience-title a:hover {
-    text-decoration: underline dotted;
+    text-decoration: underline ;
     opacity: 0.9;
 }
 
@@ -1799,7 +1810,7 @@ sup[id^="fnref"]:hover .footnote-popup {
     padding: 0.2rem;
     background: none;
     border: none;
-    border-radius: 4px;
+    border-radius: 0px;
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.2s ease;
@@ -1810,7 +1821,7 @@ sup[id^="fnref"]:hover .footnote-popup {
     content: '';
     position: absolute;
     border: 1px solid var(--brand-main);
-    border-radius: 2px;
+    border-radius: 0px;
     transition: all 0.2s ease;
 }
 
@@ -1836,11 +1847,11 @@ sup[id^="fnref"]:hover .footnote-popup {
 }
 
 .copy-button.success::after {
-    border-color: var(--kanagawa-dark-green);
+    border-color: var(--usgraphics-green-dark);
     height: 15px;
     width: 8px;
-    border-right: 2px solid var(--kanagawa-dark-green);
-    border-bottom: 2px solid var(--kanagawa-dark-green);
+    border-right: 2px solid var(--usgraphics-green-dark);
+    border-bottom: 2px solid var(--usgraphics-green-dark);
     border-left: 0;
     border-top: 0;
     transform: rotate(45deg);
@@ -1853,7 +1864,7 @@ article.post img,
 .post-content img,
 .footnote-popup img,
 blockquote img {
-    border-radius: 6px;  /* Match other elements' radius */
+    border-radius: 0px;  /* Match other elements' radius */
     height: auto;
     border: 1px solid var(--brand-main);
 }
@@ -1891,7 +1902,7 @@ span.footnote-popup code {
     margin-top: 2rem;
     font-size: 0.9rem;
     border: 1px solid var(--brand-main);
-    border-radius: 6px;
+    border-radius: 0px;
     padding: 0.8rem;
     font-family: 'Berkeley Mono', monospace;
     font-stretch: condensed;
@@ -1954,7 +1965,7 @@ span.footnote-popup code {
 }
 
 .toc a:hover {
-    text-decoration: underline dotted;
+    text-decoration: underline ;
     color: var(--brand-dark);
 }
 
@@ -1973,7 +1984,7 @@ span.footnote-popup code {
 
 .toc-title:hover {
     color: var(--brand-main);
-    text-decoration: underline dotted;
+    text-decoration: underline ;
 }
 
 .toc-title:hover::before {
@@ -2059,7 +2070,7 @@ h6 .toclink:hover ~ .header-link::after,
 .toclink:hover,
 .toclink:active {
     color: var(--brand-dark);
-    text-decoration: underline dotted;
+    text-decoration: underline ;
 }
 
 .highlighttable {
@@ -2098,32 +2109,32 @@ h6 .toclink:hover ~ .header-link::after,
   text-decoration: none;
   color: var(--text-body);
   background-color: var(--bg-main);
-  border-radius: 4px;
+  border-radius: 0px;
   transition: background-color 0.3s, color 0.3s;
   border: 1px solid var(--brand-main);
 }
 
 .pagination-link:hover {
-  background-color: var(--kanagawa-light-blue);
+  background-color: var(--usgraphics-blue-light);
   color: var(--text-dark);
 }
 
 .pagination-link.current {
   font-weight: bold;
-  background-color: var(--kanagawa-dark-blue);
-  color: var(--kanagawa-light-white);
+  background-color: var(--usgraphics-blue-dark);
+  color: var(--usgraphics-white);
 }
 
 .pagination-link.prev,
 .pagination-link.next {
   font-weight: bold;
-  background-color: var(--kanagawa-medium-cyan);
-  color: var(--kanagawa-light-white);
+  background-color: var(--usgraphics-cyan);
+  color: var(--usgraphics-white);
 }
 
 .pagination-link.prev:hover,
 .pagination-link.next:hover {
-  background-color: var(--kanagawa-dark-cyan);
+  background-color: var(--usgraphics-cyan-dark);
 }
 
 /* Icons for previous and next buttons */
@@ -2195,7 +2206,7 @@ h6 .toclink:hover ~ .header-link::after,
 
 .archive-title:hover {
   color: var(--brand-main);
-  text-decoration: underline dotted;
+  text-decoration: underline ;
 }
 
 .archive-meta {
