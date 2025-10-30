@@ -39,20 +39,25 @@
     <link href="{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
     {% endblock %}
-    <meta name="title" content="{{ self.title() }}" />
-    <meta name="description" content="{% block description %}{% endblock %}" />
+    <meta name="title" property="og:title" content="{{ self.title() }}" />
+    <meta name="description" property="og:description" content="{% block description %}{% endblock %}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://saxon.me/" />
     <meta property="og:title" content="{{ self.title() }}" />
     <meta property="og:description" content="{{ self.description() }}" />
-    <meta property="og:image" content="{{ SITEURL }}/{% block imgurl %}{{ SITEURL }}/theme/img/bg-sba.jpg {% endblock %}" />
+    <meta name="image" property="og:image" content="{{ SITEURL }}/{% block imgurl %}{{ SITEURL }}/theme/img/bg-sba.jpg {% endblock %}" />
    <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:site" content="https://saxon.me/" />
     <meta property="twitter:creator" content="@m2saxon" />
     <meta property="twitter:title" content="{{ self.title() }}" />
     <meta property="twitter:description" content="{{ self.description() }}" />
     <meta property="twitter:image" content="{{ SITEURL }}/{{ self.imgurl() }}" />
+    <meta name="author" content="Michael Saxon" />
     <link rel="icon" type="image/png" href="{{ SITEURL }}/theme/img/logomark_fill.png"/>
+    {% if article %}
+    <meta name="publish_date" property="og:publish_date" content="{{ article.locale_date }}"/>
+    {% endif %}
+
 </head>
 
 <body style="width: 100vw; overflow-x: hidden;">
