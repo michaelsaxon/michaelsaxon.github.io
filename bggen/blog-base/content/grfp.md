@@ -5,7 +5,7 @@ Tags: PhD, Admissions, NSF GRFP, Applications
 Authors: Michael Saxon
 Summary: Reflections and advice from my successful NSF GRFP proposal in NLP. Why I think my applications worked well, what I wish I did differently, and links to my actual statements and feedback from the GRFP reviewing panel.
 Image: images/grfp.jpg
-bsky_uri: at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3kb7omx2cqh2n
+bsky_uri: at://did:plc:yhpo4pagfroflgcj2czskvjn/app.bsky.feed.post/3m4gqyxasic2i 
 
 [TOC]
 
