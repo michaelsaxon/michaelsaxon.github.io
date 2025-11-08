@@ -84,3 +84,5 @@ I got rid of it in October 2025. I want to eventually roll my own visitor tracke
 For posterity, here's the state of the visitor map when I took it down:
 
 ![The visitor map for my site.]({attach}images/clustr.png)
+
+I have since started playing with Google Analytics as the visitor tracking engine. I am still experimenting with the best solution for displaying a visitors map.
