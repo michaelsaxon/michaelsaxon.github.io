@@ -89,7 +89,9 @@ def determine_venue_badge(pubdict):
         'colm': 'colm-badge',
         'neurips': 'neurips-badge',
         'emnlp': 'emnlp-badge',
-        'iccv': 'cvf-badge'
+        'iccv': 'cvf-badge',
+        'eccv': 'cvf-badge',
+        'icml': 'icml-badge'
     }
     
     # Handle arXiv preprints
@@ -325,9 +327,9 @@ def add_publications(generator):
         # Add show/hide logic
         entry_dict['is_first_author'] = is_first_author
         venue_category = 'other'
-        if any(key in venue_badge_class for key in ['acl', 'naacl', 'eacl', 'aacl', 'emnlp']):
+        if any(key in venue_badge_class for key in ['acl', 'naacl', 'eacl', 'aacl', 'emnlp', 'colm']):
             venue_category = 'acl'
-        elif any(key in venue_badge_class for key in ['colm', 'iclr', 'neurips']):
+        elif any(key in venue_badge_class for key in ['iclr', 'neurips', 'icml']):
             venue_category = 'topml'
         elif any(key in venue_badge_class for key in ['cvf']):
             venue_category = 'cv'
