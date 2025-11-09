@@ -132,17 +132,22 @@
             <span class="checkmark"></span>
             <span class="filter-text">*ACL</span>
           </label>
-          <label class="custom-checkbox venue-speech" style="grid-row: 2; grid-column: 2;">
-            <input type="checkbox" id="filter-speech">
+          <label class="custom-checkbox venue-other" style="grid-row: 1; grid-column: 2;">
+            <input type="checkbox" id="filter-cv" checked>
             <span class="checkmark"></span>
-            <span class="filter-text">Speech Venues</span>
+            <span class="filter-text">Computer Vision</span>
           </label>
-          <label class="custom-checkbox venue-preprint" style="grid-row: 1; grid-column: 2;">
-            <input type="checkbox" id="filter-preprint" checked>
+          <label class="custom-checkbox venue-speech" style="grid-row: 2; grid-column: 2;">
+            <input type="checkbox" id="filter-speech" checked>
+            <span class="checkmark"></span>
+            <span class="filter-text">Speech</span>
+          </label>
+          <label class="custom-checkbox venue-preprint" style="grid-row: 1; grid-column: 3;">
+            <input type="checkbox" id="filter-preprint">
             <span class="checkmark"></span>
             <span class="filter-text">Preprints</span>
           </label>
-          <label class="custom-checkbox venue-other" style="grid-row: 1; grid-column: 3;">
+          <label class="custom-checkbox venue-other" style="grid-row: 2; grid-column: 3;">
             <input type="checkbox" id="filter-other">
             <span class="checkmark"></span>
             <span class="filter-text">Other</span>
@@ -164,21 +169,31 @@
             data-venue="acl"
             data-year="2025"
             id="pub-1">
-                    <span class="title">Culture is Everywhere: A Call for Intentionally Cultural Evaluation</span>
+                    <span class="title"><a href="https://aclanthology.org/2025.findings-emnlp.1043/" class="pub-title-link">Culture is Everywhere: A Call for Intentionally Cultural Evaluation</a></span>
                 <br>
                 <span class="authors">Juhyun Oh, Inha Cha, <span class="me">Michael Saxon</span>, Hyunseung Lim, Shaily Bhatt, Alice Oh</span><br>
                 <div class="venue">
                         <span class="pub-badge emnlp-badge">EMNLP 2025</span>
                 </div>
                 <div class="pub-badges">
+                        <a href="https://aclanthology.org/2025.findings-emnlp.1043/" class="pub-badge acl-anthology-badge">ACL Anthology</a>
+                        <a href="https://aclanthology.org/2025.findings-emnlp.1043.pdf" class="pub-badge link-badge">PDF</a>
+                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'abstract-1')" aria-expanded="false" role="button" tabindex="0">Abstract</span>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-1')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>    
             
+            <div id="abstract-1" class="expandable-content hidden">
+                <div class="abstract">
+                    <strong>Abstract:</strong> The prevailing “trivia-centered paradigm” for evaluating the cultural alignment of large language models (LLMs) is increasingly inadequate as these models become more advanced and widely deployed. Existing approaches typically reduce culture to static facts or values, testing models via multiple-choice or short-answer questions that treat culture as isolated trivia. Such methods neglect the pluralistic and interactive realities of culture, and overlook how cultural assumptions permeate even ostensibly “neutral” evaluation settings.In this position paper, we argue for intentionally cultural evaluation: an approach that systematically examines the cultural assumptions embedded in all aspects of evaluation, not just in explicitly cultural tasks. We systematically characterize the what, how, and circumstances by which culturally contingent considerations arise in evaluation, and emphasize the importance of researcher positionality for fostering inclusive, culturally aligned NLP research. Finally, we discuss implications and future directions for moving beyond current benchmarking practices, discovering important applications that we don’t know exist, and involving communities in evaluation design through HCI-inspired participatory methodologies.
+                </div>
+            </div>
             <div id="bibtex-1" class="highlight bibtex-highlight expandable-content hidden"><code>@article{oh2025culture,
     author = "Oh, Juhyun and Cha, Inha and Saxon, Michael and Lim, Hyunseung and Bhatt, Shaily and Oh, Alice",
     title = "Culture is Everywhere: A Call for Intentionally Cultural Evaluation",
     journal = "Findings of the Association for Computational Linguistics: EMNLP 2025",
     year = "2025",
+    abstract = "The prevailing “trivia-centered paradigm” for evaluating the cultural alignment of large language models (LLMs) is increasingly inadequate as these models become more advanced and widely deployed. Existing approaches typically reduce culture to static facts or values, testing models via multiple-choice or short-answer questions that treat culture as isolated trivia. Such methods neglect the pluralistic and interactive realities of culture, and overlook how cultural assumptions permeate even ostensibly “neutral” evaluation settings.In this position paper, we argue for intentionally cultural evaluation: an approach that systematically examines the cultural assumptions embedded in all aspects of evaluation, not just in explicitly cultural tasks. We systematically characterize the what, how, and circumstances by which culturally contingent considerations arise in evaluation, and emphasize the importance of researcher positionality for fostering inclusive, culturally aligned NLP research. Finally, we discuss implications and future directions for moving beyond current benchmarking practices, discovering important applications that we don’t know exist, and involving communities in evaluation design through HCI-inspired participatory methodologies.",
+  url = {https://aclanthology.org/2025.findings-emnlp.1043/},
 }</code></div>
         </div>
         
@@ -187,37 +202,49 @@
             data-venue="acl"
             data-year="2025"
             id="pub-2">
-                    <span class="title">Do You Know About My Nation? Investigating Multilingual Language Models’ Cultural Literacy Through Factual Knowledge</span>
+                    <span class="title"><a href="https://aclanthology.org/2025.emnlp-main.756/" class="pub-title-link">Do You Know About My Nation? Investigating Multilingual Language Models’ Cultural Literacy Through Factual Knowledge</a></span>
                 <br>
                 <span class="authors">Eshaan Tanwar, Anwoy Chatterjee, <span class="me">Michael Saxon</span>, Alon Albalak, William Yang Wang, Tanmoy Chakraborty</span><br>
                 <div class="venue">
                         <span class="pub-badge emnlp-badge">EMNLP 2025</span>
+                            <!-- <span class="venue-separator">·</span> -->
+                                <span class="pub-badge award-badge">Senior Area Chair Highlight Award</span>
                 </div>
                 <div class="pub-badges">
+                        <a href="https://aclanthology.org/2025.emnlp-main.756/" class="pub-badge acl-anthology-badge">ACL Anthology</a>
+                        <a href="https://aclanthology.org/2025.emnlp-main.756.pdf" class="pub-badge link-badge">PDF</a>
+                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'abstract-2')" aria-expanded="false" role="button" tabindex="0">Abstract</span>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-2')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>    
             
+            <div id="abstract-2" class="expandable-content hidden">
+                <div class="abstract">
+                    <strong>Abstract:</strong> Most multilingual question-answering benchmarks, while covering a diverse pool of languages, do not factor in regional diversity in the information they capture and tend to be Western-centric. This introduces a significant gap in fairly evaluating multilingual models’ comprehension of factual information from diverse geographical locations. To address this, we introduce XNationQA for investigating the cultural literacy of multilingual LLMs. XNationQA encompasses a total of 49,280 questions on the geography, culture, and history of nine countries, presented in seven languages. We benchmark eight standard multilingual LLMs on XNationQA and evaluate them using two novel transference metrics. Our analyses uncover a considerable discrepancy in the models’ accessibility to culturally specific facts across languages. Notably, we often find that a model demonstrates greater knowledge of cultural information in English than in the dominant language of the respective culture. The models exhibit better performance in Western languages, although this does not necessarily translate to being more literate for Western countries, which is counterintuitive. Furthermore, we observe that models have a very limited ability to transfer knowledge across languages, particularly evident in open-source models.
+                </div>
+            </div>
             <div id="bibtex-2" class="highlight bibtex-highlight expandable-content hidden"><code>@article{tanwar2025do,
     author = "Tanwar, Eshaan and Chatterjee, Anwoy and Saxon, Michael and Albalak, Alon and Wang, William Yang and Chakraborty, Tanmoy",
     title = "Do You Know About My Nation? Investigating Multilingual Language Models’ Cultural Literacy Through Factual Knowledge",
     journal = "Empirical Methods in Natural Language Processing (EMNLP)",
     year = "2025",
+    abstract = "Most multilingual question-answering benchmarks, while covering a diverse pool of languages, do not factor in regional diversity in the information they capture and tend to be Western-centric. This introduces a significant gap in fairly evaluating multilingual models’ comprehension of factual information from diverse geographical locations. To address this, we introduce XNationQA for investigating the cultural literacy of multilingual LLMs. XNationQA encompasses a total of 49,280 questions on the geography, culture, and history of nine countries, presented in seven languages. We benchmark eight standard multilingual LLMs on XNationQA and evaluate them using two novel transference metrics. Our analyses uncover a considerable discrepancy in the models’ accessibility to culturally specific facts across languages. Notably, we often find that a model demonstrates greater knowledge of cultural information in English than in the dominant language of the respective culture. The models exhibit better performance in Western languages, although this does not necessarily translate to being more literate for Western countries, which is counterintuitive. Furthermore, we observe that models have a very limited ability to transfer knowledge across languages, particularly evident in open-source models.",
+  url = {https://aclanthology.org/2025.emnlp-main.756/},
 }</code></div>
         </div>
         
         <div class="publication"
             data-first-author="1"
-            data-venue="preprint"
+            data-venue="topml"
             data-year="2025"
             id="pub-3">
-                    <span class="title"><a href="https://arxiv.org/abs/2504.13367" class="pub-title-link">ThoughtTerminator: Benchmarking, Calibrating, and Mitigating Overthinking in Reasoning Models</a></span>
+                    <span class="title"><a href="https://openreview.net/forum?id=oHR862dpMC" class="pub-title-link">ThoughtTerminator: Benchmarking, Calibrating, and Mitigating Overthinking in Reasoning Models</a></span>
                 <br>
                 <span class="authors"><span class="me">Michael Saxon*</span>, Xiao Pu*, Wenyue Hua, William Yang Wang</span><br>
                 <div class="venue">
-                        <span class="pub-badge preprint-badge">COLM 2025</span>
+                        <span class="pub-badge colm-badge">COLM 2025</span>
                 </div>
                 <div class="pub-badges">
-                        <a href="https://arxiv.org/abs/2504.13367" class="pub-badge arxiv-badge">arXiv:2504.13367</a>
+                        <a href="https://openreview.net/forum?id=oHR862dpMC" class="pub-badge link-badge">OpenReview</a>
                         <a href="https://arxiv.org/pdf/2504.13367" class="pub-badge link-badge">PDF</a>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'abstract-3')" aria-expanded="false" role="button" tabindex="0">Abstract</span>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-3')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
@@ -235,24 +262,24 @@
     journal = "Second Conference on Language Modeling (COLM 2025)",
     year = "2025",
     abstract = "Reasoning models have demonstrated impressive performance on difficult tasks that traditional language models struggle at. However, many are plagued with the problem of overthinking--generating large amounts of unnecessary tokens which don't improve accuracy on a question. We introduce approximate measures of problem-level difficulty and demonstrate that a clear relationship between problem difficulty and optimal token spend exists, and evaluate how well calibrated a variety of reasoning models are in terms of efficiently allocating the optimal token count. We find that in general, reasoning models are poorly calibrated, particularly on easy problems. To evaluate calibration on easy questions we introduce DUMB500, a dataset of extremely easy math, reasoning, code, and task problems, and jointly evaluate reasoning model on these simple examples and extremely difficult examples from existing frontier benchmarks on the same task domain. Finally, we introduce THOUGHTTERMINATOR, a training-free black box decoding technique that significantly improves reasoning model calibration.",
-  url = {https://arxiv.org/abs/2504.13367},
+  url = {https://openreview.net/forum?id=oHR862dpMC},
 }</code></div>
         </div>
         
         <div class="publication"
             data-first-author="0"
-            data-venue="preprint"
+            data-venue="cv"
             data-year="2025"
             id="pub-4">
-                    <span class="title"><a href="https://arxiv.org/abs/2407.01863" class="pub-title-link">VSP: Assessing the dual challenges of perception and reasoning in spatial planning tasks for VLMs</a></span>
+                    <span class="title"><a href="https://openaccess.thecvf.com/content/ICCV2025/html/Wu_VSP_Diagnosing_the_Dual_Challenges_of_Perception_and_Reasoning_in_ICCV_2025_paper.html" class="pub-title-link">VSP: Assessing the dual challenges of perception and reasoning in spatial planning tasks for VLMs</a></span>
                 <br>
                 <span class="authors">Qiucheng Wu, Handong Zhao, <span class="me">Michael Saxon</span>, Trung Bui, William Yang Wang, Yang Zhang, Shiyu Chang</span><br>
                 <div class="venue">
-                        <span class="pub-badge preprint-badge">ICCV 2025</span>
+                        <span class="pub-badge cvf-badge">ICCV 2025</span>
                 </div>
                 <div class="pub-badges">
-                        <a href="https://arxiv.org/abs/2407.01863" class="pub-badge arxiv-badge">arXiv:2407.01863</a>
-                        <a href="https://arxiv.org/pdf/2407.01863" class="pub-badge link-badge">PDF</a>
+                        <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Wu_VSP_Diagnosing_the_Dual_Challenges_of_Perception_and_Reasoning_in_ICCV_2025_paper.html" class="pub-badge link-badge">Official</a>
+                        <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_VSP_Diagnosing_the_Dual_Challenges_of_Perception_and_Reasoning_in_ICCV_2025_paper.pdf" class="pub-badge link-badge">PDF</a>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-4')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>    
             
@@ -261,7 +288,7 @@
     title = "VSP: Assessing the dual challenges of perception and reasoning in spatial planning tasks for VLMs",
     journal = "International Conference on Computer Vision (ICCV) 2025",
     year = "2025",
-  url = {https://arxiv.org/abs/2407.01863},
+  url = {https://openaccess.thecvf.com/content/ICCV2025/html/Wu_VSP_Diagnosing_the_Dual_Challenges_of_Perception_and_Reasoning_in_ICCV_2025_paper.html},
 }</code></div>
         </div>
         
@@ -336,13 +363,15 @@
             data-venue="acl"
             data-year="2025"
             id="pub-7">
-                    <span class="title">Can Vision Language Models Understand Mimes?</span>
+                    <span class="title"><a href="https://aclanthology.org/2025.findings-acl.1372/" class="pub-title-link">Can Vision Language Models Understand Mimed Actions?</a></span>
                 <br>
                 <span class="authors">Justin Hyundong Cho, Spencer Lin, Tejas Srinivasan, <span class="me">Michael Saxon</span>, Deuksin Kwon, Natali T. Chavez, Jonathan May</span><br>
                 <div class="venue">
                         <span class="pub-badge acl-badge">ACL 2025</span>
                 </div>
                 <div class="pub-badges">
+                        <a href="https://aclanthology.org/2025.findings-acl.1372/" class="pub-badge acl-anthology-badge">ACL Anthology</a>
+                        <a href="https://aclanthology.org/2025.findings-acl.1372.pdf" class="pub-badge link-badge">PDF</a>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'abstract-7')" aria-expanded="false" role="button" tabindex="0">Abstract</span>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-7')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>    
@@ -354,10 +383,11 @@
             </div>
             <div id="bibtex-7" class="highlight bibtex-highlight expandable-content hidden"><code>@article{cho2025mime,
     author = "Cho, Justin Hyundong and Lin, Spencer and Srinivasan, Tejas and Saxon, Michael and Kwon, Deuksin and Chavez, Natali T. and May, Jonathan",
-    title = "Can Vision Language Models Understand Mimes?",
+    title = "Can Vision Language Models Understand Mimed Actions?",
     journal = "Findings of the Association for Computational Linguistics: ACL 2025",
     year = "2025",
     abstract = "Non-verbal communication (NVC) is an integral part of human language, but it has been overlooked in natural language processing research. Studying NVC in general is challenging because of its high variance in interpretation among individuals and cultures, but mime---the theatrical technique of suggesting intent using only gesture, expression, and movement---is a subset of NVC with much lower human interpretation variance. As a gateway for evaluating vision-language models on their understanding of NVC, we propose Mime Identification-based Multimodal Evaluation (MIME), a gesture recognition task built upon a novel corpus of mimed activity comprising 86 unique gestures with a variety of perturbations applied to the avatar, background, and viewpoint for evaluating recognition robustness. We find that both open-weight and API-based vision-language models perform significantly worse than humans at identifying mimed gestures in MIME, motivating the need for increased research for instilling more robust understanding of human actions for VLMs.",
+  url = {https://aclanthology.org/2025.findings-acl.1372/},
 }</code></div>
         </div>
                 </div>  <!-- Close previous year group -->
@@ -546,18 +576,18 @@
         
         <div class="publication"
             data-first-author="0"
-            data-venue="preprint"
+            data-venue="acl"
             data-year="2023"
             id="pub-13">
-                    <span class="title"><a href="https://arxiv.org/abs/2305.13903" class="pub-title-link">Let's think frame by frame with vip: A video infilling and prediction dataset for evaluating video chain-of-thought</a></span>
+                    <span class="title"><a href="https://aclanthology.org/2023.emnlp-main.15/" class="pub-title-link">Let's think frame by frame with vip: A video infilling and prediction dataset for evaluating video chain-of-thought</a></span>
                 <br>
                 <span class="authors">Vaishnavi Himakunthala, Andy Ouyang, Daniel Rose, Ryan He, Alex Mei, Yujie Lu, Chinmay Sonar, <span class="me">Michael Saxon</span>, William Yang Wang</span><br>
                 <div class="venue">
-                        <span class="pub-badge preprint-badge">EMNLP 2023</span>
+                        <span class="pub-badge emnlp-badge">EMNLP 2023</span>
                 </div>
                 <div class="pub-badges">
-                        <a href="https://arxiv.org/abs/2305.13903" class="pub-badge arxiv-badge">arXiv:2305.13903</a>
-                        <a href="https://arxiv.org/pdf/2305.13903" class="pub-badge link-badge">PDF</a>
+                        <a href="https://aclanthology.org/2023.emnlp-main.15/" class="pub-badge acl-anthology-badge">ACL Anthology</a>
+                        <a href="https://aclanthology.org/2023.emnlp-main.15.pdf" class="pub-badge link-badge">PDF</a>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-13')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>    
             
@@ -566,7 +596,7 @@
     title = "Let's think frame by frame with vip: A video infilling and prediction dataset for evaluating video chain-of-thought",
     booktitle = "Conference on Empirical Methods in Natural Language Processing",
     year = "2023",
-  url = {https://arxiv.org/abs/2305.13903},
+  url = {https://aclanthology.org/2023.emnlp-main.15/},
 }</code></div>
         </div>
         
@@ -644,13 +674,15 @@
             data-venue="acl"
             data-year="2023"
             id="pub-16">
-                    <span class="title">CausalDialogue: Modeling Utterance-level Causality in Conversations</span>
+                    <span class="title"><a href="https://aclanthology.org/2023.findings-acl.792/" class="pub-title-link">CausalDialogue: Modeling Utterance-level Causality in Conversations</a></span>
                 <br>
                 <span class="authors">Yi-Lin Tuan, Alon Albalak, Wenda Xu, <span class="me">Michael Saxon</span>, Connor Pryor, Lise Getoor, William Yang Wang</span><br>
                 <div class="venue">
                         <span class="pub-badge acl-badge">ACL 2023</span>
                 </div>
                 <div class="pub-badges">
+                        <a href="https://aclanthology.org/2023.findings-acl.792/" class="pub-badge acl-anthology-badge">ACL Anthology</a>
+                        <a href="https://aclanthology.org/2023.findings-acl.792.pdf" class="pub-badge link-badge">PDF</a>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-16')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>    
             
@@ -660,6 +692,7 @@
     booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
     pages = "12506--12522",
     year = "2023",
+  url = {https://aclanthology.org/2023.findings-acl.792/},
 }</code></div>
         </div>
         
@@ -854,22 +887,32 @@
             data-venue="acl"
             data-year="2022"
             id="pub-23">
-                    <span class="title">Not All Errors are Equal: Learning Text Generation Metrics using Stratified Error Synthesis</span>
+                    <span class="title"><a href="https://aclanthology.org/2022.findings-emnlp.489/" class="pub-title-link">Not All Errors are Equal: Learning Text Generation Metrics using Stratified Error Synthesis</a></span>
                 <br>
                 <span class="authors">Wenda Xu, Yi-Lin Tuan, Yujie Lu, <span class="me">Michael Saxon</span>, Lei Li, William Yang Wang</span><br>
                 <div class="venue">
                         <span class="pub-badge emnlp-badge">EMNLP 2022</span>
                 </div>
                 <div class="pub-badges">
+                        <a href="https://aclanthology.org/2022.findings-emnlp.489/" class="pub-badge acl-anthology-badge">ACL Anthology</a>
+                        <a href="https://aclanthology.org/2022.findings-emnlp.489.pdf" class="pub-badge link-badge">PDF</a>
+                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'abstract-23')" aria-expanded="false" role="button" tabindex="0">Abstract</span>
                         <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-23')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>    
             
+            <div id="abstract-23" class="expandable-content hidden">
+                <div class="abstract">
+                    <strong>Abstract:</strong> Is it possible to build a general and automatic natural language generation (NLG) evaluation metric? Existing learned metrics either perform unsatisfactorily or are restricted to tasks where large human rating data is already available. We introduce SESCORE, a model-based metric that is highly correlated with human judgements without requiring human annotation, by utilizing a novel, iterative error synthesis and severity scoring pipeline. This pipeline applies a series of plausible errors to raw text and assigns severity labels by simulating human judgements with entailment. We evaluate SESCORE against existing metrics by comparing how their scores correlate with human ratings. SESCORE outperforms all prior unsupervised metrics on multiple diverse NLG tasks including machine translation, image captioning, and WebNLG text generation. For WMT 20/21En-De and Zh-En, SESCORE improve the average Kendall correlation with human judgement from 0.154 to 0.195. SESCORE even achieves comparable performance to the best supervised metric COMET, despite receiving no human annotated training data.
+                </div>
+            </div>
             <div id="bibtex-23" class="highlight bibtex-highlight expandable-content hidden"><code>@inproceedings{xu2022not,
     author = "Xu, Wenda and Tuan, Yi-Lin and Lu, Yujie and Saxon, Michael and Li, Lei and Wang, William Yang",
     title = "Not All Errors are Equal: Learning Text Generation Metrics using Stratified Error Synthesis",
     booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
     pages = "6559--6574",
     year = "2022",
+    abstract = "Is it possible to build a general and automatic natural language generation (NLG) evaluation metric? Existing learned metrics either perform unsatisfactorily or are restricted to tasks where large human rating data is already available. We introduce SESCORE, a model-based metric that is highly correlated with human judgements without requiring human annotation, by utilizing a novel, iterative error synthesis and severity scoring pipeline. This pipeline applies a series of plausible errors to raw text and assigns severity labels by simulating human judgements with entailment. We evaluate SESCORE against existing metrics by comparing how their scores correlate with human ratings. SESCORE outperforms all prior unsupervised metrics on multiple diverse NLG tasks including machine translation, image captioning, and WebNLG text generation. For WMT 20/21En-De and Zh-En, SESCORE improve the average Kendall correlation with human judgement from 0.154 to 0.195. SESCORE even achieves comparable performance to the best supervised metric COMET, despite receiving no human annotated training data.",
+  url = {https://aclanthology.org/2022.findings-emnlp.489/},
 }</code></div>
         </div>
                 </div>  <!-- Close previous year group -->
@@ -1151,7 +1194,7 @@
         </div>  <!-- Close the last year group -->
 
     <div id="nonarchival-section">
-        <h2>Non-archival Presenations and Workshop Papers</h2>
+        <h2>Non-archival Presentations and Workshop Papers</h2>
         
                 
                 <h3 id="workshop-year-2023">2023</h3>
@@ -1174,11 +1217,6 @@
                             <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-1')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                             <a href="https://www.youtube.com/watch?v=tBYJFLaM71U" class="pub-badge video-badge">Presentation</a>
                     </div>    
-                </div>
-                
-                <div class="pub-badges">
-                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-1')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
-                        <a href="https://www.youtube.com/watch?v=tBYJFLaM71U" class="pub-badge video-badge">Presentation</a>
                 </div>
                 
                 <div id="bibtex-1" class="highlight bibtex-highlight expandable-content hidden"><code>@inproceedings{saxon2023disparities,
@@ -1206,10 +1244,6 @@
                     <div class="pub-badges">
                             <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-2')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                     </div>    
-                </div>
-                
-                <div class="pub-badges">
-                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-2')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>
                 
                 <div id="bibtex-2" class="highlight bibtex-highlight expandable-content hidden"><code>@inproceedings{tanna2023data,
@@ -1245,12 +1279,6 @@
                             <a href="https://ceur-ws.org/Vol-2328/4_paper_1.pdf" class="pub-badge link-badge">PDF</a>
                             <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-3')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                     </div>    
-                </div>
-                
-                <div class="pub-badges">
-                        <a href="https://ceur-ws.org/Vol-2328/" class="pub-badge link-badge">Official</a>
-                        <a href="https://ceur-ws.org/Vol-2328/4_paper_1.pdf" class="pub-badge link-badge">PDF</a>
-                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-3')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
                 </div>
                 
                 <div id="bibtex-3" class="highlight bibtex-highlight expandable-content hidden"><code>@inproceedings{saxon2019word,
@@ -1289,12 +1317,6 @@
                     </div>    
                 </div>
                 
-                <div class="pub-badges">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-92279-9_53" class="pub-badge link-badge">Official</a>
-                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'abstract-4')" aria-expanded="false" role="button" tabindex="0">Abstract</span>
-                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-4')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
-                </div>
-                
                 <div id="abstract-4" class="expandable-content hidden">
                     <div class="abstract">
                         <strong>Abstract:</strong> Perception of social cues is a fundamental communicative skill that can be hampered by hearing and cognitive disorders. Understanding slang and sarcastic intent is often difficult in verbal communication, particularly for individuals who struggle with the perception of social cues. Misinterpretation of slang terms can cause discomfort or social isolation. Sarcasm is particularly difficult to recognize due to its inherently ambiguous and context-dependent nature. We have identified two problems of particular interest in social assistive technologies – slang word sentiment assessment and sarcasm detection. We propose combining a slang sentiment analysis model with a speech emotion analysis model to create an assistive tool, Chat-Box, which will detect social cues such as sarcasm, slang, and sentiment.
@@ -1329,6 +1351,7 @@ function toggleContent(element, targetId) {
 function updatePubFilters() {
     const showFirst = document.getElementById('filter-first').checked;
     const showAll = document.getElementById('filter-allauthors').checked;
+    const showCV = document.getElementById('filter-cv').checked;
     const showACL = document.getElementById('filter-acl').checked;
     const showTopML = document.getElementById('filter-topml').checked;
     const showSpeech = document.getElementById('filter-speech').checked;
@@ -1354,6 +1377,7 @@ function updatePubFilters() {
         // Venue logic
         if (show) {
             if ((venue === 'acl' && !showACL) ||
+                (venue === 'cv' && !showCV) ||
                 (venue === 'topml' && !showTopML) ||
                 (venue === 'speech' && !showSpeech) ||
                 (venue === 'preprint' && !showPreprint) ||

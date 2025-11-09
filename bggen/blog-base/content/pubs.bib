@@ -195,9 +195,9 @@
   booktitle={Findings of the Association for Computational Linguistics: EMNLP 2022},
   pages={6559--6574},
   year={2022},
-  abstract={},
-  url_official={},
-  url_pdf={},
+  abstract={Is it possible to build a general and automatic natural language generation (NLG) evaluation metric? Existing learned metrics either perform unsatisfactorily or are restricted to tasks where large human rating data is already available. We introduce SESCORE, a model-based metric that is highly correlated with human judgements without requiring human annotation, by utilizing a novel, iterative error synthesis and severity scoring pipeline. This pipeline applies a series of plausible errors to raw text and assigns severity labels by simulating human judgements with entailment. We evaluate SESCORE against existing metrics by comparing how their scores correlate with human ratings. SESCORE outperforms all prior unsupervised metrics on multiple diverse NLG tasks including machine translation, image captioning, and WebNLG text generation. For WMT 20/21En-De and Zh-En, SESCORE improve the average Kendall correlation with human judgement from 0.154 to 0.195. SESCORE even achieves comparable performance to the best supervised metric COMET, despite receiving no human annotated training data.},
+  url_official={https://aclanthology.org/2022.findings-emnlp.489/},
+  url_pdf={https://aclanthology.org/2022.findings-emnlp.489.pdf},
   venue_abbrev={EMNLP 2022}
 }
 
@@ -286,8 +286,8 @@
   booktitle={Conference on Empirical Methods in Natural Language Processing}, 
   year={2023},
   abstract={},
-  url_official={https://arxiv.org/abs/2305.13903},
-  url_pdf={https://arxiv.org/pdf/2305.13903},
+  url_official={https://aclanthology.org/2023.emnlp-main.15/},
+  url_pdf={https://aclanthology.org/2023.emnlp-main.15.pdf},
   venue_abbrev={EMNLP 2023},
   yindex={8}  
 }
@@ -386,8 +386,8 @@
   pages={12506--12522},
   year={2023},
   abstract={},
-  url_official={},
-  url_pdf={},
+  url_official={https://aclanthology.org/2023.findings-acl.792/},
+  url_pdf={https://aclanthology.org/2023.findings-acl.792.pdf},
   venue_abbrev={ACL 2023},
   yindex={5}
 }
@@ -398,7 +398,7 @@
   journal={Second Conference on Language Modeling (COLM 2025)},
   year={2025},
   abstract={Reasoning models have demonstrated impressive performance on difficult tasks that traditional language models struggle at. However, many are plagued with the problem of overthinking--generating large amounts of unnecessary tokens which don't improve accuracy on a question. We introduce approximate measures of problem-level difficulty and demonstrate that a clear relationship between problem difficulty and optimal token spend exists, and evaluate how well calibrated a variety of reasoning models are in terms of efficiently allocating the optimal token count. We find that in general, reasoning models are poorly calibrated, particularly on easy problems. To evaluate calibration on easy questions we introduce DUMB500, a dataset of extremely easy math, reasoning, code, and task problems, and jointly evaluate reasoning model on these simple examples and extremely difficult examples from existing frontier benchmarks on the same task domain. Finally, we introduce THOUGHTTERMINATOR, a training-free black box decoding technique that significantly improves reasoning model calibration. },
-  url_official={https://arxiv.org/abs/2504.13367},
+  url_official={https://openreview.net/forum?id=oHR862dpMC},
   url_pdf={https://arxiv.org/pdf/2504.13367},
   yindex={6},
   press_link={https://spectrum.ieee.org/chain-of-thought-prompting},
@@ -406,12 +406,14 @@
 }
 
 @article{cho2025mime,
-  title={Can Vision Language Models Understand Mimes?},
+  title={Can Vision Language Models Understand Mimed Actions?},
   author={Cho, Justin Hyundong and Lin, Spencer and Srinivasan, Tejas and Saxon, Michael and Kwon, Deuksin and Chavez, Natali T. and May, Jonathan},
   journal={Findings of the Association for Computational Linguistics: ACL 2025},
   year={2025},
   abstract={Non-verbal communication (NVC) is an integral part of human language, but it has been overlooked in natural language processing research. Studying NVC in general is challenging because of its high variance in interpretation among individuals and cultures, but mime---the theatrical technique of suggesting intent using only gesture, expression, and movement---is a subset of NVC with much lower human interpretation variance. As a gateway for evaluating vision-language models on their understanding of NVC, we propose Mime Identification-based Multimodal Evaluation (MIME), a gesture recognition task built upon a novel corpus of mimed activity comprising 86 unique gestures with a variety of perturbations applied to the avatar, background, and viewpoint for evaluating recognition robustness. We find that both open-weight and API-based vision-language models perform significantly worse than humans at identifying mimed gestures in MIME, motivating the need for increased research for instilling more robust understanding of human actions for VLMs.},
   yindex={2},
+  url_official={https://aclanthology.org/2025.findings-acl.1372/},
+  url_pdf={https://aclanthology.org/2025.findings-acl.1372.pdf},
   venue_abbrev={ACL 2025}
 }
 
@@ -434,8 +436,8 @@
   journal={International Conference on Computer Vision (ICCV) 2025},
   year={2025},
   abstract={},
-  url_official={https://arxiv.org/abs/2407.01863},
-  url_pdf={https://arxiv.org/pdf/2407.01863},
+  url_official={https://openaccess.thecvf.com/content/ICCV2025/html/Wu_VSP_Diagnosing_the_Dual_Challenges_of_Perception_and_Reasoning_in_ICCV_2025_paper.html},
+  url_pdf={https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_VSP_Diagnosing_the_Dual_Challenges_of_Perception_and_Reasoning_in_ICCV_2025_paper.pdf},
   yindex={5},
   venue_abbrev={ICCV 2025}
  }
@@ -457,11 +459,12 @@
   author={Tanwar, Eshaan and Chatterjee, Anwoy and Saxon, Michael and Albalak, Alon and Wang, William Yang and Chakraborty, Tanmoy },
   journal={Empirical Methods in Natural Language Processing (EMNLP)},
   year={2025},
-  abstract={},
-  url_official={},
-  url_pdf={},
+  abstract={Most multilingual question-answering benchmarks, while covering a diverse pool of languages, do not factor in regional diversity in the information they capture and tend to be Western-centric. This introduces a significant gap in fairly evaluating multilingual models’ comprehension of factual information from diverse geographical locations. To address this, we introduce XNationQA for investigating the cultural literacy of multilingual LLMs. XNationQA encompasses a total of 49,280 questions on the geography, culture, and history of nine countries, presented in seven languages. We benchmark eight standard multilingual LLMs on XNationQA and evaluate them using two novel transference metrics. Our analyses uncover a considerable discrepancy in the models’ accessibility to culturally specific facts across languages. Notably, we often find that a model demonstrates greater knowledge of cultural information in English than in the dominant language of the respective culture. The models exhibit better performance in Western languages, although this does not necessarily translate to being more literate for Western countries, which is counterintuitive. Furthermore, we observe that models have a very limited ability to transfer knowledge across languages, particularly evident in open-source models.},
+  url_official={https://aclanthology.org/2025.emnlp-main.756/},
+  url_pdf={https://aclanthology.org/2025.emnlp-main.756.pdf},
   yindex={7},
-  venue_abbrev={EMNLP 2025}
+  venue_abbrev={EMNLP 2025},
+  additional_info={Senior Area Chair Highlight Award},
  }
 
 @article{oh2025culture,
@@ -469,9 +472,9 @@
   author={Oh, Juhyun and Cha, Inha and Saxon, Michael and Lim, Hyunseung and Bhatt, Shaily and Oh, Alice},
   journal={Findings of the Association for Computational Linguistics: EMNLP 2025},
   year={2025},
-  abstract={},
-  url_official={},
-  url_pdf={},
+  abstract={The prevailing “trivia-centered paradigm” for evaluating the cultural alignment of large language models (LLMs) is increasingly inadequate as these models become more advanced and widely deployed. Existing approaches typically reduce culture to static facts or values, testing models via multiple-choice or short-answer questions that treat culture as isolated trivia. Such methods neglect the pluralistic and interactive realities of culture, and overlook how cultural assumptions permeate even ostensibly “neutral” evaluation settings.In this position paper, we argue for intentionally cultural evaluation: an approach that systematically examines the cultural assumptions embedded in all aspects of evaluation, not just in explicitly cultural tasks. We systematically characterize the what, how, and circumstances by which culturally contingent considerations arise in evaluation, and emphasize the importance of researcher positionality for fostering inclusive, culturally aligned NLP research. Finally, we discuss implications and future directions for moving beyond current benchmarking practices, discovering important applications that we don’t know exist, and involving communities in evaluation design through HCI-inspired participatory methodologies.},
+  url_official={https://aclanthology.org/2025.findings-emnlp.1043/},
+  url_pdf={https://aclanthology.org/2025.findings-emnlp.1043.pdf},
   yindex={8},
   venue_abbrev={EMNLP 2025}
  } 

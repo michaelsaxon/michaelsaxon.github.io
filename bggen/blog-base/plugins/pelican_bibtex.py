@@ -88,7 +88,8 @@ def determine_venue_badge(pubdict):
         'iclr': 'iclr-badge',
         'colm': 'colm-badge',
         'neurips': 'neurips-badge',
-        'emnlp': 'emnlp-badge'
+        'emnlp': 'emnlp-badge',
+        'iccv': 'cvf-badge'
     }
     
     # Handle arXiv preprints
@@ -107,6 +108,8 @@ def determine_venue_badge(pubdict):
         info_badge_class = 'oral-badge'
     elif 'spotlight' in additional_info:
         info_badge_class = 'spotlight-badge'
+    elif 'award' in additional_info:
+        info_badge_class = 'award-badge'
     else:
         info_badge_class = None
         
@@ -326,6 +329,8 @@ def add_publications(generator):
             venue_category = 'acl'
         elif any(key in venue_badge_class for key in ['colm', 'iclr', 'neurips']):
             venue_category = 'topml'
+        elif any(key in venue_badge_class for key in ['cvf']):
+            venue_category = 'cv'
         elif any(key in entry_dict.get('venue_abbrev', '').lower() for key in ['icassp', 'interspeech', 'taslp']):
             venue_category = 'speech'
         elif 'arxiv' in entry_dict.get('url_official', '') or 'arxiv' in venue_badge_class or 'preprint' in venue_badge_class:

@@ -33,17 +33,22 @@
             <span class="checkmark"></span>
             <span class="filter-text">*ACL</span>
           </label>
-          <label class="custom-checkbox venue-speech" style="grid-row: 2; grid-column: 2;">
-            <input type="checkbox" id="filter-speech">
+          <label class="custom-checkbox venue-other" style="grid-row: 1; grid-column: 2;">
+            <input type="checkbox" id="filter-cv" checked>
             <span class="checkmark"></span>
-            <span class="filter-text">Speech Venues</span>
+            <span class="filter-text">Computer Vision</span>
           </label>
-          <label class="custom-checkbox venue-preprint" style="grid-row: 1; grid-column: 2;">
-            <input type="checkbox" id="filter-preprint" checked>
+          <label class="custom-checkbox venue-speech" style="grid-row: 2; grid-column: 2;">
+            <input type="checkbox" id="filter-speech" checked>
+            <span class="checkmark"></span>
+            <span class="filter-text">Speech</span>
+          </label>
+          <label class="custom-checkbox venue-preprint" style="grid-row: 1; grid-column: 3;">
+            <input type="checkbox" id="filter-preprint">
             <span class="checkmark"></span>
             <span class="filter-text">Preprints</span>
           </label>
-          <label class="custom-checkbox venue-other" style="grid-row: 1; grid-column: 3;">
+          <label class="custom-checkbox venue-other" style="grid-row: 2; grid-column: 3;">
             <input type="checkbox" id="filter-other">
             <span class="checkmark"></span>
             <span class="filter-text">Other</span>
@@ -154,7 +159,7 @@
     {# Non-archival  Section #}
     {% if workshop_publications %}
     <div id="nonarchival-section">
-        <h2>Non-archival Presenations and Workshop Papers</h2>
+        <h2>Non-archival Presentations and Workshop Papers</h2>
         
         {% set ns = namespace(current_year=None) %}
         {% for pubdict in workshop_publications %}
@@ -215,24 +220,6 @@
                     </div>    
                 </div>
                 
-                <div class="pub-badges">
-                    {% if pubdict.badge_text and pubdict.badge_class %}
-                        <a href="{{ pubdict.get('url_official', '#') }}" class="pub-badge {{ pubdict.badge_class }}">{{ pubdict.badge_text }}</a>
-                    {% endif %}
-                    {% if pubdict['url_pdf'] %}
-                        <a href="{{ pubdict['url_pdf'] }}" class="pub-badge link-badge">PDF</a>
-                    {% endif %}
-                    {% if pubdict['abstract'] %}
-                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'abstract-{{ loop.index }}')" aria-expanded="false" role="button" tabindex="0">Abstract</span>
-                    {% endif %}
-                    {% if pubdict['bibtex'] %}
-                        <span class="pub-badge toggle-badge" onclick="toggleContent(this, 'bibtex-{{ loop.index }}')" aria-expanded="false" role="button" tabindex="0">BibTeX</span>
-                    {% endif %}
-                    {% if pubdict['video_link'] %}
-                        <a href="{{ pubdict['video_link'] }}" class="pub-badge video-badge">Presentation</a>
-                    {% endif %}
-                </div>
-                
                 {% if pubdict['abstract'] %}
                 <div id="abstract-{{ loop.index }}" class="expandable-content hidden">
                     <div class="abstract">
@@ -266,6 +253,7 @@ function toggleContent(element, targetId) {
 function updatePubFilters() {
     const showFirst = document.getElementById('filter-first').checked;
     const showAll = document.getElementById('filter-allauthors').checked;
+    const showCV = document.getElementById('filter-cv').checked;
     const showACL = document.getElementById('filter-acl').checked;
     const showTopML = document.getElementById('filter-topml').checked;
     const showSpeech = document.getElementById('filter-speech').checked;
@@ -291,6 +279,7 @@ function updatePubFilters() {
         // Venue logic
         if (show) {
             if ((venue === 'acl' && !showACL) ||
+                (venue === 'cv' && !showCV) ||
                 (venue === 'topml' && !showTopML) ||
                 (venue === 'speech' && !showSpeech) ||
                 (venue === 'preprint' && !showPreprint) ||
