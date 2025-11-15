@@ -80,9 +80,7 @@ For a long time I used [Clustrmaps](https://clustrmaps.com/site/1bs8p) for visit
 While obviously, any free service for this sort of thing will be using it for data gathering, I didn't realize quite how nasty Clustrmaps is.
 Beyond just a run-of-the-mill databroker, it actually uses its data to power a by-name people search service which correlates IPs to addresses.
 
-I got rid of it in October 2025. I want to eventually roll my own visitor tracker (shouldn't be *too* hard) but that's a project for another time.
-For posterity, here's the state of the visitor map when I took it down:
+I got rid of it in October 2025 and replaced it with Google Analytics (that way the data being collected only goes to me, and Google who is in my opinion much less pernicious---they are already tracking you anyway).
+I rolled a custom visitor map generator I'm calling [`analytics2map`](https://github.com/michaelsaxon/analytics2map) which pulls the latest Google analytics data and renders it to svgs hosted at [`saxon.me/analytics2map`](https://saxon.me/analytics2map). Eventually, I'm going to make it run as a periodic Github action, and I will have fully recovered the useful, automatic behavior Clustrmaps gave without as hairy of privacy issues.
 
-![The visitor map for my site.]({attach}images/clustr.png)
-
-I have since started playing with Google Analytics as the visitor tracking engine. I am still experimenting with the best solution for displaying a visitors map.
+![The visitor map for my site.](https://saxon.me/analytics2map/output/visitors-large.svg)

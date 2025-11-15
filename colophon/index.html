@@ -174,10 +174,9 @@ A <em>colophon</em><sup id="fnref:4"><a class="footnote-ref footnote-toggle" hre
 <p>For a long time I used <a href="https://clustrmaps.com/site/1bs8p">Clustrmaps</a> for visitor tracking.
 While obviously, any free service for this sort of thing will be using it for data gathering, I didn't realize quite how nasty Clustrmaps is.
 Beyond just a run-of-the-mill databroker, it actually uses its data to power a by-name people search service which correlates IPs to addresses.</p>
-<p>I got rid of it in October 2025. I want to eventually roll my own visitor tracker (shouldn't be <em>too</em> hard) but that's a project for another time.
-For posterity, here's the state of the visitor map when I took it down:</p>
-<p class="image-line"><img alt="The visitor map for my site." src="https://saxon.me/colophon/images/clustr.png"/></p>
-<p>I have since started playing with Google Analytics as the visitor tracking engine. I am still experimenting with the best solution for displaying a visitors map.</p>
+<p>I got rid of it in October 2025 and replaced it with Google Analytics (that way the data being collected only goes to me, and Google who is in my opinion much less pernicious—they are already tracking you anyway).
+I rolled a custom visitor map generator I'm calling <a href="https://github.com/michaelsaxon/analytics2map"><code>analytics2map</code></a> which pulls the latest Google analytics data and renders it to svgs hosted at <a href="https://saxon.me/analytics2map"><code>saxon.me/analytics2map</code></a>. Eventually, I'm going to make it run as a periodic Github action, and I will have fully recovered the useful, automatic behavior Clustrmaps gave without as hairy of privacy issues.</p>
+<p class="image-line"><img alt="The visitor map for my site." src="https://saxon.me/analytics2map/output/visitors-large.svg"/></p>
 
 
 </article>
@@ -199,12 +198,12 @@ For posterity, here's the state of the visitor map when I took it down:</p>
   </ul>
   
     <div style="max-width: 600px;   margin-right: auto; margin-left: auto; border: 1pt solid var(--text-body); margin-top: 10pt; margin-bottom: 10pt; padding: 2pt 5pt 2pt 5pt;">
-	    <p style="font-size:10pt; text-align: center; margin-bottom: 5pt;">© Michael Saxon, 2017-2025. CC-BY-SA. Scratchbuilt in framework-free HTML/CSS with a heavily customized <a href="https://getpelican.com/">Pelican</a> stack.
+	    <p style="font-size:10pt; text-align: center;">© Michael Saxon, 2017-2025. CC-BY-SA. Scratchbuilt in framework-free HTML/CSS with a heavily customized <a href="https://getpelican.com/">Pelican</a> stack.
         For more info on the design and all its cool features, check out the <a href="https://saxon.me/colophon" style="font-family: 'Triptych', serif; font-style: italic; font-weight: 500;">Colophon</a>!</p>
     </div>
 
 
-    <div class="worldmap" style="border: 1pt solid var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); font-family: 'Berkeley Mono', monospace; font-stretch: semi-condensed;">The Clustrmaps visitor tracker that used to live here has been removed to protect your privacy.</div>
+    <div class="worldmap" style="padding: 0; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); font-family: 'Berkeley Mono', monospace; font-stretch: semi-condensed;"><a style="padding: 0; margin: 0;" href="https://saxon.me/analytics2map"><img style="border: 1pt solid var(--brand-main); border-radius: 2px; width: 100%; height: auto; margin: 0; padding:0;" src="http://saxon.me/analytics2map/output/visitors-small.svg"/></a></div>
   
   <div style="max-width: 800px; margin-right: auto; margin-left: auto; text-align: center;">
      <!-- <img src="https://web.badges.world/badges/operated/getfirefox.gif"/> -->
