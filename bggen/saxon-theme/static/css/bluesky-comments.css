@@ -1,12 +1,12 @@
 :root {
-    --primary-base: var(--kanagawa-dark-blue);
+    --primary-base: var(--dark-blue);
     --primary-light: #EBEFFF;
     --primary-border: var(--brand-main);
-    --primary-accent: var(--kanagawa-dark-blue);
+    --primary-accent: var(--dark-blue);
     --primary-dark: var(--text-main);
-    --warning: var(--kanagawa-dark-yellow);
-    --error-color: var(--kanagawa-dark-magenta);
-    --success-color: var(--kanagawa-dark-yellow);
+    --warning: var(--dark-yellow);
+    --error-color: var(--dark-magenta);
+    --success-color: var(--dark-yellow);
 
     --monochrome-0: var(--bg-main);
     --monochrome-1: var(--bg-main);
@@ -41,8 +41,10 @@
     padding: 24px 0;
     display: flex;
     justify-content: center;
-    border: 1px solid var(--brand-main);
-    border-radius: 6px;
+    border-top: 1px solid var(--brand-main);
+    margin-top: 2.5rem;
+    /* border: 1px solid var(--brand-main); */
+    /* border-radius: 6px; */
 }
 
 .widget-wrapper .demo-heading {
@@ -653,17 +655,17 @@ a.bsky-stat-link {
 }
 
 a.bsky-stat-link:hover span.stat-ph-heart, a.bsky-stat-link:hover span.stat-ph-heart span {
-    color: var(--kanagawa-dark-red) !important;
+    color: var(--dark-red) !important;
 }
 
 a.bsky-stat-link:hover span.stat-ph-chat-centered, a.bsky-stat-link:hover span.stat-ph-chat-centered span {
-    color: var(--kanagawa-dark-cyan) !important;
+    color: var(--dark-cyan) !important;
 }
 
 a.bsky-stat-link:hover span.stat-ph-repeat, a.bsky-stat-link:hover span.stat-ph-repeat span {
-    color: var(--kanagawa-dark-green) !important;
+    color: var(--dark-green) !important;
 }
 
 a.bsky-stat-link:hover span.stat-ph-quotes, a.bsky-stat-link:hover span.stat-ph-quotes span {
-    color: var(--kanagawa-dark-blue) !important;
+    color: var(--dark-blue) !important;
 }

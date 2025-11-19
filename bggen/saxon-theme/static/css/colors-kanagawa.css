@@ -1,0 +1,169 @@
+/* Defines Kanagawa color scheme for the website. Use it by importing colors-kanagawa.css into style.css */
+
+/* Define the color palette. Goal is all RGB values happen here. */
+:root {
+/* Reds */
+ --dark-red: #b31d1d;
+ --medium-red: #c34043;
+ --light-red: #db5555;
+
+ /* Greens */
+ --dark-green: #4b6b4b;
+ --medium-green: #76946a;
+ --light-green: #98bb6c;
+
+ /* Blues */
+ --dark-blue: #4a5cc5;
+ --light-blue: #7e9cd8;
+ --selection-blue: #4a7890;
+
+ /* Yellows */
+ --dark-yellow: #8f6c3f;
+ --medium-yellow: #c0a36e;
+ --light-yellow: #e6c384;
+
+ /* Magentas */
+  --dark-magenta: #625987;
+  --medium-magenta: #957fb8;
+  --light-magenta: #938aa9;
+
+ /* Cyans */
+ --dark-cyan: #3d6b62;
+ --medium-cyan: #6a9589;
+ --light-cyan: #7aa89f;
+
+ /* Blacks and Whites */
+ --dark-black: #090618;
+ --dark-white: #c8c093;
+ --light-black: #1f1f28;
+ --light-white: #dcd7ba;
+ --light-bg-white: #efede3;
+
+  /* Background, Foreground and Selection */
+  --dark-bg: #1f1f28;
+  --dark-text: #dcd7ba;
+  --light-selection: #2d4f67;
+  --light-bg: #efede3;
+  --light-text: #1f1f28;
+  --dark-selection: #6a91ac;
+
+
+
+ --light-blue-teal: #2d4f67;
+ --dark-blue-teal: #6a91ac;
+
+/* Icon filters */
+--dark-icon-filter: brightness(0) saturate(100%) invert(90%) sepia(83%) saturate(132%) hue-rotate(334deg) brightness(91%) contrast(89%);
+--light-icon-filter: brightness(0) saturate(100%) invert(9%) sepia(15%) saturate(845%) hue-rotate(201deg) brightness(92%) contrast(91%);
+--icon-mouseover-filter: brightness(0) saturate(100%) invert(45%) sepia(34%) saturate(510%) hue-rotate(156deg) brightness(89%) contrast(89%);
+--text-filter: 40%;  /* Adjust this value to match text-body color */
+}/* Kanagawa color variables */  
+
+ /* Assign colors for light mode UI. All colors named here are generic across schemes. */
+
+:root {
+
+
+  /* Core brand colors */
+  --brand-dark: var(--dark-cyan);      /* Dark red for hover states */
+  --brand-main: var(--medium-cyan);      /* Main brand red */
+  --brand-light: color-mix(in srgb, var(--light-bg) 95%, var(--medium-cyan) 5%);   /* Light red background */
+  
+  /* Text colors */
+  --light-bg: var(--light-bg-white);
+  --text-dark: var(--light-black);         /* Dark text for headings */
+  --text-body: color-mix(in srgb, var(--light-black) 90%, var(--light-bg) 10%);         /* Main body text */
+  --text-muted: color-mix(in srgb, var(--light-black) 70%, var(--light-bg) 30%);        /* Subdued text */
+  --text-black: var(--light-black);        /* Pure black text */
+  
+  /* UI colors */
+  
+  --bg-main: var(--light-bg-white);     /* Main background */
+  --link-color: var(--dark-blue);    /* Link blue */
+  /* --selection-color: var(--selection-blue); */
+  --selection-color: var(--light-black);
+  --selection-text-color: var(--light-white);
+  
+  /* Social icon colors */
+  --icon-hover: var(--red);
+  --icon-default: var(--bright-black);
+  
+  /* Scrollbar colors */
+  --scrollbar-bg: var(--light-bg);
+  --scrollbar-thumb: var(--light-red);
+  --scrollbar-thumb-hover: var(--light-red);
+
+  /* Infobox colors */
+  --quote-bg: color-mix(in srgb, var(--light-bg) 95%, var(--dark-black) 5%);
+  --quote-border: var(--light-black);
+  --quote-text: var(--dark-black);
+
+  --note-bg: color-mix(in srgb, var(--light-bg) 95%, var(--dark-magenta) 5%);
+  --note-border: var(--dark-magenta);
+  --note-text: var(--dark-magenta);
+
+  --warning-bg: color-mix(in srgb, var(--light-bg) 95%, var(--dark-red) 5%);
+  --warning-border: var(--dark-red);
+  --warning-text: var(--dark-red);
+
+  --tip-bg: color-mix(in srgb, var(--light-bg) 95%, var(--light-yellow) 5%);
+  --tip-border: var(--dark-yellow);
+  --tip-text: var(--dark-yellow);
+
+  --icon-filter: var(--light-icon-filter);
+  --icon-filter-hover: var(--icon-mouseover-filter);
+}
+
+/* Kanagawa dark theme colors  (uses the kanagawa theme colors above) */
+:root[data-theme="dark"] {
+  /* Base sizes */
+  --base-size: 13pt;
+
+  /* Core brand colors */
+  --brand-dark: var(--light-cyan);      /* Dark red for hover states */
+  --brand-main: var(--medium-cyan);      /* Main brand red */
+  --brand-light: color-mix(in srgb, var(--dark-bg) 95%, var(--dark-cyan) 5%);   /* Light red background */
+  
+  /* Text colors */
+  --text-dark: var(--dark-text);         /* Dark text for headings */
+  --text-body: color-mix(in srgb, var(--dark-text) 90%, var(--dark-bg) 10%);         /* Main body text */
+  --text-muted: color-mix(in srgb, var(--dark-text) 70%, var(--dark-bg) 30%);        /* Subdued text */
+  --text-black: var(--dark-text);        /* Pure black text */
+  
+  /* UI colors */
+  --bg-main: var(--dark-bg);     /* Main background */
+  --link-color: var(--light-blue);    /* Link blue */
+  --selection-color: var(--dark-text);
+  --selection-text-color: var(--light-text);
+  
+  /* Social icon colors */
+  --icon-hover: var(--red);
+  --icon-default: var(--bright-black);
+  
+  /* Scrollbar colors */
+  --scrollbar-bg: var(--dark-bg);
+  --scrollbar-thumb: var(--light-red);
+  --scrollbar-thumb-hover: var(--light-red);
+
+  /* Infobox colors */
+  --quote-bg: color-mix(in srgb, var(--dark-bg) 75%, var(--light-black) 25%);
+  --quote-border: var(--dark-text);
+  --quote-text: var(--dark-text);
+
+  --note-bg: color-mix(in srgb, var(--dark-bg) 80%, var(--dark-magenta) 20%);
+  --note-border: var(--light-magenta);
+  --note-text: var(--light-magenta);
+
+  --warning-bg: color-mix(in srgb, var(--dark-bg) 80%, var(--dark-red) 20%);
+  --warning-border: var(--light-red);
+  --warning-text: var(--light-red);
+
+  --tip-bg: color-mix(in srgb, var(--dark-bg) 80%, var(--dark-yellow) 20%);
+  --tip-border: var(--light-yellow);
+  --tip-text: var(--light-yellow);
+
+
+    --icon-filter: var(--dark-icon-filter);
+    --icon-filter-hover: var(--icon-mouseover-filter);
+  
+}

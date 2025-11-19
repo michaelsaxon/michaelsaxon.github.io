@@ -1,4 +1,54 @@
 /* code style */
+
+/* Code block styling */
+.highlight {
+    /* Add horizontal scrolling */
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--brand-main) var(--bg-main);
+    
+    /* Container styling */
+    max-width: 100%;
+    padding: 1.2rem;
+    margin: 1em 0;
+    border-radius: 6px;
+    border: 1px solid var(--brand-main);
+    background-color: var(--kanagawa-code-bg);
+    color: var(--kanagawa-code-fg);
+    position: relative;  /* For absolute positioning of copy button */
+}
+
+
+.highlight pre {
+    /* Code content */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    font-family: 'Berkeley Mono', monospace;
+}
+
+/* Webkit scrollbar styling */
+.highlight::-webkit-scrollbar {
+    height: 8px;
+}
+
+.highlight::-webkit-scrollbar-track {
+    background: var(--bg-main);
+    border-radius: 4px;
+}
+
+.highlight::-webkit-scrollbar-thumb {
+    background: var(--brand-main);
+    opacity: 0.5;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.highlight::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7;
+}
+
+
 .normal { margin-right: 2pt; }
 .highlight {
     /* Add horizontal scrolling */
@@ -15,8 +65,8 @@
     /* Optional: add a subtle border */
     border-radius: 4px;
 
-    background-color: var(--kanagawa-code-bg);
-    color: var(--kanagawa-code-fg);
+    background-color: var(--code-bg);
+    color: var(--code-fg);
 
     font-family: 'Berkeley Mono', monospace !important;
 }
@@ -107,8 +157,8 @@
     --kanagawa-code-bright-magenta: var(--kanagawa-code-light-bright-magenta);
     --kanagawa-code-bright-cyan: var(--kanagawa-code-light-bright-cyan);
     --kanagawa-code-bright-white: var(--kanagawa-code-light-bright-white);
-    --kanagawa-code-bg: var(--kanagawa-code-light-bg);
-    --kanagawa-code-fg: var(--kanagawa-code-light-fg);
+    --code-bg: var(--kanagawa-code-light-bg);
+    --code-fg: var(--kanagawa-light-fg);
     --kanagawa-code-selection: var(--kanagawa-code-light-selection);
 }
 
@@ -130,8 +180,8 @@
     --kanagawa-code-bright-magenta: var(--kanagawa-code-dark-bright-magenta);
     --kanagawa-code-bright-cyan: var(--kanagawa-code-dark-bright-cyan);
     --kanagawa-code-bright-white: var(--kanagawa-code-dark-bright-white);
-    --kanagawa-code-bg: var(--kanagawa-code-dark-bg);
-    --kanagawa-code-fg: var(--kanagawa-code-dark-fg);
+    --code-bg: var(--kanagawa-code-dark-bg);
+    --code-fg: var(--kanagawa-code-dark-fg);
     --kanagawa-code-selection: var(--kanagawa-code-dark-selection);
 }
 
@@ -154,8 +204,8 @@
         --kanagawa-code-bright-magenta: var(--kanagawa-code-dark-bright-magenta);
         --kanagawa-code-bright-cyan: var(--kanagawa-code-dark-bright-cyan);
         --kanagawa-code-bright-white: var(--kanagawa-code-dark-bright-white);
-        --kanagawa-code-bg: var(--kanagawa-code-dark-bg);
-        --kanagawa-code-fg: var(--kanagawa-code-dark-fg);
+        --code-bg: var(--kanagawa-code-dark-bg);
+        --code-fg: var(--kanagawa-code-dark-fg);
         --kanagawa-code-selection: var(--kanagawa-code-dark-selection);
     }
 }

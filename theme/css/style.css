@@ -1,220 +1,11 @@
-/* Kanagawa color variables */
+/* Import color scheme */
+@import 'colors-kanagawa.css';
+
 :root {
- /* Reds */
- --kanagawa-dark-red: #b31d1d;
- --kanagawa-medium-red: #c34043;
- --kanagawa-light-red: #db5555;
-
- /* Greens */
- --kanagawa-dark-green: #4b6b4b;
- --kanagawa-medium-green: #76946a;
- --kanagawa-light-green: #98bb6c;
- --kanagawa-extra-green: #668c44;
-
- /* Blues */
- --kanagawa-dark-blue: #4a5cc5;
- --kanagawa-light-blue: #7e9cd8;
- --kanagawa-selection-blue: #4a7890;
-
- /* Yellows */
- --kanagawa-dark-yellow: #8f6c3f;
- --kanagawa-medium-yellow: #c0a36e;
- --kanagawa-light-yellow: #e6c384;
-
- /* Magentas */
-  --kanagawa-dark-magenta: #625987;
-  --kanagawa-medium-magenta: #957fb8;
-  --kanagawa-light-magenta: #938aa9;
-
- /* Cyans */
- --kanagawa-dark-cyan: #3d6b62;
- --kanagawa-medium-cyan: #6a9589;
- --kanagawa-light-cyan: #7aa89f;
-
- /* Blacks and Whites */
- --kanagawa-dark-black: #090618;
- --kanagawa-dark-bright-black: #727169;
- --kanagawa-dark-white: #c8c093;
- --kanagawa-dark-bright-white: #dcd7ba;
- --kanagawa-light-black: #1f1f28;
- --kanagawa-light-bright-black: #54534d;
- --kanagawa-light-white: #dcd7ba;
- --kanagawa-light-bright-white: #1f1f28;
-
- /* Background, Foreground and Selection */
- --kanagawa-dark-bg: #1f1f28;
- --kanagawa-dark-text: #dcd7ba;
- --kanagawa-light-selection: #2d4f67;
- --kanagawa-light-bg: #efede3;
- --kanagawa-light-text: #1f1f28;
- --kanagawa-dark-selection: #6a91ac;
-
-  /* Icon filters */
-  --kanagawa-dark-icon-filter: brightness(0) saturate(100%) invert(90%) sepia(83%) saturate(132%) hue-rotate(334deg) brightness(91%) contrast(89%);
-  --kanagawa-light-icon-filter: brightness(0) saturate(100%) invert(9%) sepia(15%) saturate(845%) hue-rotate(201deg) brightness(92%) contrast(91%);
-  --kanagawa-icon-mouseover-filter: brightness(0) saturate(100%) invert(45%) sepia(34%) saturate(510%) hue-rotate(156deg) brightness(89%) contrast(89%);
-  /* Icon filters */
-  --text-filter: 40%;  /* Adjust this value to match text-body color */
-
   /* font and page sizing */
   --page-width: min(900px, 100vw);
-}
-
-
-/* base theme colors */
-:root {
-  /* Base sizes */
   --base-size: 13pt;
-  
-  /* Core brand colors */
-  --brand-dark: rgb(147, 54, 37);      /* Dark red for hover states */
-  --brand-main: rgb(205, 76, 53);      /* Main brand red */
-  --brand-light: rgb(255, 245, 245);   /* Light red background */
-  
-  /* Text colors */
-  --text-dark: #333;         /* Dark text for headings */
-  --text-body: #444;         /* Main body text */
-  --text-muted: #666;        /* Subdued text like metadata */
-  --text-black: #000;        /* Pure black text */
-  
-  /* UI colors */
-  --bg-main: rgb(252, 252, 252);     /* Main background */
-  --link-color: rgb(50, 115, 228);    /* Link blue */
-  --selection-color: var(--text-black);
-  
-  /* Social icon colors */
-  --icon-hover: var(--brand-dark);
-  --icon-default: rgba(0, 0, 0, 0.6);  /* Default gray state */
-  
-  /* Scrollbar colors */
-  --scrollbar-bg: #f1f1f1;
-  --scrollbar-thumb: rgba(205, 76, 53, 0.5);
-  --scrollbar-thumb-hover: rgba(205, 76, 53, 0.7);
-
-  /* Infobox colors */
-  --quote-bg: rgb(246, 248, 250);
-  --quote-border: rgb(208, 215, 222);
-  --quote-text: rgb(36, 41, 47);
-
-  --note-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-magenta) 5%);
-  --note-border: var(--kanagawa-dark-magenta);
-  --note-text: var(--kanagawa-dark-magenta);
-
-  --warning-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-red) 5%);
-  --warning-border: var(--kanagawa-dark-red);
-  --warning-text: var(--kanagawa-dark-red);
-
-  --tip-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-yellow) 5%);
-  --tip-border: var(--kanagawa-dark-yellow);
-  --tip-text: var(--kanagawa-dark-yellow);
 }
-
-/* Kanagawa light theme colors  (uses the kanagawa theme colors above) */
-:root {
-  /* Base sizes */
-  --base-size: 13pt;
-
-  /* Core brand colors */
-  --brand-dark: var(--kanagawa-dark-cyan);      /* Dark red for hover states */
-  --brand-main: var(--kanagawa-medium-cyan);      /* Main brand red */
-  --brand-light: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-medium-cyan) 5%);   /* Light red background */
-  
-  /* Text colors */
-  --text-dark: var(--kanagawa-light-text);         /* Dark text for headings */
-  --text-body: color-mix(in srgb, var(--kanagawa-light-text) 90%, var(--kanagawa-light-bg) 10%);         /* Main body text */
-  --text-muted: color-mix(in srgb, var(--kanagawa-light-text) 70%, var(--kanagawa-light-bg) 30%);        /* Subdued text */
-  --text-black: var(--kanagawa-light-text);        /* Pure black text */
-  
-  /* UI colors */
-  --bg-main: var(--kanagawa-light-bg);     /* Main background */
-  --link-color: var(--kanagawa-dark-blue);    /* Link blue */
-  /* --selection-color: var(--kanagawa-selection-blue); */
-  --selection-color: var(--kanagawa-dark-bg);
-  --selection-text-color: var(--kanagawa-dark-text);
-  
-  /* Social icon colors */
-  --icon-hover: var(--kanagawa-red);
-  --icon-default: var(--kanagawa-bright-black);
-  
-  /* Scrollbar colors */
-  --scrollbar-bg: var(--kanagawa-light-bg);
-  --scrollbar-thumb: var(--kanagawa-light-red);
-  --scrollbar-thumb-hover: var(--kanagawa-light-red);
-
-  /* Infobox colors */
-  --quote-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-dark-black) 5%);
-  --quote-border: var(--kanagawa-light-bright-black);
-  --quote-text: var(--kanagawa-dark-black);
-
-  --note-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-dark-magenta) 5%);
-  --note-border: var(--kanagawa-dark-magenta);
-  --note-text: var(--kanagawa-dark-magenta);
-
-  --warning-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-dark-red) 5%);
-  --warning-border: var(--kanagawa-dark-red);
-  --warning-text: var(--kanagawa-dark-red);
-
-  --tip-bg: color-mix(in srgb, var(--kanagawa-light-bg) 95%, var(--kanagawa-light-yellow) 5%);
-  --tip-border: var(--kanagawa-dark-yellow);
-  --tip-text: var(--kanagawa-dark-yellow);
-
-  --icon-filter: var(--kanagawa-light-icon-filter);
-  --icon-filter-hover: var(--kanagawa-icon-mouseover-filter);
-}
-
-/* Kanagawa dark theme colors  (uses the kanagawa theme colors above) */
-:root[data-theme="dark"] {
-  /* Base sizes */
-  --base-size: 13pt;
-
-  /* Core brand colors */
-  --brand-dark: var(--kanagawa-light-cyan);      /* Dark red for hover states */
-  --brand-main: var(--kanagawa-medium-cyan);      /* Main brand red */
-  --brand-light: color-mix(in srgb, var(--kanagawa-dark-bg) 95%, var(--kanagawa-dark-cyan) 5%);   /* Light red background */
-  
-  /* Text colors */
-  --text-dark: var(--kanagawa-dark-text);         /* Dark text for headings */
-  --text-body: color-mix(in srgb, var(--kanagawa-dark-text) 90%, var(--kanagawa-dark-bg) 10%);         /* Main body text */
-  --text-muted: color-mix(in srgb, var(--kanagawa-dark-text) 70%, var(--kanagawa-dark-bg) 30%);        /* Subdued text */
-  --text-black: var(--kanagawa-dark-text);        /* Pure black text */
-  
-  /* UI colors */
-  --bg-main: var(--kanagawa-dark-bg);     /* Main background */
-  --link-color: var(--kanagawa-light-blue);    /* Link blue */
-  --selection-color: var(--kanagawa-dark-text);
-  --selection-text-color: var(--kanagawa-light-text);
-  
-  /* Social icon colors */
-  --icon-hover: var(--kanagawa-red);
-  --icon-default: var(--kanagawa-bright-black);
-  
-  /* Scrollbar colors */
-  --scrollbar-bg: var(--kanagawa-dark-bg);
-  --scrollbar-thumb: var(--kanagawa-light-red);
-  --scrollbar-thumb-hover: var(--kanagawa-light-red);
-
-  /* Infobox colors */
-  --quote-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 75%, var(--kanagawa-light-bright-black) 25%);
-  --quote-border: var(--kanagawa-dark-text);
-  --quote-text: var(--kanagawa-dark-text);
-
-  --note-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 80%, var(--kanagawa-dark-magenta) 20%);
-  --note-border: var(--kanagawa-light-magenta);
-  --note-text: var(--kanagawa-light-magenta);
-
-  --warning-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 80%, var(--kanagawa-dark-red) 20%);
-  --warning-border: var(--kanagawa-light-red);
-  --warning-text: var(--kanagawa-light-red);
-
-  --tip-bg: color-mix(in srgb, var(--kanagawa-dark-bg) 80%, var(--kanagawa-dark-yellow) 20%);
-  --tip-border: var(--kanagawa-light-yellow);
-  --tip-text: var(--kanagawa-light-yellow);
-
-  --icon-filter: var(--kanagawa-dark-icon-filter);
-  --icon-filter-hover: var(--kanagawa-icon-mouseover-filter);
-
-}
-
 
 a {
   text-decoration: none;
@@ -463,7 +254,7 @@ ul.icons li img {
 .profilebox img {
   margin: 0;
   margin-right:20px;margin-bottom:20px;margin-top:6pt;margin-left:20px; border:1px solid var(--border-gray);padding:1px; width: 90%;
-  filter: blur(19px);
+  /* filter: blur(19px); */
 }
 
 @media only screen and (max-width: 600px) {
@@ -493,7 +284,7 @@ ul.icons li img {
 blockquote {
   margin: 0 0 1rem 0;
   max-width: var(--page-width);
-  padding: 1rem 1rem 0 4rem; /* Extra left padding for icon */
+  padding: 1rem 1rem 0rem 4rem; /* Extra left padding for icon */
   border-radius: 6px;
   position: relative;
   background-color: var(--quote-bg);
@@ -872,10 +663,10 @@ ul, ol {
   max-width: var(--page-width);
   margin: 0 auto 1.5rem auto;
   background: var(--bg-main);
-  border-radius: 6px;
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--brand-main);
+  border-bottom: 1px solid var(--brand-main);
+  /* border-radius: 6px; */
 }
 
 
@@ -897,15 +688,44 @@ ul, ol {
   right: 0;
   bottom: 0;
   height: 100px;
+  width: 100%;
   background: linear-gradient(to bottom, 
       rgba(255,255,255,0) 0%, 
       var(--bg-main) 100%
   );
 }
 
+/* Gradient overlay for image fade */
+.post-hero-full::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient( to top, var(--bg-main) 0, transparent 100%);
+  mix-blend-mode: luminosity;
+}
+
+.post-hero-full {
+  width: 100vw;
+  height: 500px;
+  margin: 0;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--bg-main);
+  mix-blend-mode: luminosity;
+}
+
+
 .post-content-wrapper {
-  padding: 1.5rem 2rem 1rem;
-  margin-top: -20px; /* Pull content up slightly to overlap with fade */
+  /* padding: 1.5rem 2rem 1rem; */
+  padding: 1rem 0;
+  /* margin-top: -20px;  */
+  /* Pull content up slightly to overlap with fade */
   position: relative; /* Keep content above gradient */
   z-index: 1;
 }
@@ -1027,10 +847,35 @@ article > ol ol {
       height: 200px;
   }
 
+  .post-hero-full {
+    height: 250px;
+}
+
   .post-title {
       font-size: 2rem;
   }
 } 
+
+@media (min-width: 2000px) {
+  .post-hero-full {
+    height: 1000px;
+}
+
+.post-hero-full::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 500px;
+  width: 100%;
+  background: linear-gradient( to top, var(--bg-main) 0, transparent 100%);
+  mix-blend-mode: luminosity;
+}
+
+} 
+
+
 
 /* Define page width variable */
 .page {
@@ -1266,7 +1111,7 @@ sup[id^="fnref"]:hover .footnote-popup {
   margin: 0 auto;
   margin-bottom: 2rem;
   background: var(--bg-main);
-  border-radius: 6px;
+  /* border-radius: 6px; */
   overflow: hidden;
   position: relative;
   min-height: 200px;
@@ -1279,7 +1124,11 @@ sup[id^="fnref"]:hover .footnote-popup {
   background-size: cover;
   background-position: center;
   position: relative;
-  /* z-index: 2; */
+
+  /* Use background-blend-mode so the background-image blends with brand-main background-color based on luminosity */
+  /* background-color: var(--brand-dark); */
+  /* background-blend-mode: luminosity; */
+  mix-blend-mode: luminosity;
 }
 
 .about-content {
@@ -1384,7 +1233,7 @@ sup[id^="fnref"]:hover .footnote-popup {
     margin-left: auto;
     margin-right: auto;
     background: var(--bg-main);
-    border-radius: 6px;
+    /* border-radius: 6px; */
     overflow: hidden;
     min-height: 160px;  /* Reduced from 200px */
     position: relative;
@@ -1582,55 +1431,9 @@ sup[id^="fnref"]:hover .footnote-popup {
     padding: 0;
 }
 
-/* Code block styling */
-.highlight {
-    /* Add horizontal scrolling */
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--brand-main) var(--bg-main);
-    
-    /* Container styling */
-    max-width: 100%;
-    padding: 1.2rem;
-    margin: 1em 0;
-    border-radius: 6px;
-    border: 1px solid var(--brand-main);
-    background-color: var(--kanagawa-code-bg);
-    color: var(--kanagawa-code-fg);
-    position: relative;  /* For absolute positioning of copy button */
-}
-
-
-.highlight pre {
-    /* Code content */
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin: 0;
-    font-family: 'Berkeley Mono', monospace;
-}
-
-/* Webkit scrollbar styling */
-.highlight::-webkit-scrollbar {
-    height: 8px;
-}
-
-.highlight::-webkit-scrollbar-track {
-    background: var(--bg-main);
-    border-radius: 4px;
-}
-
-.highlight::-webkit-scrollbar-thumb {
-    background: var(--brand-main);
-    opacity: 0.5;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.highlight::-webkit-scrollbar-thumb:hover {
-    opacity: 0.7;
-}
 
 /* Add gradient overlay */
+
 .about-image::after {
     content: '';
     position: absolute;
@@ -2104,26 +1907,26 @@ h6 .toclink:hover ~ .header-link::after,
 }
 
 .pagination-link:hover {
-  background-color: var(--kanagawa-light-blue);
+  background-color: var(--light-blue);
   color: var(--text-dark);
 }
 
 .pagination-link.current {
   font-weight: bold;
-  background-color: var(--kanagawa-dark-blue);
-  color: var(--kanagawa-light-white);
+  background-color: var(--dark-blue);
+  color: var(--light-white);
 }
 
 .pagination-link.prev,
 .pagination-link.next {
   font-weight: bold;
-  background-color: var(--kanagawa-medium-cyan);
-  color: var(--kanagawa-light-white);
+  background-color: var(--medium-cyan);
+  color: var(--light-white);
 }
 
 .pagination-link.prev:hover,
 .pagination-link.next:hover {
-  background-color: var(--kanagawa-dark-cyan);
+  background-color: var(--dark-cyan);
 }
 
 /* Icons for previous and next buttons */

@@ -5,6 +5,9 @@ remove_footnote_section: true
 my_title: Siegel Postdoctoral Fellow
 my_affiliation: University of Washington
 
+> [!TIP]
+> **Attention!** We will be presenting a tutorial entitled "[The Science of Benchmarking: What's Measured, What's Missing, What's Next](https://benchmarking.science/)" at NeurIPS on December 2, 2025! Hope to see you there!
+
 I have broad interests in generative AI, NLP, and multimodal systems. In particular, I'm interested in:
 
 1. Rigorous evaluation of **difficult-to-measure capabilities** in language models and generative image systems. ([COLM 2024](https://arxiv.org/abs/2407.16711)[^1], [NeurIPS 2024 Spotlight](https://arxiv.org/abs/2404.04251)[^2])

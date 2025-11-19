@@ -1,0 +1,66 @@
+{% block head %}
+<script>
+  // Check and apply theme immediately
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+  }
+</script>
+<script src="{{ SITEURL }}/theme/js/theme.js"></script>
+<script src="{{ SITEURL }}/theme/js/copy-code.js"></script>
+<script src="{{ SITEURL }}/theme/js/toc.js"></script>
+<script src="{{ SITEURL }}/theme/js/popups.js"></script>
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/fonts.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/bluesky-comments.css"/>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/code.css"/>
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pubs.css"/>
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+      crossorigin="anonymous"/>
+{% if FEED_ALL_ATOM %}
+<link href="{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+{% endif %}
+{% if FEED_ALL_RSS %}
+<link href="{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+{% endif %}
+{% if FEED_ATOM %}
+<link href="{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+{% endif %}
+{% if FEED_RSS %}
+<link href="{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+{% endif %}
+{% endblock %}
+<meta name="title" property="og:title" content="{{ self.title() }}" />
+<meta name="description" property="og:description" content="{% block description %}{% endblock %}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://saxon.me/" />
+<meta property="og:title" content="{{ self.title() }}" />
+<meta property="og:description" content="{{ self.description() }}" />
+<meta name="image" property="og:image" content="{{ SITEURL }}/{% block imgurl %}{{ SITEURL }}/theme/img/bg-sba.jpg {% endblock %}" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:site" content="https://saxon.me/" />
+<meta property="twitter:creator" content="@m2saxon" />
+<meta property="twitter:title" content="{{ self.title() }}" />
+<meta property="twitter:description" content="{{ self.description() }}" />
+<meta property="twitter:image" content="{{ SITEURL }}/{{ self.imgurl() }}" />
+<meta name="author" content="Michael Saxon" />
+<link rel="icon" type="image/png" href="{{ SITEURL }}/theme/img/logomark_fill.png"/>
+{% if article %}
+<meta name="publish_date" property="og:publish_date" content="{{ article.locale_date }}"/>
+{% endif %}
+
+<!-- Google analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65W6NPXWCV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-65W6NPXWCV');
+</script>

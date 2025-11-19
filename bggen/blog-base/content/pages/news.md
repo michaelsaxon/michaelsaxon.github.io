@@ -1,6 +1,12 @@
 Title: news
 save_as: 
 
+**11/18/2025** We will be presenting a tutorial entitled "[The Science of Benchmarking: What's Measured, What's Missing, What's Next](https://benchmarking.science/)" at NeurIPS on December 2, 2025!
+
+**9/15/2025** Started my postdoc at UW.
+
+**6/2/2025** Defended my thesis!
+
 **5/8/2025** Interviewed in IEEE Spectrum about reasoning models; our ThoughtTerminator work was mentioned! [[article link]](https://spectrum.ieee.org/chain-of-thought-prompting)
 
 
