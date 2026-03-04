@@ -2,11 +2,8 @@ Title: About
 save_as: index.html
 Template: about
 remove_footnote_section: true
-my_title: Siegel Postdoctoral Fellow
-my_affiliation: University of Washington
-
-> [!TIP]
-> **Attention!** We will be presenting a tutorial entitled "[The Science of Benchmarking: What's Measured, What's Missing, What's Next](https://benchmarking.science/)" at NeurIPS on December 2, 2025! Hope to see you there!
+my_title: Research Scientist
+my_affiliation: Google DeepMind
 
 I have broad interests in generative AI, NLP, and multimodal systems. In particular, I'm interested in:
 
